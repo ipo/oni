@@ -17,7 +17,7 @@
      }
     }
    ],
-   "time": 50.0
+   "time": 50
   }
  ],
  "AdvancedCraftingTable": [
@@ -37,7 +37,10 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": {
+    "raw": "INDUSTRIAL.RECIPES.STANDARD_FABRICATION_TIME * 2f"
+   }
   },
   {
    "fabricator": "AdvancedCraftingTable",
@@ -55,7 +58,10 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": {
+    "raw": "INDUSTRIAL.RECIPES.STANDARD_FABRICATION_TIME * 4f"
+   }
   },
   {
    "fabricator": "AdvancedCraftingTable",
@@ -73,7 +79,10 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": {
+    "raw": "INDUSTRIAL.RECIPES.STANDARD_FABRICATION_TIME * 4f"
+   }
   }
  ],
  "AdvancedCureConfig": [
@@ -97,7 +106,7 @@
      }
     }
    ],
-   "time": 200.0
+   "time": 200
   }
  ],
  "Apothecary": [
@@ -118,7 +127,7 @@
      }
     }
    ],
-   "time": 50.0
+   "time": 50
   },
   {
    "fabricator": "Apothecary",
@@ -141,7 +150,7 @@
      }
     }
    ],
-   "time": 50.0
+   "time": 50
   },
   {
    "fabricator": "Apothecary",
@@ -160,7 +169,7 @@
      }
     }
    ],
-   "time": 50.0
+   "time": 50
   },
   {
    "fabricator": "Apothecary",
@@ -179,7 +188,7 @@
      }
     }
    ],
-   "time": 100.0
+   "time": 100
   },
   {
    "fabricator": "Apothecary",
@@ -209,7 +218,7 @@
      }
     }
    ],
-   "time": 100.0
+   "time": 100
   },
   {
    "fabricator": "Apothecary",
@@ -234,7 +243,7 @@
      }
     }
    ],
-   "time": 100.0
+   "time": 100
   }
  ],
  "BionicUpgradeComponentConfig": [
@@ -250,7 +259,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 30.0
   },
   {
    "ingredients": [],
@@ -264,7 +274,10 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": {
+    "raw": "INDUSTRIAL.RECIPES.STANDARD_FABRICATION_TIME * 2f"
+   }
   }
  ],
  "ChemicalRefinery": [
@@ -290,7 +303,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "ChemicalRefinery",
@@ -314,7 +327,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "ChemicalRefinery",
@@ -348,7 +361,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   },
   {
    "fabricator": "ChemicalRefinery",
@@ -376,7 +389,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   }
  ],
  "Chlorinator": [
@@ -406,7 +419,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ],
  "ClothingAlterationStation": [
@@ -437,7 +450,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 180.0
   }
  ],
  "ClothingFabricator": [
@@ -461,7 +475,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 180.0
   },
   {
    "fabricator": "ClothingFabricator",
@@ -485,7 +500,10 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": {
+    "raw": "TUNING.EQUIPMENT.VESTS.FUNKY_VEST_FABTIME"
+   }
   },
   {
    "fabricator": "ClothingFabricator",
@@ -517,7 +535,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 180.0
   },
   {
    "fabricator": "ClothingFabricator",
@@ -541,7 +560,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 20.0
   }
  ],
  "CookingStation": [
@@ -561,7 +581,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 30.0
   },
   {
    "fabricator": "CookingStation",
@@ -579,7 +600,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -597,7 +619,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -622,7 +645,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -640,7 +664,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -661,7 +686,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -679,7 +705,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -697,7 +724,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -718,7 +746,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -736,7 +765,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -754,7 +784,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -776,7 +807,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -794,7 +826,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "CookingStation",
@@ -812,7 +845,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   }
  ],
  "CraftingTable": [
@@ -838,7 +872,10 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": {
+    "raw": "INDUSTRIAL.RECIPES.STANDARD_FABRICATION_TIME * 2f"
+   }
   },
   {
    "fabricator": "CraftingTable",
@@ -860,7 +897,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 20
   },
   {
    "fabricator": "CraftingTable",
@@ -878,7 +916,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 20
   },
   {
    "fabricator": "CraftingTable",
@@ -904,7 +943,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 30.0
   },
   {
    "fabricator": "CraftingTable",
@@ -930,7 +970,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 30.0
   },
   {
    "fabricator": "CraftingTable",
@@ -954,7 +995,10 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": {
+    "raw": "INDUSTRIAL.RECIPES.STANDARD_FABRICATION_TIME * 2f"
+   }
   }
  ],
  "DataMiner": [
@@ -979,7 +1023,7 @@
      }
     }
    ],
-   "time": 200.0
+   "time": 200
   }
  ],
  "Deepfryer": [
@@ -1003,7 +1047,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "Deepfryer",
@@ -1025,7 +1070,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "Deepfryer",
@@ -1054,7 +1100,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "Deepfryer",
@@ -1083,7 +1130,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   }
  ],
  "DiamondPress": [
@@ -1104,7 +1152,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   }
  ],
  "FabricatedWoodMaker": [
@@ -1167,7 +1215,7 @@
      }
     }
    ],
-   "time": 250.0
+   "time": 250
   }
  ],
  "FossilDig": [
@@ -1185,7 +1233,7 @@
      "material": "Fossil"
     }
    ],
-   "time": 80.0
+   "time": 80
   }
  ],
  "GlassForge": [
@@ -1206,7 +1254,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ],
  "GourmetCookingStation": [
@@ -1230,7 +1278,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1252,7 +1301,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1274,7 +1324,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1299,7 +1350,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1321,7 +1373,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1343,7 +1396,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1369,7 +1423,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1395,7 +1450,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "GourmetCookingStation",
@@ -1432,7 +1488,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 50.0
   }
  ],
  "IntermediateCureConfig": [
@@ -1453,7 +1510,7 @@
      "material": "IntermediateCure"
     }
    ],
-   "time": 100.0
+   "time": 100
   }
  ],
  "Kiln": [
@@ -1484,7 +1541,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "Kiln",
@@ -1513,7 +1570,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ],
  "ManualHighEnergyParticleSpawner": [
@@ -1536,7 +1593,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "ManualHighEnergyParticleSpawner",
@@ -1557,7 +1614,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ],
  "MetalRefinery": [
@@ -1572,7 +1629,7 @@
     }
    ],
    "results": [],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "MetalRefinery",
@@ -1599,7 +1656,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ],
  "MicrobeMusher": [
@@ -1627,7 +1684,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "MicrobeMusher",
@@ -1652,7 +1709,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "MicrobeMusher",
@@ -1674,7 +1732,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "MicrobeMusher",
@@ -1705,7 +1764,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "MicrobeMusher",
@@ -1727,7 +1787,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "MicrobeMusher",
@@ -1759,7 +1820,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 30.0
   }
  ],
  "MilkPress": [
@@ -1889,7 +1951,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "MilkPress",
@@ -2106,7 +2168,7 @@
      }
     }
    ],
-   "time": 33.0
+   "time": 33
   }
  ],
  "RockCrusher": [
@@ -2132,7 +2194,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2145,7 +2207,7 @@
     }
    ],
    "results": [],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2164,7 +2226,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2185,7 +2247,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2208,7 +2270,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2229,7 +2291,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2250,7 +2312,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2276,7 +2338,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2302,7 +2364,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2321,7 +2383,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2353,7 +2415,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2383,7 +2445,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2413,7 +2475,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2432,7 +2494,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   },
   {
    "fabricator": "RockCrusher",
@@ -2451,7 +2513,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ],
  "RubberMaker": [
@@ -2473,7 +2535,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ],
  "SludgePress": [
@@ -2488,7 +2550,7 @@
     }
    ],
    "results": [],
-   "time": 20.0
+   "time": 20
   }
  ],
  "Smoker": [
@@ -2519,7 +2581,7 @@
      }
     }
    ],
-   "time": 600.0
+   "time": 600
   },
   {
    "fabricator": "Smoker",
@@ -2551,7 +2613,7 @@
      }
     }
    ],
-   "time": 600.0
+   "time": 600
   },
   {
    "fabricator": "Smoker",
@@ -2584,7 +2646,7 @@
      }
     }
    ],
-   "time": 600.0
+   "time": 600
   }
  ],
  "SuitFabricator": [
@@ -2616,7 +2678,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 40
   },
   {
    "fabricator": "SuitFabricator",
@@ -2642,7 +2705,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 40
   },
   {
    "fabricator": "SuitFabricator",
@@ -2668,7 +2732,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 40
   },
   {
    "fabricator": "SuitFabricator",
@@ -2694,7 +2759,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 40
   },
   {
    "fabricator": "SuitFabricator",
@@ -2716,7 +2782,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 40
   },
   {
    "fabricator": "SuitFabricator",
@@ -2738,7 +2805,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
      }
     }
-   ]
+   ],
+   "time": 40
   }
  ],
  "SupermaterialRefinery": [
@@ -2773,7 +2841,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   },
   {
    "fabricator": "SupermaterialRefinery",
@@ -2806,7 +2874,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   },
   {
    "fabricator": "SupermaterialRefinery",
@@ -2846,7 +2914,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   },
   {
    "fabricator": "SupermaterialRefinery",
@@ -2873,7 +2941,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   },
   {
    "fabricator": "SupermaterialRefinery",
@@ -2892,7 +2960,7 @@
      }
     }
    ],
-   "time": 80.0
+   "time": 80
   }
  ],
  "SushiBar": [
@@ -2916,7 +2984,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "SushiBar",
@@ -2942,7 +3011,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "SushiBar",
@@ -2960,7 +3030,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   },
   {
    "fabricator": "SushiBar",
@@ -2986,7 +3057,8 @@
       "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
      }
     }
-   ]
+   ],
+   "time": 50.0
   }
  ],
  "UraniumCentrifuge": [
@@ -3014,7 +3086,7 @@
      }
     }
    ],
-   "time": 40.0
+   "time": 40
   }
  ]
 }

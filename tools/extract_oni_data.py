@@ -541,8 +541,12 @@ def parse_config_file(path, resolver):
                 if key not in rec:
                     rec[key] = resolver.resolve(expr, local)
 
-    # Components: `Type var = go.AddOrGet<Type>();`
-    for m in re.finditer(r'(\w+)\s+(\w+)\s*=\s*go\.AddOrGet<(\w+)>\(\);', text):
+    # Components: `Type var = go.AddOrGet<Type>();` (or AddComponent)
+    decls = list(re.finditer(
+        r'(\w+)\s+(\w+)\s*=\s*go\.(?:AddOrGet|AddComponent)<(\w+)>\(\);', text))
+    for idx, m in enumerate(decls):
+        end = decls[idx + 1].start() if idx + 1 < len(decls) else len(text)
+        section = text[m.start():end]
         vartype, varname = m.group(3), m.group(2)
         if vartype not in INTERESTING_COMPONENTS:
             continue
@@ -554,10 +558,10 @@ def parse_config_file(path, resolver):
             comp[prop] = resolver.resolve(expr, local)
         if vartype == 'ElementConverter':
             consumed = parse_element_list(
-                text, resolver, local, 'new ElementConverter.ConsumedElement',
+                section, resolver, local, 'new ElementConverter.ConsumedElement',
                 ['element', 'kg_per_second', 'is_active'])
             produced = parse_element_list(
-                text, resolver, local, 'new ElementConverter.OutputElement',
+                section, resolver, local, 'new ElementConverter.OutputElement',
                 ['kg_per_second', 'element', 'min_temperature', 'use_entity_temperature',
                  'store_output', 'offset_x', 'offset_y'])
             if consumed:
@@ -565,7 +569,7 @@ def parse_config_file(path, resolver):
             if produced:
                 comp['produced'] = produced
         if vartype == 'EnergyGenerator':
-            args, _ = extract_call(text, 'EnergyGenerator.CreateSimpleFormula')
+            args, _ = extract_call(section, 'EnergyGenerator.CreateSimpleFormula')
             if args:
                 pos, named = parse_named_args(split_args(args))
                 names = ['element', 'kg_per_second', 'max_stored_kg', 'output_element',
@@ -580,16 +584,22 @@ def parse_config_file(path, resolver):
                         formula[aname] = resolver.resolve(expr, local)
                 comp['formula'] = formula
             inputs = parse_element_list(
-                text, resolver, local, 'new EnergyGenerator.InputItem',
+                section, resolver, local, 'new EnergyGenerator.InputItem',
                 ['element', 'kg_per_second', 'max_stored_kg'])
             outputs = parse_element_list(
-                text, resolver, local, 'new EnergyGenerator.OutputItem',
+                section, resolver, local, 'new EnergyGenerator.OutputItem',
                 ['element', 'kg_per_second', 'store', 'offset', 'min_temperature'])
             if inputs:
                 comp.setdefault('formula', {})['inputs'] = inputs
             if outputs:
                 comp.setdefault('formula', {})['outputs'] = outputs
-        rec.setdefault('components', {})[vartype] = comp
+        comps = rec.setdefault('components', {})
+        key = vartype
+        n = 2
+        while key in comps:
+            key = f'{vartype}#{n}'
+            n += 1
+        comps[key] = comp
 
     # inline chained: go.AddOrGet<Storage>().capacityKg = 10f;
     for m in re.finditer(r'go\.AddOrGet<(\w+)>\(\)\.(\w+)\s*=\s*([^;]+);', text):
@@ -655,9 +665,9 @@ def parse_recipes(path, resolver):
             bo = text.index('{', close_idx + 1)
             bc = find_matching(text, bo, '{', '}')
             body = text[bo + 1:bc]
-            tm = re.search(r'time\s*=\s*([\d.]+)f?', body)
+            tm = re.search(r'time\s*=\s*([^,}]+)', body)
             if tm:
-                rec['time'] = float(tm.group(1))
+                rec['time'] = resolver.resolve(tm.group(1), local)
             fm = re.search(r'TagManager\.Create\("([^"]+)"\)', body)
             if fm and 'fabricator' not in rec:
                 rec['fabricator'] = fm.group(1)
