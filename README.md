@@ -17,7 +17,10 @@ Most of the data for machines and resources comes from [Oxygen Not Included Data
 Machine and resource data is extracted directly from the current game files
 with `tools/extract_oni_data.py`, which parses the game's StreamingAssets YAML
 and a decompiled `Assembly-CSharp.dll` (via `ilspycmd`). Extracted raw data
-lives in `oni/data/` (`elements.json`, `buildings.json`, `recipes.json`);
+lives in `oni/data/` (`elements.json`, `buildings.json`, `recipes.json`),
+and `tools/build_conversions.py` derives `conversions.json`: a normalized
+per-building list of mass conversions with rates, output temperature rules,
+and whether each output goes to the environment, storage, or a conduit.
 `oni/machine.yaml` and the liquid/gas lists in `oni/resource.py` are derived
 from it. Resource names are internal element ids (e.g. `DirtyWater` is
 Polluted Water, `Methane` is Natural Gas, `Carbon` is Coal).
