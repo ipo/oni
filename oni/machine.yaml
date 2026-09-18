@@ -41,8 +41,8 @@ MethaneGenerator:
     PipedMethane: 0.09
   gives:
     Power: 800
-    PipedDirtyWater: 0.0675
-    CarbonDioxide: 0.0225
+    PipedCarbonDioxide: 0.0225
+    DirtyWater: 0.0675
     Heat: 10000
 
 PetroleumGenerator:

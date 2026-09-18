@@ -1,0 +1,3409 @@
+{
+ "AdvancedApothecary": {
+  "conversions": [
+   {
+    "batch_seconds": 50,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Carbon",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "IntermediateRadPill",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 2500.0,
+  "name": "Nuclear Apothecary"
+ },
+ "AdvancedCraftingTable": {
+  "conversions": [
+   {
+    "batch_seconds": null,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": null,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": null,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "name": "Soldering Station",
+  "power_w": -480
+ },
+ "AirFilter": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.1,
+      "material": "ContaminatedOxygen",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.14333335,
+      "material": "Clay",
+      "to": "storage"
+     },
+     {
+      "kg_per_second": 0.089999996,
+      "material": "Oxygen",
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 625.0,
+  "name": "Deodorizer",
+  "power_w": -5
+ },
+ "AlgaeDistillery": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.2,
+      "material": "Algae",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     },
+     {
+      "kg_per_second": 0.40000004,
+      "material": "DirtyWater",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "liquid_conduit"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 1500.0,
+  "name": "Algae Distiller",
+  "power_w": -120
+ },
+ "AlgaeHabitat": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.040000003,
+      "material": "Oxygen",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.29033336,
+      "material": "DirtyWater",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "name": "Algae Terrarium"
+ },
+ "Apothecary": {
+  "conversions": [
+   {
+    "batch_seconds": 50,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Carbon",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BasicBooster",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Carbon",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Water",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BasicCure",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Carbon",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BasicRadPill",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 100,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.01,
+      "material": "SpiceNut",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.01,
+      "material": "IntermediateBooster",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 100,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.8,
+      "material": "LiquidGunk",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 2.0,
+      "material": "Water",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.01,
+      "material": "LubricationStick",
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 2.0,
+      "material": "DirtyWater",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 100,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.1,
+      "material": "Tallow",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.01,
+      "material": "TallowLubricationStick",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 625.0,
+  "name": "Apothecary",
+  "power_w": 0
+ },
+ "AtomicGarden": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 0.039,
+      "material": "DirtyWater",
+      "via": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.065,
+      "material": "Dirt",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.025999999,
+      "material": "Phosphorite",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.12,
+      "material": "Fertilizer",
+      "temperature": {
+       "min_k": 323.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.01,
+      "material": "Methane",
+      "temperature": {
+       "k": 349.15,
+       "rule": "fixed"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "emitter"
+   }
+  ],
+  "heat_dtu_s": 3000,
+  "power_w": -120
+ },
+ "CO2Scrubber": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "Water",
+      "via": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.3,
+      "material": "CarbonDioxide",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 1,
+      "material": "DirtyWater",
+      "to": "liquid_conduit"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 1000,
+  "name": "Carbon Skimmer",
+  "power_w": -120
+ },
+ "Campfire": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.004,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "name": "Wood Heater"
+ },
+ "ChemicalRefinery": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.325,
+      "material": "Water",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.175,
+      "material": "Salt",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "SaltWater",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 4.0,
+      "material": "PhytoOil",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 1.0,
+      "material": "BleachStone",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 5.0,
+      "material": "RefinedLipid",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "SuperCoolant",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "ViscoGel",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 1000,
+  "name": "Emulsifier",
+  "power_w": -480
+ },
+ "Chlorinator": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.75,
+      "material": "Salt",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.0125,
+      "material": "Gold",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 3000,
+  "name": "Bleach Stone Hopper",
+  "power_w": -480
+ },
+ "ClothingAlterationStation": {
+  "conversions": [
+   {
+    "batch_seconds": 180.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.005556,
+      "material": "Funky_Vest",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.016667,
+      "material": "Fabrics",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.005556,
+      "material": "CustomClothing",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "name": "Clothing Refashionator",
+  "power_w": -240
+ },
+ "ClothingFabricator": {
+  "conversions": [
+   {
+    "batch_seconds": 180.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.022222,
+      "material": "Fabrics",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.005556,
+      "material": "Warm_Vest",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": null,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 180.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.011111,
+      "material": "Fabrics",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.005556,
+      "material": "DrySuit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 20.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "RubberBoots",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "name": "Textile Loom",
+  "power_w": -240
+ },
+ "Compost": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.1,
+      "material": "Dirt",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 1125.0,
+  "name": "Compost"
+ },
+ "CookingStation": {
+  "conversions": [
+   {
+    "batch_seconds": 30.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.1,
+      "material": "BasicPlantFood",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.033333,
+      "material": "PickledMeal",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "MushBar",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "FriedMushBar",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Mushroom",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "FriedMushroom",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "RawEgg",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Pancakes",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.04,
+      "material": "Meat",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedMeat",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedFish",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "PrickleFruit",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "GrilledPrickleFruit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "SwampFruit",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "SwampDelights",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "ColdWheatBread",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "RawEgg",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedEgg",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "WormBasicFruit",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "WormBasicFood",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.16,
+      "material": "WormSuperFruit",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.08,
+      "material": "Sucrose",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "WormSuperFood",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "HardSkinBerry",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedPikeapple",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "ButterflyPlantSeed",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "ButterflyFood",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 4500.0,
+  "name": "Electric Grill",
+  "power_w": -60
+ },
+ "CraftingTable": {
+  "conversions": [
+   {
+    "batch_seconds": null,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 20,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "BasicMetalOres",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "Oxygen_Mask",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 20,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "Worn_Oxygen_Mask",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "Oxygen_Mask",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 30.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.033333,
+      "material": "RubberGasket",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 30.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.033333,
+      "material": "PlasticGasket",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": null,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "name": "Crafting Station",
+  "power_w": -60
+ },
+ "DataMiner": {
+  "conversions": [
+   {
+    "batch_seconds": 200,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 3500.0,
+  "name": "Data Miner",
+  "power_w": -1000
+ },
+ "Deepfryer": {
+  "conversions": [
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Carrot",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Tallow",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "FriesCarrot",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.12,
+      "material": "BeanPlantSeed",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Tallow",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "DeepFriedNosh",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "FishMeat",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.048,
+      "material": "Tallow",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "DeepFriedFish",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "ShellfishMeat",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.048,
+      "material": "Tallow",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "DeepFriedShellfish",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 10000,
+  "name": "Deep Fryer",
+  "power_w": -480
+ },
+ "Desalinator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 5,
+      "material": "SaltWater",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 4.65,
+      "material": "Water",
+      "to": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.35,
+      "material": "Salt",
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "inputs": [
+     {
+      "kg_per_second": 5,
+      "material": "Brine",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 3.5,
+      "material": "Water",
+      "to": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 1.5,
+      "material": "Salt",
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "inputs": [
+     {
+      "kg_per_second": 5,
+      "material": "MurkyBrine",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 3.5,
+      "material": "DirtyWater",
+      "to": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 1.5,
+      "material": "Salt",
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 8000,
+  "name": "Desalinator",
+  "power_w": -480
+ },
+ "DiamondPress": {
+  "conversions": [
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "RefinedCarbon",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "Diamond",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 16000,
+  "name": "Diamond Press",
+  "power_w": -240
+ },
+ "Electrolyzer": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "Water",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.888,
+      "material": "Oxygen",
+      "temperature": {
+       "min_k": 343.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.11199999,
+      "material": "Hydrogen",
+      "temperature": {
+       "min_k": 343.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 1250.0,
+  "name": "Electrolyzer",
+  "power_w": -120
+ },
+ "EthanolDistillery": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "BuildingWood",
+      "via": "tagged_delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Ethanol",
+      "temperature": {
+       "min_k": 346.5,
+       "rule": "max_input_or_min"
+      },
+      "to": "liquid_conduit"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 4500.0,
+  "name": "Ethanol Distiller",
+  "power_w": -240
+ },
+ "FabricatedWoodMaker": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.25,
+      "material": "PlantFiber",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.25,
+      "material": "NaturalResin",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "FabricatedWood",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 1250.0,
+  "name": "Plywood Press",
+  "power_w": -480
+ },
+ "FertilizerMaker": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 0.039,
+      "material": "DirtyWater",
+      "via": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.065,
+      "material": "Dirt",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.025999999,
+      "material": "Phosphorite",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.12,
+      "material": "Fertilizer",
+      "temperature": {
+       "min_k": 323.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.01,
+      "material": "Methane",
+      "temperature": {
+       "k": 349.15,
+       "rule": "fixed"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "emitter"
+   }
+  ],
+  "heat_dtu_s": 3000,
+  "name": "Fertilizer Synthesizer",
+  "power_w": -120
+ },
+ "FoodDehydrator": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.0050000004,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "batch_seconds": 250,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.048,
+      "material": "Polypropylene",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.024,
+      "material": "Water",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 4000,
+  "name": "Dehydrator"
+ },
+ "FossilDig": {
+  "conversions": [
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.0125,
+      "material": "Diamond",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "Fossil",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "name": "Ancient Specimen"
+ },
+ "Generator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "Carbon",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CarbonDioxide",
+      "to": "environment"
+     }
+    ],
+    "source": "generator"
+   }
+  ],
+  "heat_dtu_s": 9000,
+  "name": "Coal Generator",
+  "power_w": 600
+ },
+ "GlassForge": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Sand",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.625,
+      "material": "MoltenGlass",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 16000,
+  "name": "Glass Forge",
+  "power_w": -1200
+ },
+ "GourmetCookingStation": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.04,
+      "material": "GrilledPrickleFruit",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.04,
+      "material": "SpiceNut",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Salsa",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "FriedMushroom",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.08,
+      "material": "Lettuce",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "MushroomWrap",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedMeat",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedFish",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "SurfAndTurf",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "SpiceNut",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "SpiceBread",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Tofu",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "SpiceNut",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "SpicyTofu",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.08,
+      "material": "GingerConfig",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.08,
+      "material": "BeanPlantSeed",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Curry",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedEgg",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Lettuce",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "FriedMushroom",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Quiche",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "ColdWheatBread",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Lettuce",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "CookedMeat",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Burger",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.08,
+      "material": "WormSuperFruit",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BerryPie",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 9000,
+  "name": "Gas Range",
+  "power_w": -240
+ },
+ "HydrogenGenerator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 0.1,
+      "material": "Hydrogen",
+      "via": "gas_conduit"
+     }
+    ],
+    "outputs": [],
+    "source": "generator"
+   }
+  ],
+  "heat_dtu_s": 4000,
+  "name": "Hydrogen Generator",
+  "power_w": 800
+ },
+ "Kiln": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 20000,
+  "name": "Kiln"
+ },
+ "ManualHighEnergyParticleSpawner": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "UraniumOre",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "EnrichedUranium",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "name": "Manual Radbolt Generator"
+ },
+ "MegaBrainTank": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Oxygen",
+      "via": "gas_conduit"
+     }
+    ],
+    "outputs": [],
+    "source": "element_converter"
+   }
+  ],
+  "name": "Somnium Synthesizer"
+ },
+ "MetalRefinery": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 1.75,
+      "material": "Iron",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.5,
+      "material": "RefinedCarbon",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.25,
+      "material": "Lime",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Steel",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 16000,
+  "name": "Metal Refinery",
+  "power_w": -1200
+ },
+ "MethaneGenerator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 0.09,
+      "material": "Methane",
+      "via": "gas_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.0675,
+      "material": "DirtyWater",
+      "temperature": {
+       "min_k": 313.15,
+       "rule": "max_building_or_min"
+      },
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.0225,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 383.15,
+       "rule": "max_building_or_min"
+      },
+      "to": "gas_conduit"
+     }
+    ],
+    "source": "generator"
+   }
+  ],
+  "heat_dtu_s": 10000,
+  "name": "Natural Gas Generator",
+  "power_w": 800
+ },
+ "MicrobeMusher": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 1.875,
+      "material": "Dirt",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "MushBar",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.04,
+      "material": "BasicPlantFood",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BasicPlantBar",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.12,
+      "material": "BeanPlantSeed",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 1.0,
+      "material": "Water",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Tofu",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "FruitCake",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Meat",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Tallow",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Pemmican",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 30.0,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.2,
+      "material": "FishFood",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 2500.0,
+  "name": "Microbe Musher",
+  "power_w": -240
+ },
+ "MilkFatSeparator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "Milk",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.089999996,
+      "material": "MilkFat",
+      "to": "storage"
+     },
+     {
+      "kg_per_second": 0.80999994,
+      "material": "Brine",
+      "to": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.100000024,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "FishMilk",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.80999994,
+      "material": "Mucus",
+      "to": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.100000024,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 8000,
+  "name": "Gleaner",
+  "power_w": -480
+ },
+ "MilkPress": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.25,
+      "material": "ColdWheatSeed",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Milk",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.075,
+      "material": "SpiceNut",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Milk",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "BeanPlantSeed",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Milk",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "DewDrip",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Milk",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "SlimeMold",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 1.75,
+      "material": "PhytoOil",
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.75,
+      "material": "Dirt",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "PhytoOil",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Amber",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "PalmWood",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "Latex",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 2000,
+  "name": "Plant Pulverizer",
+  "power_w": 0
+ },
+ "MineralDeoxidizer": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 0.55,
+      "material": "Algae",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Oxygen",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 1500.0,
+  "name": "Oxygen Diffuser",
+  "power_w": -120
+ },
+ "MissileFabricator": {
+  "conversions": [
+   {
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.0125,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "k": 313.15,
+       "rule": "fixed"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "emitter"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.3125,
+      "material": "BasicRefinedMetals",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.0625,
+      "material": "MissileBasic",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.625,
+      "material": "BasicRefinedMetals",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.0125,
+      "material": "MissileLongRange",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.625,
+      "material": "BasicRefinedMetals",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.0125,
+      "material": "MissileLongRange",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 8000,
+  "name": "Blastshot Maker",
+  "power_w": -960
+ },
+ "OilRefinery": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 10,
+      "material": "CrudeOil",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 5,
+      "material": "Petroleum",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.09,
+      "material": "Methane",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 10000,
+  "name": "Oil Refinery",
+  "power_w": -480
+ },
+ "OilWellCap": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 3.3333333,
+      "material": "CrudeOil",
+      "temperature": {
+       "min_k": 363.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 2000,
+  "name": "Oil Well",
+  "power_w": -240
+ },
+ "OrbitalResearchCenter": {
+  "conversions": [
+   {
+    "batch_seconds": 33,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.030303,
+      "material": "OrbitalResearchDatabank",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 625.0,
+  "name": "Orbital Data Collection Lab",
+  "power_w": -60
+ },
+ "OxyliteRefinery": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.6,
+      "material": "OxyRock",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 12000,
+  "name": "Oxylite Refinery",
+  "power_w": -1200
+ },
+ "PeatGenerator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "Peat",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.04,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 383.15,
+       "rule": "max_building_or_min"
+      },
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.2,
+      "material": "DirtyWater",
+      "temperature": {
+       "min_k": 313.15,
+       "rule": "max_building_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "generator"
+   }
+  ],
+  "heat_dtu_s": 4500.0,
+  "name": "Peat Burner",
+  "power_w": 480
+ },
+ "PetroleumGenerator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 2,
+      "material": "CombustibleLiquid",
+      "via": "tagged_delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 383.15,
+       "rule": "max_building_or_min"
+      },
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.75,
+      "material": "DirtyWater",
+      "temperature": {
+       "min_k": 313.15,
+       "rule": "max_building_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "generator"
+   }
+  ],
+  "heat_dtu_s": 20000,
+  "name": "Petroleum Generator",
+  "power_w": 2000
+ },
+ "Polymerizer": {
+  "conversions": [
+   {
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.5,
+      "material": "Polypropylene",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 32500.0,
+  "name": "Polymer Press",
+  "power_w": -240
+ },
+ "RockCrusher": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.125,
+      "material": "EggShell",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.125,
+      "material": "Lime",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 1.5,
+      "material": "CrabShell",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.25,
+      "material": "SnailShell",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.25,
+      "material": "SnailIronShell",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Fossil",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.125,
+      "material": "Lime",
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 2.375,
+      "material": "SedimentaryRock",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Corallium",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.25,
+      "material": "Lime",
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 2.25,
+      "material": "Sand",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "GarbageElectrobank",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Katairite",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Salt",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Fullerene",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 3.0,
+      "material": "IceBellyPoop",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Urchin",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 2.5,
+      "material": "Diamond",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "GoldBellyCrown",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 6.25,
+      "material": "GoldAmalgam",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 16000,
+  "name": "Rock Crusher",
+  "power_w": -240
+ },
+ "RubberMaker": {
+  "conversions": [
+   {
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "k": 349.15,
+       "rule": "fixed"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "emitter"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 17000,
+  "name": "Vulcanizer",
+  "power_w": -480
+ },
+ "RustDeoxidizer": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 0.75,
+      "material": "Rust",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.25,
+      "material": "Salt",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.57,
+      "material": "Oxygen",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.029999971,
+      "material": "ChlorineGas",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.4,
+      "material": "IronOre",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 1125.0,
+  "name": "Rust Deoxidizer",
+  "power_w": -60
+ },
+ "Shower": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "Water",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 1,
+      "material": "DirtyWater",
+      "to": "liquid_conduit"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 250.0,
+  "name": "Shower"
+ },
+ "SludgePress": {
+  "conversions": [
+   {
+    "batch_seconds": 20,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 4000,
+  "name": "Sludge Press",
+  "power_w": -120
+ },
+ "Smoker": {
+  "conversions": [
+   {
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "CarbonDioxide",
+      "temperature": {
+       "min_k": 348.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "gas_conduit"
+     }
+    ],
+    "source": "element_converter"
+   },
+   {
+    "batch_seconds": 600,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.01,
+      "material": "DinosaurMeat",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.005333,
+      "material": "SmokedDinosaurMeat",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 600,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.006667,
+      "material": "SmokedFish",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 600,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 0.006667,
+      "material": "SmokedVegetables",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 9000,
+  "name": "Smoker"
+ },
+ "SublimationStation": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "ToxicSand",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.66,
+      "material": "ContaminatedOxygen",
+      "temperature": {
+       "min_k": 303.15,
+       "rule": "max_input_or_min"
+      },
+      "to": "environment"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 1500.0,
+  "name": "Sublimation Station",
+  "power_w": -60
+ },
+ "SuitFabricator": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 7.5,
+      "material": "BasicRefinedMetals",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.05,
+      "material": "Fabrics",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Atmo_Suit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Worn_Atmo_Suit",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.025,
+      "material": "Fabrics",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Atmo_Suit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 5.0,
+      "material": "Steel",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.05,
+      "material": "Fabrics",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Jet_Suit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Worn_Jet_Suit",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.025,
+      "material": "Fabrics",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Jet_Suit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 5.0,
+      "material": "Lead",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.25,
+      "material": "Glass",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Lead_Suit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Worn_Lead_Suit",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.125,
+      "material": "Glass",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.025,
+      "material": "Lead_Suit",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "name": "Exosuit Forge",
+  "power_w": -480
+ },
+ "SupermaterialRefinery": {
+  "conversions": [
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "Fullerene",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "HardPolypropylene",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "SuperInsulator",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "incomplete": true,
+    "inputs": [],
+    "outputs": [
+     {
+      "kg_per_second": 1.25,
+      "material": "TempConductorSolid",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 80,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.125,
+      "material": "EnrichedUranium",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.0125,
+      "material": "SelfChargingElectrobank",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 16000,
+  "name": "Molecular Forge",
+  "power_w": -1600
+ },
+ "SushiBar": {
+  "conversions": [
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BeanPlantSeed",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "SaltySticksFood",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Edamame",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BasicPlantBar",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Nori",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "FishMeat",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Maki",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Urchin",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "UrchinMeat",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   },
+   {
+    "batch_seconds": 50.0,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "BasicPlantBar",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "Nori",
+      "via": "delivery"
+     },
+     {
+      "kg_per_second": 0.02,
+      "material": "SquidMeat",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.02,
+      "material": "Nigiri",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 500.0,
+  "name": "Sushi Bar",
+  "power_w": 0
+ },
+ "UraniumCentrifuge": {
+  "conversions": [
+   {
+    "batch_seconds": 40,
+    "duplicant_operated": true,
+    "inputs": [
+     {
+      "kg_per_second": 0.25,
+      "material": "UraniumOre",
+      "via": "delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.05,
+      "material": "EnrichedUranium",
+      "to": "environment"
+     },
+     {
+      "kg_per_second": 0.2,
+      "material": "MoltenUranium",
+      "to": "environment"
+     }
+    ],
+    "source": "recipe"
+   }
+  ],
+  "heat_dtu_s": 625.0,
+  "name": "Uranium Centrifuge",
+  "power_w": -480
+ },
+ "WaterPurifier": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1,
+      "material": "Filter",
+      "via": "tagged_delivery"
+     },
+     {
+      "kg_per_second": 5,
+      "material": "DirtyWater",
+      "via": "liquid_conduit"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 5,
+      "material": "Water",
+      "to": "liquid_conduit"
+     },
+     {
+      "kg_per_second": 0.2,
+      "material": "ToxicSand",
+      "to": "storage"
+     }
+    ],
+    "source": "element_converter"
+   }
+  ],
+  "heat_dtu_s": 4000,
+  "name": "Water Sieve",
+  "power_w": -120
+ },
+ "WoodGasGenerator": {
+  "conversions": [
+   {
+    "inputs": [
+     {
+      "kg_per_second": 1.2,
+      "material": "BuildingWood",
+      "via": "tagged_delivery"
+     }
+    ],
+    "outputs": [
+     {
+      "kg_per_second": 0.17,
+      "material": "CarbonDioxide",
+      "to": "environment"
+     }
+    ],
+    "source": "generator"
+   }
+  ],
+  "heat_dtu_s": 9000,
+  "name": "Wood Burner",
+  "power_w": 300
+ }
+}
