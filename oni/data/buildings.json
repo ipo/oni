@@ -389,8 +389,53 @@
     },
     "showInStatusPanel": true
    },
+   "ElementConverter": {
+    "consumed": [
+     {
+      "element": {
+       "raw": "tag"
+      },
+      "kg_per_second": 0.030000001
+     },
+     {
+      "element": {
+       "raw": "tag2"
+      },
+      "kg_per_second": 0.3
+     }
+    ],
+    "produced": [
+     {
+      "element": "Oxygen",
+      "kg_per_second": 0.040000003,
+      "min_temperature": 303.15,
+      "offset_x": 0,
+      "offset_y": 1,
+      "store_output": false,
+      "use_entity_temperature": false
+     },
+     {
+      "element": "DirtyWater",
+      "kg_per_second": 0.29033336,
+      "min_temperature": 303.15,
+      "offset_x": 0,
+      "offset_y": 1,
+      "store_output": true,
+      "use_entity_temperature": false
+     }
+    ],
+    "spawnBubblesUnderLiquid": true
+   },
    "Storage": {
     "showInUI": true
+   },
+   "Storage#2": {
+    "allowItemRemoval": false,
+    "capacityKg": 360,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "storageFilters"
+    }
    }
   },
   "config_class": "AlgaeHabitatConfig",
@@ -2676,6 +2721,90 @@
     ],
     "invertElementFilter": true
    },
+   "ElementConverter": {
+    "consumed": [
+     {
+      "element": "SaltWater",
+      "kg_per_second": 5
+     }
+    ],
+    "produced": [
+     {
+      "element": "Water",
+      "kg_per_second": 4.65,
+      "min_temperature": 0,
+      "offset_x": 0,
+      "offset_y": 0.5,
+      "store_output": true,
+      "use_entity_temperature": false
+     },
+     {
+      "element": "Salt",
+      "kg_per_second": 0.35,
+      "min_temperature": 0,
+      "offset_x": 0,
+      "offset_y": 0.5,
+      "store_output": true,
+      "use_entity_temperature": false
+     }
+    ]
+   },
+   "ElementConverter#2": {
+    "consumed": [
+     {
+      "element": "Brine",
+      "kg_per_second": 5
+     }
+    ],
+    "produced": [
+     {
+      "element": "Water",
+      "kg_per_second": 3.5,
+      "min_temperature": 0,
+      "offset_x": 0,
+      "offset_y": 0.5,
+      "store_output": true,
+      "use_entity_temperature": false
+     },
+     {
+      "element": "Salt",
+      "kg_per_second": 1.5,
+      "min_temperature": 0,
+      "offset_x": 0,
+      "offset_y": 0.5,
+      "store_output": true,
+      "use_entity_temperature": false
+     }
+    ]
+   },
+   "ElementConverter#3": {
+    "consumed": [
+     {
+      "element": "MurkyBrine",
+      "kg_per_second": 5
+     }
+    ],
+    "produced": [
+     {
+      "element": "DirtyWater",
+      "kg_per_second": 3.5,
+      "min_temperature": 0,
+      "offset_x": 0,
+      "offset_y": 0.5,
+      "store_output": true,
+      "use_entity_temperature": false
+     },
+     {
+      "element": "Salt",
+      "kg_per_second": 1.5,
+      "min_temperature": 0,
+      "offset_x": 0,
+      "offset_y": 0.5,
+      "store_output": true,
+      "use_entity_temperature": false
+     }
+    ]
+   },
    "Storage": {
     "showInUI": true
    }
@@ -3759,6 +3888,16 @@
     "showDescriptor": true,
     "showInUI": true,
     "storageID": "FishFeederTop"
+   },
+   "Storage#2": {
+    "allowItemRemoval": false,
+    "capacityKg": 200,
+    "dropOffset": {
+     "raw": "Vector2.up * 3.5f"
+    },
+    "showDescriptor": true,
+    "showInUI": true,
+    "storageID": "FishFeederBot"
    }
   },
   "config_class": "FishFeederConfig",
@@ -4182,6 +4321,33 @@
  "FoodRehydrator": {
   "anim": "Rehydrator_kanim",
   "build_location_rule": "OnFloor",
+  "components": {
+   "ConduitConsumer": {
+    "alwaysConsume": true,
+    "capacityKG": {
+     "raw": "storage2.capacityKg"
+    },
+    "capacityTag": {
+     "raw": "REHYDRATION_TAG"
+    },
+    "storage": {
+     "raw": "storage2"
+    }
+   },
+   "Storage": {
+    "allowItemRemoval": false,
+    "capacityKg": 5,
+    "showCapacityAsMainStatus": true,
+    "showCapacityStatusItem": true,
+    "showDescriptor": false,
+    "showInUI": true
+   },
+   "Storage#2": {
+    "allowItemRemoval": false,
+    "capacityKg": 20,
+    "showCapacityStatusItem": true
+   }
+  },
   "config_class": "FoodRehydratorConfig",
   "construction_mass": [
    100.0,
@@ -5512,6 +5678,11 @@
     "elementFilter": [
      "LiquidGunk"
     ]
+   },
+   "Storage": {
+    "capacityKg": {
+     "raw": "STORAGE_CAPACITY"
+    }
    }
   },
   "config_class": "GunkEmptierConfig",
@@ -5631,6 +5802,16 @@
  "HabitatModuleMedium": {
   "anim": "rocket_habitat_medium_module_kanim",
   "build_location_rule": "Anywhere",
+  "components": {
+   "Storage": {
+    "capacityKg": 10,
+    "showInUI": false
+   },
+   "Storage#2": {
+    "capacityKg": 1,
+    "showInUI": false
+   }
+  },
   "config_class": "HabitatModuleMediumConfig",
   "construction_mass": [
    500.0
@@ -5659,6 +5840,16 @@
  "HabitatModuleSmall": {
   "anim": "rocket_nosecone_kanim",
   "build_location_rule": "Anywhere",
+  "components": {
+   "Storage": {
+    "capacityKg": 10,
+    "showInUI": false
+   },
+   "Storage#2": {
+    "capacityKg": 1,
+    "showInUI": false
+   }
+  },
   "config_class": "HabitatModuleSmallConfig",
   "construction_mass": [
    200.0
@@ -5756,6 +5947,24 @@
     "storage": {
      "raw": "storage2"
     }
+   },
+   "Storage": {
+    "showDescriptor": false,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "STORAGEFILTERS.LIQUIDS"
+    }
+   },
+   "Storage#2": {
+    "showDescriptor": false,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "STORAGEFILTERS.LIQUIDS"
+    }
+   },
+   "Storage#3": {
+    "showDescriptor": false,
+    "showInUI": true
    }
   },
   "config_class": "HeatCompressorConfig",
@@ -5847,6 +6056,11 @@
  "HijackedHeadquarters": {
   "anim": "hijacked_hq_kanim",
   "build_location_rule": "OnFloor",
+  "components": {
+   "Storage": {
+    "capacityKg": 275
+   }
+  },
   "config_class": "HijackedHeadquartersConfig",
   "construction_mass": [
    800.0
@@ -6085,6 +6299,14 @@
  "IceCooledFan": {
   "anim": "fanice_kanim",
   "build_location_rule": "OnFloor",
+  "components": {
+   "Storage": {
+    "capacityKg": 50
+   },
+   "Storage#2": {
+    "capacityKg": 50
+   }
+  },
   "config_class": "IceCooledFanConfig",
   "construction_mass": [
    400.0
@@ -6124,6 +6346,17 @@
      "raw": "Mathf.Ceil(152.80188f)"
     },
     "showInUI": true
+   },
+   "Storage#2": {
+    "allowItemRemoval": false,
+    "capacityKg": 1000,
+    "showInUI": true
+   },
+   "Storage#3": {
+    "allowItemRemoval": true,
+    "capacityKg": 500,
+    "showDescriptor": true,
+    "showInUI": true
    }
   },
   "config_class": "IceKettleConfig",
@@ -6162,6 +6395,13 @@
   "components": {
    "Storage": {
     "capacityKg": 60,
+    "showInUI": true
+   },
+   "Storage#2": {
+    "allowItemRemoval": true,
+    "allowUIItemRemoval": true,
+    "capacityKg": 300,
+    "ignoreSourcePriority": true,
     "showInUI": true
    }
   },
@@ -7212,6 +7452,10 @@
      "raw": "storage"
     },
     "storeOnConsume": true
+   },
+   "Storage": {},
+   "Storage#2": {
+    "capacityKg": 100
    }
   },
   "config_class": "LiquidCooledFanConfig",
@@ -9331,10 +9575,6 @@
      {
       "element": "Milk",
       "kg_per_second": 1
-     },
-     {
-      "element": "FishMilk",
-      "kg_per_second": 1
      }
     ],
     "produced": [
@@ -9362,7 +9602,17 @@
       "offset_y": 3,
       "store_output": false,
       "use_entity_temperature": false
-     },
+     }
+    ]
+   },
+   "ElementConverter#2": {
+    "consumed": [
+     {
+      "element": "FishMilk",
+      "kg_per_second": 1
+     }
+    ],
+    "produced": [
      {
       "element": "Mucus",
       "kg_per_second": 0.80999994,
@@ -9715,6 +9965,25 @@
  "MissileLauncher": {
   "anim": "missile_launcher_kanim",
   "build_location_rule": "OnFloor",
+  "components": {
+   "Storage": {
+    "allowSettingOnlyFetchMarkedItems": false,
+    "capacityKg": 1000,
+    "fetchCategory": {
+     "raw": "Storage.FetchCategory.GeneralStorage"
+    },
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "CosmicBlastShotTypes"
+    },
+    "storageID": "MissileLongRange"
+   },
+   "Storage#2": {
+    "capacityKg": 200,
+    "showInUI": false,
+    "storageID": "CondiutStorage"
+   }
+  },
   "config_class": "MissileLauncherConfig",
   "construction_mass": [
    400.0
@@ -10130,7 +10399,8 @@
     "wrongElementResult": {
      "raw": "ConduitConsumer.WrongElementResult.Dump"
     }
-   }
+   },
+   "Storage": {}
   },
   "config_class": "NuclearReactorConfig",
   "construction_mass": [
@@ -10250,6 +10520,9 @@
     "wrongElementResult": {
      "raw": "ConduitConsumer.WrongElementResult.Dump"
     }
+   },
+   "Storage": {
+    "capacityKg": 400.0
    }
   },
   "config_class": "OilChangerConfig",
@@ -10428,6 +10701,19 @@
  "OrbitalCargoModule": {
   "anim": "rocket_orbital_deploy_cargo_module_kanim",
   "build_location_rule": "Anywhere",
+  "components": {
+   "Storage": {
+    "capacityKg": {
+     "raw": "TOTAL_STORAGE_MASS"
+    },
+    "showCapacityStatusItem": true,
+    "showDescriptor": true,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "list"
+    }
+   }
+  },
   "config_class": "OrbitalCargoModuleConfig",
   "construction_mass": [
    400.0
@@ -10793,6 +11079,32 @@
      "raw": "storage2"
     },
     "storeOnConsume": true
+   },
+   "ElementConsumer#2": {
+    "configuration": {
+     "raw": "ElementConsumer.Configuration.AllGas"
+    },
+    "consumptionRadius": 2,
+    "consumptionRate": 0.5,
+    "elementToConsume": "ContaminatedOxygen",
+    "showInStatusPanel": false,
+    "storage": {
+     "raw": "storage2"
+    },
+    "storeOnConsume": true
+   },
+   "Storage": {
+    "capacityKg": 45,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "new List<Tag> { GameTags.Metal }"
+    }
+   },
+   "Storage#2": {
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "new List<Tag> { GameTags.Breathable }"
+    }
    }
   },
   "config_class": "OxygenMaskStationConfig",
@@ -11224,6 +11536,11 @@
  "PioneerModule": {
   "anim": "rocket_pioneer_cargo_module_kanim",
   "build_location_rule": "Anywhere",
+  "components": {
+   "Storage": {
+    "showInUI": true
+   }
+  },
   "config_class": "PioneerModuleConfig",
   "construction_mass": [
    200.0
@@ -12331,6 +12648,12 @@
  "RoboPilotCommandModule": {
   "anim": "robo_command_capsule_kanim",
   "build_location_rule": "BuildingAttachPoint",
+  "components": {
+   "Storage": {
+    "capacityKg": 100,
+    "showInUI": true
+   }
+  },
   "config_class": "RoboPilotCommandModuleConfig",
   "construction_mass": [
    200.0
@@ -12359,6 +12682,12 @@
  "RoboPilotModule": {
   "anim": "robot_rocket_control_station_kanim",
   "build_location_rule": "Anywhere",
+  "components": {
+   "Storage": {
+    "capacityKg": 100,
+    "showInUI": true
+   }
+  },
   "config_class": "RoboPilotModuleConfig",
   "construction_mass": [
    200.0
@@ -12517,6 +12846,12 @@
  "RocketInteriorGasInputPort": {
   "anim": "rocket_interior_port_gas_in_kanim",
   "build_location_rule": "Tile",
+  "components": {
+   "Storage": {
+    "capacityKg": 1,
+    "showInUI": false
+   }
+  },
   "config_class": "RocketInteriorGasInputPortConfig",
   "construction_mass": [
    100.0
@@ -12661,6 +12996,12 @@
  "RocketInteriorLiquidInputPort": {
   "anim": "rocket_interior_port_liquid_in_kanim",
   "build_location_rule": "Tile",
+  "components": {
+   "Storage": {
+    "capacityKg": 10,
+    "showInUI": false
+   }
+  },
   "config_class": "RocketInteriorLiquidInputPortConfig",
   "construction_mass": [
    100.0
@@ -13143,6 +13484,11 @@
  "ScoutModule": {
   "anim": "rocket_scout_cargo_module_kanim",
   "build_location_rule": "Anywhere",
+  "components": {
+   "Storage": {
+    "showInUI": true
+   }
+  },
   "config_class": "ScoutModuleConfig",
   "construction_mass": [
    200.0
@@ -13502,7 +13848,8 @@
       "use_entity_temperature": false
      }
     ]
-   }
+   },
+   "Storage": {}
   },
   "config_class": "SmokerConfig",
   "construction_mass": [
@@ -14089,6 +14436,12 @@
     "storageFilters": {
      "raw": "new List<Tag> { GameTags.BagableCreature }"
     }
+   },
+   "Storage#2": {
+    "allowItemRemoval": false,
+    "allowSettingOnlyFetchMarkedItems": false,
+    "showCapacityStatusItem": false,
+    "showInUI": false
    }
   },
   "config_class": "SpecialCargoBayClusterConfig",
@@ -14119,6 +14472,37 @@
  "SpiceGrinder": {
   "anim": "spice_grinder_kanim",
   "build_location_rule": "OnFloor",
+  "components": {
+   "Storage": {
+    "allowItemRemoval": false,
+    "allowSettingOnlyFetchMarkedItems": false,
+    "capacityKg": 1,
+    "fetchCategory": {
+     "raw": "Storage.FetchCategory.Building"
+    },
+    "showCapacityStatusItem": false,
+    "showDescriptor": true,
+    "showInUI": true,
+    "showSideScreenTitleBar": true,
+    "storageFilters": {
+     "raw": "new List<Tag> { GameTags.Edible }"
+    },
+    "storageFullMargin": 0.5
+   },
+   "Storage#2": {
+    "allowItemRemoval": false,
+    "fetchCategory": {
+     "raw": "Storage.FetchCategory.Building"
+    },
+    "showCapacityStatusItem": true,
+    "showDescriptor": true,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "new List<Tag> { GameTags.Seed }"
+    },
+    "storageFullMargin": 0.5
+   }
+  },
   "config_class": "SpiceGrinderConfig",
   "construction_mass": [
    400.0
@@ -14791,6 +15175,39 @@
  "SweepBotStation": {
   "anim": "sweep_bot_base_station_kanim",
   "build_location_rule": "OnFloor",
+  "components": {
+   "Storage": {
+    "allowClearable": false,
+    "allowItemRemoval": false,
+    "capacityKg": 25,
+    "fetchCategory": {
+     "raw": "Storage.FetchCategory.Building"
+    },
+    "ignoreSourcePriority": true,
+    "showDescriptor": false,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "STORAGEFILTERS.STORAGE_LOCKERS_STANDARD"
+    },
+    "storageFullMargin": 0.5
+   },
+   "Storage#2": {
+    "allowClearable": true,
+    "allowItemRemoval": true,
+    "capacityKg": 1000,
+    "fetchCategory": {
+     "raw": "Storage.FetchCategory.StorageSweepOnly"
+    },
+    "ignoreSourcePriority": true,
+    "showCapacityStatusItem": true,
+    "showDescriptor": true,
+    "showInUI": true,
+    "storageFilters": {
+     "raw": "STORAGEFILTERS.STORAGE_LOCKERS_STANDARD"
+    },
+    "storageFullMargin": 0.5
+   }
+  },
   "config_class": "SweepBotStationConfig",
   "construction_mass": [
    {
@@ -15532,6 +15949,34 @@
  "VerticalWindTunnel": {
   "anim": "wind_tunnel_kanim",
   "build_location_rule": "OnFloor",
+  "components": {
+   "ElementConsumer": {
+    "configuration": {
+     "raw": "ElementConsumer.Configuration.AllGas"
+    },
+    "consumptionRadius": 2,
+    "consumptionRate": 3,
+    "sampleCellOffset": {
+     "raw": "new Vector3(0f, -2f, 0f)"
+    },
+    "showDescriptor": false,
+    "showInStatusPanel": false,
+    "storeOnConsume": false
+   },
+   "ElementConsumer#2": {
+    "configuration": {
+     "raw": "ElementConsumer.Configuration.AllGas"
+    },
+    "consumptionRadius": 2,
+    "consumptionRate": 3,
+    "sampleCellOffset": {
+     "raw": "new Vector3(0f, 6f, 0f)"
+    },
+    "showDescriptor": false,
+    "showInStatusPanel": false,
+    "storeOnConsume": false
+   }
+  },
   "config_class": "VerticalWindTunnelConfig",
   "construction_mass": [
    1200.0
