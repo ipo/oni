@@ -69,11 +69,17 @@
      {
       "kg_per_second": 0.14333335,
       "material": "Clay",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "storage"
      },
      {
       "kg_per_second": 0.089999996,
       "material": "Oxygen",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "environment"
      }
     ],
@@ -354,6 +360,9 @@
      {
       "kg_per_second": 1,
       "material": "DirtyWater",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      }
     ],
@@ -1104,11 +1113,17 @@
      {
       "kg_per_second": 4.65,
       "material": "Water",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      },
      {
       "kg_per_second": 0.35,
       "material": "Salt",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "storage"
      }
     ],
@@ -1126,11 +1141,17 @@
      {
       "kg_per_second": 3.5,
       "material": "Water",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      },
      {
       "kg_per_second": 1.5,
       "material": "Salt",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "storage"
      }
     ],
@@ -1148,11 +1169,17 @@
      {
       "kg_per_second": 3.5,
       "material": "DirtyWater",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      },
      {
       "kg_per_second": 1.5,
       "material": "Salt",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "storage"
      }
     ],
@@ -1419,6 +1446,9 @@
      {
       "kg_per_second": 0.02,
       "material": "CarbonDioxide",
+      "temperature": {
+       "rule": "building_temperature"
+      },
       "to": "environment"
      }
     ],
@@ -2004,11 +2034,17 @@
      {
       "kg_per_second": 0.089999996,
       "material": "MilkFat",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "storage"
      },
      {
       "kg_per_second": 0.80999994,
       "material": "Brine",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      },
      {
@@ -2035,6 +2071,9 @@
      {
       "kg_per_second": 0.80999994,
       "material": "Mucus",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      },
      {
@@ -2856,6 +2895,9 @@
      {
       "kg_per_second": 1,
       "material": "DirtyWater",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      }
     ],
@@ -3367,11 +3409,17 @@
      {
       "kg_per_second": 5,
       "material": "Water",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "liquid_conduit"
      },
      {
       "kg_per_second": 0.2,
       "material": "ToxicSand",
+      "temperature": {
+       "rule": "input_temperature"
+      },
       "to": "storage"
      }
     ],
@@ -3396,6 +3444,9 @@
      {
       "kg_per_second": 0.17,
       "material": "CarbonDioxide",
+      "temperature": {
+       "rule": "building_temperature"
+      },
       "to": "environment"
      }
     ],
