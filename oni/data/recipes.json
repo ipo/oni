@@ -1,0 +1,3020 @@
+{
+ "AdvancedApothecary": [
+  {
+   "fabricator": "AdvancedApothecary",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Carbon"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "IntermediateRadPill",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 50.0
+  }
+ ],
+ "AdvancedCraftingTable": [
+  {
+   "fabricator": "AdvancedCraftingTable",
+   "ingredients": [
+    {
+     "amount": 200,
+     "material": "Katairite"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "EmptyElectrobank",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "AdvancedCraftingTable",
+   "ingredients": [
+    {
+     "amount": 200,
+     "material": "Polypropylene"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "FetchDrone",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "AdvancedCraftingTable",
+   "ingredients": [
+    {
+     "amount": 200,
+     "material": "HardPolypropylene"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "FetchDrone",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  }
+ ],
+ "AdvancedCureConfig": [
+  {
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Steel"
+    },
+    {
+     "amount": 1,
+     "material": "LightBugOrangeEgg"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "AdvancedCure",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 200.0
+  }
+ ],
+ "Apothecary": [
+  {
+   "fabricator": "Apothecary",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Carbon"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "BasicBooster",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 50.0
+  },
+  {
+   "fabricator": "Apothecary",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Carbon"
+    },
+    {
+     "amount": 1,
+     "material": "Water"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "BasicCure",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 50.0
+  },
+  {
+   "fabricator": "Apothecary",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Carbon"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "BasicRadPill",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 50.0
+  },
+  {
+   "fabricator": "Apothecary",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "SpiceNut"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "IntermediateBooster",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 100.0
+  },
+  {
+   "fabricator": "Apothecary",
+   "ingredients": [
+    {
+     "amount": 80.0,
+     "material": "LiquidGunk"
+    },
+    {
+     "amount": 200,
+     "material": "Water"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "LubricationStick",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": 200,
+     "material": "DirtyWater",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 100.0
+  },
+  {
+   "fabricator": "Apothecary",
+   "ingredients": [
+    {
+     "amount": 10,
+     "material": "Tallow"
+    },
+    {
+     "amount": {
+      "raw": "GunkMonitor.GUNK_CAPACITY - 10f"
+     },
+     "material": "Water"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "TallowLubricationStick",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 100.0
+  }
+ ],
+ "BionicUpgradeComponentConfig": [
+  {
+   "ingredients": [],
+   "results": [
+    {
+     "amount": 1,
+     "material": {
+      "raw": "ID.ToTag()"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "ingredients": [],
+   "results": [
+    {
+     "amount": 1,
+     "material": {
+      "raw": "ID"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  }
+ ],
+ "ChemicalRefinery": [
+  {
+   "fabricator": "ChemicalRefinery",
+   "ingredients": [
+    {
+     "amount": 93,
+     "material": "Water"
+    },
+    {
+     "amount": 7,
+     "material": "Salt"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "SaltWater",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "ChemicalRefinery",
+   "ingredients": [
+    {
+     "amount": 160,
+     "material": "PhytoOil"
+    },
+    {
+     "amount": 40,
+     "material": "BleachStone"
+    }
+   ],
+   "results": [
+    {
+     "amount": 200,
+     "material": "RefinedLipid",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "ChemicalRefinery",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "100f * num"
+     },
+     "material": "Fullerene"
+    },
+    {
+     "amount": {
+      "raw": "100f * num2"
+     },
+     "material": "Gold"
+    },
+    {
+     "amount": {
+      "raw": "100f * num2"
+     },
+     "material": "Petroleum"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "SuperCoolant",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 80.0
+  },
+  {
+   "fabricator": "ChemicalRefinery",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "100f * num3"
+     },
+     "material": "Isoresin"
+    },
+    {
+     "amount": {
+      "raw": "100f * (1f - num3)"
+     },
+     "material": "Petroleum"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "ViscoGel",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 80.0
+  }
+ ],
+ "Chlorinator": [
+  {
+   "fabricator": "Chlorinator",
+   "ingredients": [
+    {
+     "amount": 30,
+     "material": "Salt"
+    },
+    {
+     "amount": 0.5,
+     "material": "Gold"
+    }
+   ],
+   "results": [
+    {
+     "amount": 10,
+     "material": {
+      "raw": "BLEACH_STONE_TAG"
+     }
+    },
+    {
+     "amount": 19.999998,
+     "material": {
+      "raw": "SAND_TAG"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ],
+ "ClothingAlterationStation": [
+  {
+   "fabricator": "ClothingAlterationStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Funky_Vest"
+    },
+    {
+     "amount": 3,
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "CustomClothing",
+     "store_element": {
+      "raw": "item.Id"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  }
+ ],
+ "ClothingFabricator": [
+  {
+   "fabricator": "ClothingFabricator",
+   "ingredients": [
+    {
+     "amount": 4,
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Warm_Vest",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "ClothingFabricator",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "TUNING.EQUIPMENT.VESTS.FUNKY_VEST_MASS"
+     },
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Funky_Vest",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "ClothingFabricator",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": [
+      "Rubber"
+     ],
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": 2,
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "DrySuit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "ClothingFabricator",
+   "ingredients": [
+    {
+     "amount": 50.0,
+     "material": [
+      "Rubber"
+     ],
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "RubberBoots",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  }
+ ],
+ "CookingStation": [
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 3,
+     "material": "BasicPlantFood"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "PickledMeal",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "MushBar"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "FriedMushBar",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Mushroom"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "FriedMushroom",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "RawEgg"
+    },
+    {
+     "amount": 2,
+     "material": [
+      "ColdWheatSeed",
+      "FernFood"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Pancakes",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 2,
+     "material": "Meat"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "CookedMeat",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": [
+      "FishMeat",
+      "ShellfishMeat"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "CookedFish",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "PrickleFruit"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "GrilledPrickleFruit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "SwampFruit"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "SwampDelights",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 3,
+     "material": [
+      "ColdWheatSeed",
+      "FernFood"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "ColdWheatBread",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "RawEgg"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "CookedEgg",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "WormBasicFruit"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "WormBasicFood",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 8,
+     "material": "WormSuperFruit"
+    },
+    {
+     "amount": 4,
+     "material": "Sucrose"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "WormSuperFood",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "HardSkinBerry"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "CookedPikeapple",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "ButterflyPlantSeed"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "ButterflyFood",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  }
+ ],
+ "CraftingTable": [
+  {
+   "fabricator": "CraftingTable",
+   "ingredients": [
+    {
+     "amount": 200,
+     "material": {
+      "raw": "inputMetals"
+     },
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "DisposableElectrobank_RawMetal",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CraftingTable",
+   "ingredients": [
+    {
+     "amount": 50,
+     "material": "BasicMetalOres",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Oxygen_Mask",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CraftingTable",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Worn_Oxygen_Mask"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Oxygen_Mask",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CraftingTable",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "(float)num * 50f"
+     },
+     "material": [
+      "Rubber"
+     ],
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1.0,
+     "material": "RubberGasket",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CraftingTable",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "(float)num2 * 50f"
+     },
+     "material": [
+      "Polypropylene"
+     ],
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1.0,
+     "material": "PlasticGasket",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "CraftingTable",
+   "ingredients": [
+    {
+     "amount": 200,
+     "material": {
+      "raw": "inputMetals"
+     },
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "DisposableElectrobank_RawMetal",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  }
+ ],
+ "DataMiner": [
+  {
+   "fabricator": "DataMiner",
+   "ingredients": [
+    {
+     "amount": 5,
+     "material": {
+      "raw": "INPUT_MATERIAL_TAG"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": {
+      "raw": "OUTPUT_MATERIAL_TAG"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 200.0
+  }
+ ],
+ "Deepfryer": [
+  {
+   "fabricator": "Deepfryer",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Carrot"
+    },
+    {
+     "amount": 1,
+     "material": "Tallow"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "FriesCarrot",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "Deepfryer",
+   "ingredients": [
+    {
+     "amount": 6,
+     "material": "BeanPlantSeed"
+    },
+    {
+     "amount": 1,
+     "material": "Tallow"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "DeepFriedNosh",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "Deepfryer",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "FishMeat"
+    },
+    {
+     "amount": 2.4,
+     "material": "Tallow"
+    },
+    {
+     "amount": 2,
+     "material": [
+      "ColdWheatSeed",
+      "FernFood"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "DeepFriedFish",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "Deepfryer",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "ShellfishMeat"
+    },
+    {
+     "amount": 2.4,
+     "material": "Tallow"
+    },
+    {
+     "amount": 2,
+     "material": [
+      "ColdWheatSeed",
+      "FernFood"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "DeepFriedShellfish",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  }
+ ],
+ "DiamondPress": [
+  {
+   "fabricator": "DiamondPress",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": "RefinedCarbon"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "Diamond",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 80.0
+  }
+ ],
+ "FabricatedWoodMaker": [
+  {
+   "fabricator": "FabricatedWoodMaker",
+   "ingredients": [
+    {
+     "amount": 90,
+     "material": "PlantFiber"
+    },
+    {
+     "amount": 10.0,
+     "material": "NaturalResin"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "FabricatedWood",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 40
+  }
+ ],
+ "FoodDehydrator": [
+  {
+   "fabricator": "FoodDehydrator",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "6000000f / item.CaloriesPerUnit"
+     },
+     "material": {
+      "raw": "item"
+     }
+    },
+    {
+     "amount": 12,
+     "material": "Polypropylene"
+    }
+   ],
+   "results": [
+    {
+     "amount": 6,
+     "material": {
+      "raw": "item2"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Dehydrated"
+     }
+    },
+    {
+     "amount": 6,
+     "material": "Water",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 250.0
+  }
+ ],
+ "FossilDig": [
+  {
+   "fabricator": "FossilDig",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Diamond"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "Fossil"
+    }
+   ],
+   "time": 80.0
+  }
+ ],
+ "GlassForge": [
+  {
+   "fabricator": "GlassForge",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": "Sand"
+    }
+   ],
+   "results": [
+    {
+     "amount": 25,
+     "material": "MoltenGlass",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Melted"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ],
+ "GourmetCookingStation": [
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 2,
+     "material": "GrilledPrickleFruit"
+    },
+    {
+     "amount": 2,
+     "material": "SpiceNut"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Salsa",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "FriedMushroom"
+    },
+    {
+     "amount": 4,
+     "material": "Lettuce"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "MushroomWrap",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "CookedMeat"
+    },
+    {
+     "amount": 1,
+     "material": "CookedFish"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "SurfAndTurf",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 10,
+     "material": [
+      "ColdWheatSeed",
+      "FernFood"
+     ]
+    },
+    {
+     "amount": 1,
+     "material": "SpiceNut"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "SpiceBread",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Tofu"
+    },
+    {
+     "amount": 1,
+     "material": "SpiceNut"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "SpicyTofu",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 4,
+     "material": "GingerConfig"
+    },
+    {
+     "amount": 4,
+     "material": "BeanPlantSeed"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Curry",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "CookedEgg"
+    },
+    {
+     "amount": 1,
+     "material": "Lettuce"
+    },
+    {
+     "amount": 1,
+     "material": "FriedMushroom"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Quiche",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "ColdWheatBread"
+    },
+    {
+     "amount": 1,
+     "material": "Lettuce"
+    },
+    {
+     "amount": 1,
+     "material": "CookedMeat"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Burger",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "GourmetCookingStation",
+   "ingredients": [
+    {
+     "amount": 3,
+     "material": [
+      "ColdWheatSeed",
+      "FernFood"
+     ]
+    },
+    {
+     "amount": 4,
+     "material": "WormSuperFruit"
+    },
+    {
+     "amount": [
+      1,
+      1.6667,
+      6.153
+     ],
+     "material": [
+      "GrilledPrickleFruit",
+      "CookedPikeapple",
+      "VineFruit"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "BerryPie",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  }
+ ],
+ "IntermediateCureConfig": [
+  {
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "SwampLilyFlower"
+    },
+    {
+     "amount": 1,
+     "material": "Phosphorite"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "IntermediateCure"
+    }
+   ],
+   "time": 100.0
+  }
+ ],
+ "Kiln": [
+  {
+   "fabricator": "Kiln",
+   "ingredients": [
+    {
+     "amount": 100.0,
+     "material": {
+      "raw": "material"
+     }
+    },
+    {
+     "amount": 25.0,
+     "material": {
+      "raw": "GameTags.BasicWoods.Append(new Tag[2]\n\t\t\t{\n\t\t\t\tSimHashes.Carbon.CreateTag(),\n\t\t\t\tSimHashes.Peat.CreateTag()\n\t\t\t})"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 100.0,
+     "material": {
+      "raw": "tag"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "Kiln",
+   "ingredients": [
+    {
+     "amount": [
+      200,
+      200,
+      200,
+      125,
+      300
+     ],
+     "material": {
+      "raw": "GameTags.BasicWoods.Append(new Tag[2] { tag2, tag3 })"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": {
+      "raw": "tag4"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ],
+ "ManualHighEnergyParticleSpawner": [
+  {
+   "fabricator": "ManualHighEnergyParticleSpawner",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "UraniumOre"
+    }
+   ],
+   "results": [
+    {
+     "amount": 0.5,
+     "material": {
+      "raw": "WASTE_MATERIAL"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "ManualHighEnergyParticleSpawner",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "EnrichedUranium"
+    }
+   ],
+   "results": [
+    {
+     "amount": 0.8,
+     "material": {
+      "raw": "WASTE_MATERIAL"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ],
+ "MetalRefinery": [
+  {
+   "fabricator": "MetalRefinery",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": {
+      "raw": "item.tag"
+     }
+    }
+   ],
+   "results": [],
+   "time": 40.0
+  },
+  {
+   "fabricator": "MetalRefinery",
+   "ingredients": [
+    {
+     "amount": 70,
+     "material": "Iron"
+    },
+    {
+     "amount": 20,
+     "material": "RefinedCarbon"
+    },
+    {
+     "amount": 10,
+     "material": "Lime"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "Steel",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ],
+ "MicrobeMusher": [
+  {
+   "fabricator": "MicrobeMusher",
+   "ingredients": [
+    {
+     "amount": 75,
+     "material": "Dirt"
+    },
+    {
+     "amount": 75,
+     "material": [
+      "Water",
+      "Mucus"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "MushBar",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "MicrobeMusher",
+   "ingredients": [
+    {
+     "amount": 2,
+     "material": "BasicPlantFood"
+    },
+    {
+     "amount": 50,
+     "material": [
+      "Water",
+      "Mucus"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "BasicPlantBar",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "MicrobeMusher",
+   "ingredients": [
+    {
+     "amount": 6,
+     "material": "BeanPlantSeed"
+    },
+    {
+     "amount": 50,
+     "material": "Water"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Tofu",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "MicrobeMusher",
+   "ingredients": [
+    {
+     "amount": 5,
+     "material": [
+      "ColdWheatSeed",
+      "FernFood"
+     ]
+    },
+    {
+     "amount": [
+      1,
+      2
+     ],
+     "material": [
+      "PrickleFruit",
+      "HardSkinBerry"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "FruitCake",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "MicrobeMusher",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Meat"
+    },
+    {
+     "amount": 1,
+     "material": "Tallow"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Pemmican",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "MicrobeMusher",
+   "ingredients": [
+    {
+     "amount": 6,
+     "material": [
+      "BasicSingleHarvestPlantSeed",
+      "PrickleFlowerSeed",
+      "MushroomSeed",
+      "SeaLettuceSeed",
+      "BeanPlantSeed",
+      "ColdWheatSeed"
+     ]
+    },
+    {
+     "amount": 30,
+     "material": [
+      "Water",
+      "Mucus"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 6,
+     "material": "FishFood",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  }
+ ],
+ "MilkPress": [
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": 10,
+     "material": "ColdWheatSeed"
+    },
+    {
+     "amount": 15,
+     "material": [
+      "Water",
+      "Mucus"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 20,
+     "material": "Milk",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40
+  },
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": 3,
+     "material": "SpiceNut"
+    },
+    {
+     "amount": 17,
+     "material": [
+      "Water",
+      "Mucus"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 20,
+     "material": "Milk",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40
+  },
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": 2,
+     "material": "BeanPlantSeed"
+    },
+    {
+     "amount": 18,
+     "material": [
+      "Water",
+      "Mucus"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 20,
+     "material": "Milk",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40
+  },
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": 2,
+     "material": "DewDrip"
+    }
+   ],
+   "results": [
+    {
+     "amount": 20,
+     "material": "Milk",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40
+  },
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": "SlimeMold"
+    }
+   ],
+   "results": [
+    {
+     "amount": 70,
+     "material": "PhytoOil",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": 30,
+     "material": "Dirt",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "num * 0.25f"
+     },
+     "material": "Kelp"
+    },
+    {
+     "amount": {
+      "raw": "num * 0.75f"
+     },
+     "material": "Water"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100.0,
+     "material": "PhytoOil",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40
+  },
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": 100.0,
+     "material": "Amber"
+    }
+   ],
+   "results": [
+    {
+     "amount": {
+      "raw": "num3 * num2"
+     },
+     "material": "NaturalResin",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": {
+      "raw": "num4 * num2"
+     },
+     "material": "Fossil",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": {
+      "raw": "num5 * num2"
+     },
+     "material": "Sand",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40
+  },
+  {
+   "fabricator": "MilkPress",
+   "ingredients": [
+    {
+     "amount": 100.0,
+     "material": "PalmWood"
+    }
+   ],
+   "results": [
+    {
+     "amount": 50.0,
+     "material": "Latex",
+     "store_element": true,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40
+  }
+ ],
+ "MissileFabricator": [
+  {
+   "fabricator": "MissileFabricator",
+   "ingredients": [
+    {
+     "amount": 25,
+     "material": "BasicRefinedMetals",
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    },
+    {
+     "amount": 50,
+     "material": [
+      "Petroleum",
+      "RefinedLipid"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 5,
+     "material": "MissileBasic",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 80
+  },
+  {
+   "fabricator": "MissileFabricator",
+   "ingredients": [
+    {
+     "amount": 50,
+     "material": "BasicRefinedMetals",
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    },
+    {
+     "amount": 100,
+     "material": [
+      "Fertilizer",
+      "Peat"
+     ]
+    },
+    {
+     "amount": 200,
+     "material": [
+      "Petroleum",
+      "RefinedLipid"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "MissileLongRange",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 80
+  },
+  {
+   "fabricator": "MissileFabricator",
+   "ingredients": [
+    {
+     "amount": 50,
+     "material": "BasicRefinedMetals",
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    },
+    {
+     "amount": 100,
+     "material": [
+      "Fertilizer",
+      "Peat"
+     ]
+    },
+    {
+     "amount": 200,
+     "material": [
+      "Petroleum",
+      "RefinedLipid"
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "MissileLongRange",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 80
+  }
+ ],
+ "OrbitalResearchCenter": [
+  {
+   "fabricator": "OrbitalResearchCenter",
+   "ingredients": [
+    {
+     "amount": 5,
+     "material": {
+      "raw": "INPUT_MATERIAL"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "OrbitalResearchDatabank",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 33.0
+  }
+ ],
+ "RockCrusher": [
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": {
+      "raw": "materialOptions"
+     },
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": {
+      "raw": "material"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": {
+      "raw": "item.tag"
+     }
+    }
+   ],
+   "results": [],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 5,
+     "material": "EggShell"
+    }
+   ],
+   "results": [
+    {
+     "amount": 5,
+     "material": "Lime",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 60,
+     "material": "CrabShell"
+    }
+   ],
+   "results": [
+    {
+     "amount": 60,
+     "material": {
+      "raw": "element3.tag"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "100f * num2"
+     },
+     "material": "CrabWoodShell"
+    }
+   ],
+   "results": [
+    {
+     "amount": {
+      "raw": "100f * num2"
+     },
+     "material": "WoodLog",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 10,
+     "material": "SnailShell"
+    }
+   ],
+   "results": [
+    {
+     "amount": 10,
+     "material": {
+      "raw": "element4.tag"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 10,
+     "material": "SnailIronShell"
+    }
+   ],
+   "results": [
+    {
+     "amount": 10,
+     "material": {
+      "raw": "element5.tag"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": "Fossil"
+    }
+   ],
+   "results": [
+    {
+     "amount": 5,
+     "material": "Lime",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": 95,
+     "material": "SedimentaryRock",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": "Corallium"
+    }
+   ],
+   "results": [
+    {
+     "amount": 10,
+     "material": "Lime",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": 90,
+     "material": "Sand",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "GarbageElectrobank"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "Katairite",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": "Salt"
+    }
+   ],
+   "results": [
+    {
+     "amount": {
+      "raw": "100f * num3"
+     },
+     "material": {
+      "raw": "TableSaltConfig.ID.ToTag()"
+     },
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": {
+      "raw": "100f * (1f - num3)"
+     },
+     "material": "Sand",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": "Fullerene"
+    }
+   ],
+   "results": [
+    {
+     "amount": {
+      "raw": "100f * num4"
+     },
+     "material": "Graphite",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": {
+      "raw": "100f * (1f - num4)"
+     },
+     "material": "Sand",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 120.0,
+     "material": "IceBellyPoop"
+    }
+   ],
+   "results": [
+    {
+     "amount": {
+      "raw": "num6"
+     },
+     "material": "Phosphorite",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": {
+      "raw": "num5 - num6"
+     },
+     "material": "Clay",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 1.0,
+     "material": "Urchin"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "Diamond",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  },
+  {
+   "fabricator": "RockCrusher",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "GoldBellyCrown"
+    }
+   ],
+   "results": [
+    {
+     "amount": 250,
+     "material": "GoldAmalgam",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ],
+ "RubberMaker": [
+  {
+   "fabricator": "RubberMaker",
+   "ingredients": [
+    {
+     "amount": 100,
+     "material": {
+      "raw": "material"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": {
+      "raw": "material2"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ],
+ "SludgePress": [
+  {
+   "fabricator": "SludgePress",
+   "ingredients": [
+    {
+     "amount": 150.0,
+     "material": {
+      "raw": "item.tag"
+     }
+    }
+   ],
+   "results": [],
+   "time": 20.0
+  }
+ ],
+ "Smoker": [
+  {
+   "fabricator": "Smoker",
+   "ingredients": [
+    {
+     "amount": 6,
+     "material": "DinosaurMeat"
+    },
+    {
+     "amount": 100,
+     "material": {
+      "raw": "GameTags.BasicWoods.Append(SimHashes.Peat.CreateTag())"
+     },
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 3.2,
+     "material": "SmokedDinosaurMeat",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 600.0
+  },
+  {
+   "fabricator": "Smoker",
+   "ingredients": [
+    {
+     "amount": 6,
+     "material": [
+      "FishMeat",
+      "PrehistoricPacuFillet"
+     ]
+    },
+    {
+     "amount": 100,
+     "material": {
+      "raw": "GameTags.BasicWoods.Append(SimHashes.Peat.CreateTag())"
+     },
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 4,
+     "material": "SmokedFish",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 600.0
+  },
+  {
+   "fabricator": "Smoker",
+   "ingredients": [
+    {
+     "amount": 7,
+     "material": [
+      "GardenFoodPlantFood",
+      "HardSkinBerry",
+      "WormBasicFruit"
+     ]
+    },
+    {
+     "amount": 100,
+     "material": {
+      "raw": "GameTags.BasicWoods.Append(SimHashes.Peat.CreateTag())"
+     },
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 4,
+     "material": "SmokedVegetables",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 600.0
+  }
+ ],
+ "SuitFabricator": [
+  {
+   "fabricator": "SuitFabricator",
+   "ingredients": [
+    {
+     "amount": 300,
+     "material": "BasicRefinedMetals",
+     "store_element": false,
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": 2,
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Atmo_Suit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SuitFabricator",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Worn_Atmo_Suit"
+    },
+    {
+     "amount": 1,
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Atmo_Suit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SuitFabricator",
+   "ingredients": [
+    {
+     "amount": 200,
+     "material": "Steel"
+    },
+    {
+     "amount": 2,
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Jet_Suit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SuitFabricator",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Worn_Jet_Suit"
+    },
+    {
+     "amount": 1,
+     "material": "Fabrics",
+     "store_element": "",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Jet_Suit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SuitFabricator",
+   "ingredients": [
+    {
+     "amount": 200,
+     "material": "Lead"
+    },
+    {
+     "amount": 10,
+     "material": "Glass"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Lead_Suit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SuitFabricator",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Worn_Lead_Suit"
+    },
+    {
+     "amount": 5,
+     "material": "Glass"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Lead_Suit",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ]
+  }
+ ],
+ "SupermaterialRefinery": [
+  {
+   "fabricator": "SupermaterialRefinery",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "100f * num"
+     },
+     "material": "Graphite"
+    },
+    {
+     "amount": {
+      "raw": "100f * num2 / 2f"
+     },
+     "material": "Sulfur"
+    },
+    {
+     "amount": {
+      "raw": "100f * num2 / 2f"
+     },
+     "material": "Aluminum"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "Fullerene",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 80.0
+  },
+  {
+   "fabricator": "SupermaterialRefinery",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "100f * num3"
+     },
+     "material": "TempConductorSolid"
+    },
+    {
+     "amount": {
+      "raw": "100f * num4"
+     },
+     "material": "Polypropylene"
+    },
+    {
+     "amount": {
+      "raw": "100f * num5"
+     },
+     "material": "MilkFat"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "HardPolypropylene",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 80.0
+  },
+  {
+   "fabricator": "SupermaterialRefinery",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "100f * num6"
+     },
+     "material": "Isoresin"
+    },
+    {
+     "amount": {
+      "raw": "100f * num8"
+     },
+     "material": "Katairite"
+    },
+    {
+     "amount": {
+      "raw": "100f * num7"
+     },
+     "material": [
+      {
+       "raw": "BasicFabricConfig.ID.ToTag()"
+      },
+      {
+       "raw": "FeatherFabricConfig.ID.ToTag()"
+      }
+     ]
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "SuperInsulator",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 80.0
+  },
+  {
+   "fabricator": "SupermaterialRefinery",
+   "ingredients": [
+    {
+     "amount": {
+      "raw": "100f * num9"
+     },
+     "material": "Niobium"
+    },
+    {
+     "amount": {
+      "raw": "100f * (1f - num9)"
+     },
+     "material": "Tungsten"
+    }
+   ],
+   "results": [
+    {
+     "amount": 100,
+     "material": "TempConductorSolid",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Heated"
+     }
+    }
+   ],
+   "time": 80.0
+  },
+  {
+   "fabricator": "SupermaterialRefinery",
+   "ingredients": [
+    {
+     "amount": 10,
+     "material": "EnrichedUranium"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "SelfChargingElectrobank",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ],
+   "time": 80.0
+  }
+ ],
+ "SushiBar": [
+  {
+   "fabricator": "SushiBar",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "BeanPlantSeed"
+    },
+    {
+     "amount": 1,
+     "material": "SaltySticksFood"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Edamame",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SushiBar",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "BasicPlantBar"
+    },
+    {
+     "amount": 1,
+     "material": "Nori"
+    },
+    {
+     "amount": 1,
+     "material": "FishMeat"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Maki",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SushiBar",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "Urchin"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "UrchinMeat",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  },
+  {
+   "fabricator": "SushiBar",
+   "ingredients": [
+    {
+     "amount": 1,
+     "material": "BasicPlantBar"
+    },
+    {
+     "amount": 1,
+     "material": "Nori"
+    },
+    {
+     "amount": 1,
+     "material": "SquidMeat"
+    }
+   ],
+   "results": [
+    {
+     "amount": 1,
+     "material": "Nigiri",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    }
+   ]
+  }
+ ],
+ "UraniumCentrifuge": [
+  {
+   "fabricator": "UraniumCentrifuge",
+   "ingredients": [
+    {
+     "amount": 10,
+     "material": "UraniumOre"
+    }
+   ],
+   "results": [
+    {
+     "amount": 2,
+     "material": "EnrichedUranium",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature"
+     }
+    },
+    {
+     "amount": 8,
+     "material": "MoltenUranium",
+     "temperature_operation": {
+      "raw": "ComplexRecipe.RecipeElement.TemperatureOperation.Melted"
+     }
+    }
+   ],
+   "time": 40.0
+  }
+ ]
+}

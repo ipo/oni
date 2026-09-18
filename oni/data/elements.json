@@ -1,0 +1,4658 @@
+{
+ "Aerogel": {
+  "default_temperature": 290,
+  "disabled": true,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Katairite",
+   "temperature": 10000
+  },
+  "max_mass": 2,
+  "molar_mass": 200,
+  "name": "Aerogel",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0.003
+ },
+ "Algae": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Dirt",
+   "temperature": 398.15
+  },
+  "material_category": "Organics",
+  "max_mass": 300,
+  "molar_mass": 4,
+  "name": "Algae",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 2
+ },
+ "Aluminum": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenAluminum",
+   "temperature": 933.45
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 1000,
+  "molar_mass": 55.845,
+  "name": "Aluminum",
+  "specific_heat_capacity": 0.91,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "StartingRefinedMetal"
+  ],
+  "thermal_conductivity": 205
+ },
+ "AluminumGas": {
+  "default_temperature": 3200,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenAluminum",
+   "temperature": 2743.15
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 63.546,
+  "name": "Aluminum Gas",
+  "specific_heat_capacity": 0.91,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 2.5
+ },
+ "AluminumOre": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenAluminum",
+   "temperature": 1357
+  },
+  "material_category": "Metal",
+  "max_mass": 500,
+  "molar_mass": 143.09,
+  "name": "Aluminum Ore",
+  "specific_heat_capacity": 0.91,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny",
+   "StartingMetalOre"
+  ],
+  "thermal_conductivity": 20.5
+ },
+ "Amber": {
+  "default_temperature": 300.15,
+  "disabled": false,
+  "hardness": 12,
+  "high_temp_transition": {
+   "ore": "Fossil",
+   "ore_mass_conversion": 0.2,
+   "target": "NaturalResin",
+   "temperature": 368.15
+  },
+  "material_category": "Organics",
+  "max_mass": 1850,
+  "molar_mass": 52.5,
+  "name": "Amber",
+  "specific_heat_capacity": 1.3,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "Fossils",
+   "Glasses"
+  ],
+  "thermal_conductivity": 0.17
+ },
+ "Basalt": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 150,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1530
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Basalt",
+  "specific_heat_capacity": 0.25,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2.5
+ },
+ "Bitumen": {
+  "default_temperature": 232.15,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 812
+  },
+  "max_mass": 1840,
+  "molar_mass": 82.2,
+  "name": "Bitumen",
+  "specific_heat_capacity": 1.76,
+  "state": "Solid",
+  "tags": [
+   "HideFromSpawnTool",
+   "HideFromCodex"
+  ],
+  "thermal_conductivity": 0.17
+ },
+ "BleachStone": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Chlorine",
+   "temperature": 942
+  },
+  "material_category": "Sublimating",
+  "max_mass": 500,
+  "molar_mass": 43,
+  "name": "Bleach Stone",
+  "specific_heat_capacity": 0.5,
+  "state": "Solid",
+  "tags": [
+   "FlyingCritterEdible"
+  ],
+  "thermal_conductivity": 4
+ },
+ "Brick": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "BuildableProcessed",
+  "max_mass": 2000,
+  "molar_mass": 25,
+  "name": "Brick",
+  "specific_heat_capacity": 0.84,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 0.62
+ },
+ "Brine": {
+  "default_temperature": 282.15,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Salt",
+   "ore_mass_conversion": 0.3,
+   "target": "Steam",
+   "temperature": 375.9
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "BrineIce",
+   "temperature": 250.65
+  },
+  "max_mass": 1200,
+  "molar_mass": 22,
+  "name": "Brine",
+  "specific_heat_capacity": 3.4,
+  "state": "Liquid",
+  "tags": [
+   "AnyWater"
+  ],
+  "thermal_conductivity": 0.609
+ },
+ "BrineIce": {
+  "default_temperature": 232.15,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Brine",
+   "temperature": 256.65
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1100,
+  "molar_mass": 18.01528,
+  "name": "Brine Ice",
+  "specific_heat_capacity": 3.4,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "IceOre",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2.18
+ },
+ "COMPOSITION": {
+  "default_temperature": 0,
+  "disabled": false,
+  "hardness": 0,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Void",
+   "temperature": 0
+  },
+  "material_category": "Special",
+  "max_mass": 0,
+  "molar_mass": 0,
+  "name": "Composition",
+  "specific_heat_capacity": 0,
+  "state": "Vacuum",
+  "tags": [
+   "HideFromSpawnTool"
+  ],
+  "thermal_conductivity": 0
+ },
+ "Carbon": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "RefinedCarbon",
+   "temperature": 550
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 4000,
+  "molar_mass": 12.0107,
+  "name": "Coal",
+  "specific_heat_capacity": 0.71,
+  "state": "Solid",
+  "tags": [
+   "Coal",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 1.25
+ },
+ "CarbonDioxide": {
+  "default_temperature": 300,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidCarbonDioxide",
+   "temperature": 225
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 44.01,
+  "name": "Carbon Dioxide",
+  "specific_heat_capacity": 0.846,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.0146
+ },
+ "CarbonFibre": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCarbon",
+   "temperature": 5000
+  },
+  "max_mass": 1840,
+  "molar_mass": 25,
+  "name": "Carbon Fiber",
+  "specific_heat_capacity": 0.52,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 0
+ },
+ "CarbonGas": {
+  "default_temperature": 5700,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCarbon",
+   "temperature": 5100
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 12.0107,
+  "name": "Carbon Gas",
+  "specific_heat_capacity": 0.71,
+  "state": "Gas",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1.7
+ },
+ "Cement": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 200,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "BuildableProcessed",
+  "max_mass": 2000,
+  "molar_mass": 25,
+  "name": "Cement",
+  "specific_heat_capacity": 1.55,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 8
+ },
+ "CementMix": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "max_mass": 2000,
+  "molar_mass": 25,
+  "name": "Cement Mix",
+  "specific_heat_capacity": 0.52,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 8
+ },
+ "Ceramic": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 2123
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 2000,
+  "molar_mass": 25,
+  "name": "Ceramic",
+  "specific_heat_capacity": 0.84,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny",
+   "Insulator"
+  ],
+  "thermal_conductivity": 0.62
+ },
+ "Chlorine": {
+  "default_temperature": 200,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "ChlorineGas",
+   "temperature": 238.55
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidChlorine",
+   "temperature": 172.17
+  },
+  "max_mass": 1000,
+  "molar_mass": 34.453,
+  "name": "Liquid Chlorine",
+  "specific_heat_capacity": 0.48,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.0081
+ },
+ "ChlorineGas": {
+  "default_temperature": 300,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Chlorine",
+   "temperature": 238.55
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 34.453,
+  "name": "Chlorine Gas",
+  "specific_heat_capacity": 0.48,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.0081
+ },
+ "Cinnabar": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MercuryGas",
+   "temperature": 856.65
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 232.66,
+  "name": "Cinnabar Ore",
+  "specific_heat_capacity": 0.386,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny",
+   "StartingMetalOre"
+  ],
+  "thermal_conductivity": 4.5
+ },
+ "Clay": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 5,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Ceramic",
+   "temperature": 1200
+  },
+  "material_category": "Farmable",
+  "max_mass": 1840,
+  "molar_mass": 200,
+  "name": "Clay",
+  "specific_heat_capacity": 0.92,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Cobalt": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 75,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCobalt",
+   "temperature": 1768
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 8900,
+  "molar_mass": 58.9,
+  "name": "Cobalt",
+  "specific_heat_capacity": 0.42,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "StartingRefinedMetal"
+  ],
+  "thermal_conductivity": 100
+ },
+ "CobaltGas": {
+  "default_temperature": 4000,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCobalt",
+   "temperature": 3200
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 58.9,
+  "name": "Cobalt Gas",
+  "specific_heat_capacity": 0.42,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Cobaltite": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCobalt",
+   "temperature": 1768
+  },
+  "material_category": "Metal",
+  "max_mass": 6300,
+  "molar_mass": 165.9,
+  "name": "Cobalt Ore",
+  "specific_heat_capacity": 0.42,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny",
+   "StartingMetalOre"
+  ],
+  "thermal_conductivity": 4
+ },
+ "ContaminatedOxygen": {
+  "default_temperature": 300,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidOxygen",
+   "temperature": 90.19
+  },
+  "material_category": "Breathable",
+  "molar_mass": 15.9994,
+  "name": "Polluted Oxygen",
+  "specific_heat_capacity": 1.01,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.024
+ },
+ "Copper": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCopper",
+   "temperature": 1357
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 3870,
+  "molar_mass": 63.546,
+  "name": "Copper",
+  "specific_heat_capacity": 0.385,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "StartingRefinedMetal"
+  ],
+  "thermal_conductivity": 60
+ },
+ "CopperGas": {
+  "default_temperature": 3200,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCopper",
+   "temperature": 2834
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 63.546,
+  "name": "Copper Gas",
+  "specific_heat_capacity": 0.386,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Coquina": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1200
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 100.09,
+  "name": "Coquina",
+  "specific_heat_capacity": 0.8,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 1.5
+ },
+ "Corallium": {
+  "default_temperature": 303.15,
+  "disabled": false,
+  "hardness": 12,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Sand",
+   "temperature": 398.15
+  },
+  "material_category": "Organics",
+  "max_mass": 400,
+  "molar_mass": 130,
+  "name": "Corallium",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [
+   "BuildableRaw",
+   "PreciousRock"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Corium": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "hardness": 251,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Fallout",
+   "temperature": 900
+  },
+  "material_category": "Other",
+  "max_mass": 200,
+  "molar_mass": 196.966569,
+  "name": "Corium",
+  "specific_heat_capacity": 7.44,
+  "state": "Solid",
+  "sublimation_rate": 0.4,
+  "sublimation_target": "NuclearWaste",
+  "tags": [],
+  "thermal_conductivity": 6
+ },
+ "Creature": {
+  "default_temperature": 310,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Creature",
+   "temperature": 10000
+  },
+  "max_mass": 200,
+  "molar_mass": 25,
+  "name": "Genetic Ooze",
+  "specific_heat_capacity": 3.47,
+  "state": "Solid",
+  "tags": [
+   "HideFromSpawnTool"
+  ],
+  "thermal_conductivity": 0.6
+ },
+ "CrudeOil": {
+  "default_temperature": 350,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Petroleum",
+   "temperature": 673
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidCrudeOil",
+   "temperature": 233
+  },
+  "max_mass": 870,
+  "molar_mass": 500,
+  "name": "Crude Oil",
+  "specific_heat_capacity": 1.69,
+  "state": "Liquid",
+  "tags": [
+   "Slippery",
+   "LubricatingOil",
+   "UnrefinedOil"
+  ],
+  "thermal_conductivity": 2
+ },
+ "CrushedIce": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Water",
+   "temperature": 272.5
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 20,
+  "molar_mass": 18.01528,
+  "name": "Crushed Ice",
+  "specific_heat_capacity": 2.05,
+  "state": "Solid",
+  "tags": [
+   "IceOre",
+   "Unstable"
+  ],
+  "thermal_conductivity": 2.18
+ },
+ "CrushedRock": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "BuildableProcessed",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Crushed Rock",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [
+   "Unstable"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Cuprite": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCopper",
+   "temperature": 1357
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 143.09,
+  "name": "Copper Ore",
+  "specific_heat_capacity": 0.386,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny",
+   "StartingMetalOre"
+  ],
+  "thermal_conductivity": 4.5
+ },
+ "DepletedUranium": {
+  "default_temperature": 300,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenUranium",
+   "temperature": 406
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 200,
+  "molar_mass": 120,
+  "name": "Depleted Uranium",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "RefinedMetal"
+  ],
+  "thermal_conductivity": 20
+ },
+ "Diamond": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCarbon",
+   "temperature": 4200
+  },
+  "material_category": "Other",
+  "max_mass": 1840,
+  "molar_mass": 12.0107,
+  "name": "Diamond",
+  "specific_heat_capacity": 0.516,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "Glasses",
+   "FlyingCritterEdible"
+  ],
+  "thermal_conductivity": 80
+ },
+ "Dirt": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Sand",
+   "temperature": 600
+  },
+  "material_category": "Farmable",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Dirt",
+  "specific_heat_capacity": 1.48,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2
+ },
+ "DirtyIce": {
+  "default_temperature": 230,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "DirtyWater",
+   "temperature": 252.5
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 800,
+  "molar_mass": 25,
+  "name": "Polluted Ice",
+  "specific_heat_capacity": 3.05,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "IceOre",
+   "Mixture",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 1
+ },
+ "DirtyWater": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Dirt",
+   "ore_mass_conversion": 0.01,
+   "target": "Steam",
+   "temperature": 392.5
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "DirtyIce",
+   "temperature": 252.5
+  },
+  "max_mass": 1000,
+  "molar_mass": 20,
+  "name": "Polluted Water",
+  "offgas_percentage": 0.001,
+  "specific_heat_capacity": 4.179,
+  "state": "Liquid",
+  "sublimation_target": "ContaminatedOxygen",
+  "tags": [
+   "Mixture",
+   "AnyWater"
+  ],
+  "thermal_conductivity": 0.58
+ },
+ "Electrum": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenGold",
+   "temperature": 1337
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 95.61,
+  "name": "Electrum",
+  "specific_heat_capacity": 0.15,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2
+ },
+ "EnrichedUranium": {
+  "default_temperature": 300,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenUranium",
+   "temperature": 1132
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 200,
+  "molar_mass": 120,
+  "name": "Enriched Uranium",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 20
+ },
+ "Ethanol": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "EthanolGas",
+   "temperature": 351.5
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidEthanol",
+   "temperature": 159.1
+  },
+  "max_mass": 1000,
+  "molar_mass": 46.07,
+  "name": "Ethanol",
+  "specific_heat_capacity": 2.46,
+  "state": "Liquid",
+  "tags": [
+   "CombustibleLiquid"
+  ],
+  "thermal_conductivity": 0.171
+ },
+ "EthanolGas": {
+  "default_temperature": 390,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Ethanol",
+   "temperature": 351.5
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 46.07,
+  "name": "Ethanol Gas",
+  "specific_heat_capacity": 2.148,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.167
+ },
+ "FabricatedWood": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 18,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 823.15
+  },
+  "material_category": "Organics",
+  "max_mass": 1840,
+  "molar_mass": 217.8529,
+  "name": "Plywood",
+  "specific_heat_capacity": 2.3,
+  "state": "Solid",
+  "tags": [
+   "HideFromSpawnTool",
+   "BuildingWood",
+   "IndustrialIngredient"
+  ],
+  "thermal_conductivity": 0.35
+ },
+ "Fallout": {
+  "default_temperature": 500,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "NuclearWaste",
+   "temperature": 340
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 92.9,
+  "name": "Nuclear Fallout",
+  "specific_heat_capacity": 0.265,
+  "state": "Gas",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Fertilizer": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Dirt",
+   "temperature": 398.15
+  },
+  "material_category": "Agriculture",
+  "max_mass": 300,
+  "molar_mass": 50,
+  "name": "Fertilizer",
+  "specific_heat_capacity": 0.83,
+  "state": "Solid",
+  "tags": [
+   "Oxidizer"
+  ],
+  "thermal_conductivity": 2
+ },
+ "FishMilk": {
+  "default_temperature": 310,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "MilkFat",
+   "ore_mass_conversion": 0.1,
+   "target": "Steam",
+   "temperature": 353.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "FishMilkIce",
+   "temperature": 256.65
+  },
+  "max_mass": 1100,
+  "molar_mass": 24,
+  "name": "Ovolene",
+  "specific_heat_capacity": 4.1,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.609
+ },
+ "FishMilkIce": {
+  "default_temperature": 232.15,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "FishMilk",
+   "temperature": 256.65
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1100,
+  "molar_mass": 18.01528,
+  "name": "Frozen Ovolene",
+  "specific_heat_capacity": 3.4,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "IceOre",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2.18
+ },
+ "FoolsGold": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenIron",
+   "temperature": 1357
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 95.61,
+  "name": "Pyrite",
+  "specific_heat_capacity": 0.386,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 4.5
+ },
+ "Fossil": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1612
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1000,
+  "molar_mass": 200,
+  "name": "Fossil",
+  "specific_heat_capacity": 0.91,
+  "state": "Solid",
+  "tags": [
+   "Fossils"
+  ],
+  "thermal_conductivity": 2
+ },
+ "FrozenInk": {
+  "default_temperature": 232.15,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Ink",
+   "temperature": 252.5
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1100,
+  "molar_mass": 544,
+  "name": "Frozen Squid Ink",
+  "specific_heat_capacity": 2,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "IceOre",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2
+ },
+ "FrozenPhytoOil": {
+  "default_temperature": 220,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "PhytoOil",
+   "temperature": 240
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 870,
+  "molar_mass": 4,
+  "name": "Frozen Phyto Oil",
+  "specific_heat_capacity": 0.9,
+  "state": "Solid",
+  "tags": [
+   "Slippery"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Fullerene": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCarbon",
+   "temperature": 4200
+  },
+  "material_category": "RareMaterials",
+  "max_mass": 50,
+  "molar_mass": 12.0107,
+  "name": "Fullerene",
+  "specific_heat_capacity": 0.95,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 50
+ },
+ "Galena": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": "Sulfur",
+   "ore_mass_conversion": 0.13,
+   "target": "MoltenLead",
+   "temperature": 1387.15
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 239.3,
+  "name": "Galena",
+  "specific_heat_capacity": 0.21,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny",
+   "UseSmeltingByproducts"
+  ],
+  "thermal_conductivity": 2.3
+ },
+ "Glass": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenGlass",
+   "temperature": 1700
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 1840,
+  "molar_mass": 25,
+  "name": "Glass",
+  "specific_heat_capacity": 0.84,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "Glasses"
+  ],
+  "thermal_conductivity": 1.11
+ },
+ "Gold": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenGold",
+   "temperature": 1337
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 9970,
+  "molar_mass": 196.966569,
+  "name": "Gold",
+  "specific_heat_capacity": 0.129,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 60
+ },
+ "GoldAmalgam": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenGold",
+   "temperature": 1337
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 95.61,
+  "name": "Gold Amalgam",
+  "specific_heat_capacity": 0.15,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2
+ },
+ "GoldGas": {
+  "default_temperature": 3500,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenGold",
+   "temperature": 3129
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 196.966569,
+  "name": "Gold Gas",
+  "specific_heat_capacity": 0.1291,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Granite": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 80,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 942
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Granite",
+  "specific_heat_capacity": 0.79,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny",
+   "PreciousRock"
+  ],
+  "thermal_conductivity": 3.39
+ },
+ "Graphite": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 0,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "RefinedCarbon",
+   "temperature": 550
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 600,
+  "molar_mass": 12.0107,
+  "name": "Graphite",
+  "specific_heat_capacity": 0.71,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 8
+ },
+ "Gunk": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidGunk",
+   "temperature": 265
+  },
+  "material_category": "Organics",
+  "max_mass": 2500,
+  "molar_mass": 850.92,
+  "name": "Solid Gunk",
+  "specific_heat_capacity": 1.2,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "Unstable"
+  ],
+  "thermal_conductivity": 1.5
+ },
+ "HardPolypropylene": {
+  "default_temperature": 296,
+  "disabled": false,
+  "hardness": 1,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SourGas",
+   "temperature": 2100
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 913,
+  "molar_mass": 100.016,
+  "name": "Plastium",
+  "specific_heat_capacity": 1.5,
+  "state": "Solid",
+  "tags": [
+   "Antiseptic",
+   "Plastic",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 0.25
+ },
+ "Helium": {
+  "default_temperature": 300,
+  "disabled": true,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidHelium",
+   "temperature": 4.22
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 4,
+  "name": "Helium",
+  "specific_heat_capacity": 0.14,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.236
+ },
+ "Hydrogen": {
+  "default_temperature": 300,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidHydrogen",
+   "temperature": 21
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 1.00794,
+  "name": "Hydrogen Gas",
+  "specific_heat_capacity": 2.4,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.168
+ },
+ "Ice": {
+  "default_temperature": 232.15,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Water",
+   "temperature": 272.5
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1100,
+  "molar_mass": 18.01528,
+  "name": "Ice",
+  "specific_heat_capacity": 2.05,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "IceOre",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2.18
+ },
+ "IgneousRock": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Igneous Rock",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Ink": {
+  "default_temperature": 320,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "RefinedCarbon",
+   "ore_mass_conversion": 0.1,
+   "target": "Mucus",
+   "temperature": 353.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "FrozenInk",
+   "temperature": 252.5
+  },
+  "max_mass": 1000,
+  "molar_mass": 26,
+  "name": "Squid Ink",
+  "specific_heat_capacity": 2,
+  "state": "Liquid",
+  "tags": [
+   "CritterDrinkable"
+  ],
+  "thermal_conductivity": 0.5
+ },
+ "Iridium": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 200,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenIridium",
+   "temperature": 2719
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 10000,
+  "molar_mass": 183.84,
+  "name": "Iridium",
+  "specific_heat_capacity": 0.131,
+  "state": "Solid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 170
+ },
+ "IridiumGas": {
+  "default_temperature": 4500,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenIridium",
+   "temperature": 4403
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 183.84,
+  "name": "Iridium Gas",
+  "specific_heat_capacity": 0.131,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Iron": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenIron",
+   "temperature": 1808
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 7870,
+  "molar_mass": 55.845,
+  "name": "Iron",
+  "specific_heat_capacity": 0.449,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 55
+ },
+ "IronGas": {
+  "default_temperature": 4000,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenIron",
+   "temperature": 3023
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 55.845,
+  "name": "Iron Gas",
+  "specific_heat_capacity": 0.449,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "IronOre": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenIron",
+   "temperature": 1808
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 159.6882,
+  "name": "Iron Ore",
+  "specific_heat_capacity": 0.449,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 4
+ },
+ "Isoresin": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Naphtha",
+   "temperature": 473.15
+  },
+  "material_category": "RareMaterials",
+  "max_mass": 50,
+  "molar_mass": 162.14,
+  "name": "Isosap",
+  "specific_heat_capacity": 1.3,
+  "state": "Solid",
+  "tags": [
+   "BuildableRaw"
+  ],
+  "thermal_conductivity": 0.17
+ },
+ "Katairite": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 150,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenTungsten",
+   "temperature": 3695
+  },
+  "material_category": "Other",
+  "max_mass": 3200,
+  "molar_mass": 341.76,
+  "name": "Abyssalite",
+  "specific_heat_capacity": 4,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 1e-05
+ },
+ "Latex": {
+  "default_temperature": 290,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 372.5
+  },
+  "low_temp_transition": {
+   "ore": "Sucrose",
+   "ore_mass_conversion": 0.68,
+   "target": "DirtyIce",
+   "temperature": 272.5
+  },
+  "max_mass": 950,
+  "molar_mass": 400,
+  "name": "Latex",
+  "specific_heat_capacity": 2.01,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.065
+ },
+ "Lead": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenLead",
+   "temperature": 600.65
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 2000,
+  "molar_mass": 55.845,
+  "name": "Lead",
+  "specific_heat_capacity": 0.128,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 35
+ },
+ "LeadGas": {
+  "default_temperature": 3500,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenLead",
+   "temperature": 2022.15
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 196.966569,
+  "name": "Lead Gas",
+  "specific_heat_capacity": 0.128,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 3.5
+ },
+ "Lime": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1330
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 1840,
+  "molar_mass": 200,
+  "name": "Lime",
+  "specific_heat_capacity": 0.834,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 2
+ },
+ "LiquidCarbonDioxide": {
+  "default_temperature": 220,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 225
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidCarbonDioxide",
+   "temperature": 216.6
+  },
+  "max_mass": 2000,
+  "molar_mass": 44.01,
+  "name": "Liquid Carbon Dioxide",
+  "specific_heat_capacity": 0.846,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 1.46
+ },
+ "LiquidGunk": {
+  "default_temperature": 310,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Sulfur",
+   "ore_mass_conversion": 0.08,
+   "target": "Petroleum",
+   "temperature": 721
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Gunk",
+   "temperature": 265
+  },
+  "max_mass": 870,
+  "molar_mass": 550,
+  "name": "Gunk",
+  "specific_heat_capacity": 1.2,
+  "state": "Liquid",
+  "tags": [
+   "Slippery"
+  ],
+  "thermal_conductivity": 1.5
+ },
+ "LiquidHelium": {
+  "default_temperature": 1,
+  "disabled": true,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Helium",
+   "temperature": 4.22
+  },
+  "max_mass": 1000,
+  "molar_mass": 4,
+  "name": "Helium",
+  "specific_heat_capacity": 0.2,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.236
+ },
+ "LiquidHydrogen": {
+  "default_temperature": 18,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Hydrogen",
+   "temperature": 21
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidHydrogen",
+   "temperature": 14
+  },
+  "max_mass": 1000,
+  "molar_mass": 1.00794,
+  "name": "Liquid Hydrogen",
+  "specific_heat_capacity": 2.4,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.1
+ },
+ "LiquidMethane": {
+  "default_temperature": 100,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Methane",
+   "temperature": 111.65
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidMethane",
+   "temperature": 90.55
+  },
+  "max_mass": 1000,
+  "molar_mass": 16.044,
+  "name": "Liquid Methane",
+  "specific_heat_capacity": 2.191,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.03
+ },
+ "LiquidOxygen": {
+  "default_temperature": 74.36,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Oxygen",
+   "temperature": 90.19
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidOxygen",
+   "temperature": 54.36
+  },
+  "max_mass": 500,
+  "molar_mass": 15.9994,
+  "name": "Liquid Oxygen",
+  "specific_heat_capacity": 1.01,
+  "state": "Liquid",
+  "tags": [
+   "Oxidizer"
+  ],
+  "thermal_conductivity": 2
+ },
+ "LiquidPhosphorus": {
+  "default_temperature": 500,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "PhosphorusGas",
+   "temperature": 553.6
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Phosphorus",
+   "temperature": 317.3
+  },
+  "max_mass": 1000,
+  "molar_mass": 30.973762,
+  "name": "Liquid Phosphorus",
+  "specific_heat_capacity": 0.7697,
+  "state": "Liquid",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 0.236
+ },
+ "LiquidPropane": {
+  "default_temperature": 200,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Propane",
+   "temperature": 231
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidPropane",
+   "temperature": 85
+  },
+  "max_mass": 1000,
+  "molar_mass": 44.1,
+  "name": "Liquid Propane",
+  "specific_heat_capacity": 2.4,
+  "state": "Liquid",
+  "tags": [
+   "HideFromSpawnTool",
+   "HideFromCodex"
+  ],
+  "thermal_conductivity": 0.1
+ },
+ "LiquidSulfur": {
+  "default_temperature": 450,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SulfurGas",
+   "temperature": 610.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Sulfur",
+   "temperature": 388.35
+  },
+  "max_mass": 740,
+  "molar_mass": 32,
+  "name": "Liquid Sulfur",
+  "specific_heat_capacity": 0.7,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.2
+ },
+ "MaficRock": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Mafic Rock",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Magma": {
+  "default_temperature": 2000,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "RockGas",
+   "temperature": 2630
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "IgneousRock",
+   "temperature": 1683
+  },
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Magma",
+  "specific_heat_capacity": 1,
+  "state": "Liquid",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Mercury": {
+  "default_temperature": 320,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MercuryGas",
+   "temperature": 629.9
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidMercury",
+   "temperature": 234.3
+  },
+  "max_mass": 1000,
+  "molar_mass": 200.59,
+  "name": "Mercury",
+  "specific_heat_capacity": 0.14,
+  "state": "Liquid",
+  "tags": [
+   "RefinedMetal"
+  ],
+  "thermal_conductivity": 8.3
+ },
+ "MercuryGas": {
+  "default_temperature": 850,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Mercury",
+   "temperature": 629.9
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 200.59,
+  "name": "Mercury Gas",
+  "specific_heat_capacity": 0.14,
+  "state": "Gas",
+  "tags": [
+   "RefinedMetal"
+  ],
+  "thermal_conductivity": 8.3
+ },
+ "Methane": {
+  "default_temperature": 300,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidMethane",
+   "temperature": 111.65
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 16.044,
+  "name": "Natural Gas",
+  "specific_heat_capacity": 2.191,
+  "state": "Gas",
+  "tags": [
+   "CombustibleGas"
+  ],
+  "thermal_conductivity": 0.035
+ },
+ "Milk": {
+  "default_temperature": 310,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "MilkFat",
+   "ore_mass_conversion": 0.1,
+   "target": "Brine",
+   "temperature": 353.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MilkIce",
+   "temperature": 256.65
+  },
+  "max_mass": 1100,
+  "molar_mass": 23,
+  "name": "Brackene",
+  "specific_heat_capacity": 4.1,
+  "state": "Liquid",
+  "tags": [
+   "CritterDrinkable"
+  ],
+  "thermal_conductivity": 0.609
+ },
+ "MilkFat": {
+  "default_temperature": 296,
+  "disabled": false,
+  "hardness": 1,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Naphtha",
+   "temperature": 433
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 913,
+  "molar_mass": 42.08,
+  "name": "Brackwax",
+  "specific_heat_capacity": 1.92,
+  "state": "Solid",
+  "tags": [
+   "Slippery"
+  ],
+  "thermal_conductivity": 0.15
+ },
+ "MilkIce": {
+  "default_temperature": 232.15,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Milk",
+   "temperature": 256.65
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1100,
+  "molar_mass": 18.01528,
+  "name": "Frozen Brackene",
+  "specific_heat_capacity": 3.4,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "IceOre",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2.18
+ },
+ "MoltenAluminum": {
+  "default_temperature": 2000,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "AluminumGas",
+   "temperature": 2743.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Aluminum",
+   "temperature": 933.45
+  },
+  "max_mass": 7870,
+  "molar_mass": 55.845,
+  "name": "Molten Aluminum",
+  "specific_heat_capacity": 0.91,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 20.5
+ },
+ "MoltenCarbon": {
+  "default_temperature": 4600,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonGas",
+   "temperature": 5100
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "RefinedCarbon",
+   "temperature": 3825
+  },
+  "max_mass": 4000,
+  "molar_mass": 12.0107,
+  "name": "Liquid Carbon",
+  "specific_heat_capacity": 0.71,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 2
+ },
+ "MoltenCobalt": {
+  "default_temperature": 2500,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CobaltGas",
+   "temperature": 3200
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Cobalt",
+   "temperature": 1768
+  },
+  "max_mass": 7870,
+  "molar_mass": 58.9,
+  "name": "Molten Cobalt",
+  "specific_heat_capacity": 0.42,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 4
+ },
+ "MoltenCopper": {
+  "default_temperature": 1800,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CopperGas",
+   "temperature": 2834
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Copper",
+   "temperature": 1357
+  },
+  "max_mass": 3870,
+  "molar_mass": 63.546,
+  "name": "Molten Copper",
+  "specific_heat_capacity": 0.386,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 12
+ },
+ "MoltenGlass": {
+  "default_temperature": 2215,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "RockGas",
+   "temperature": 2630
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Glass",
+   "temperature": 1400
+  },
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Molten Glass",
+  "specific_heat_capacity": 0.2,
+  "state": "Liquid",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "MoltenGold": {
+  "default_temperature": 2000,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "GoldGas",
+   "temperature": 3129
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Gold",
+   "temperature": 1337
+  },
+  "max_mass": 9970,
+  "molar_mass": 196.966569,
+  "name": "Molten Gold",
+  "specific_heat_capacity": 0.1291,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 6
+ },
+ "MoltenIridium": {
+  "default_temperature": 3500,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "IridiumGas",
+   "temperature": 4403
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Iridium",
+   "temperature": 2719
+  },
+  "max_mass": 3870,
+  "molar_mass": 183.84,
+  "name": "Molten Iridium",
+  "specific_heat_capacity": 0.131,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal"
+  ],
+  "thermal_conductivity": 170
+ },
+ "MoltenIron": {
+  "default_temperature": 2500,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "IronGas",
+   "temperature": 3023
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Iron",
+   "temperature": 1808
+  },
+  "max_mass": 7870,
+  "molar_mass": 55.845,
+  "name": "Molten Iron",
+  "specific_heat_capacity": 0.449,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 4
+ },
+ "MoltenLead": {
+  "default_temperature": 2000,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LeadGas",
+   "temperature": 2022.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Lead",
+   "temperature": 600.65
+  },
+  "max_mass": 9970,
+  "molar_mass": 196.966569,
+  "name": "Molten Lead",
+  "specific_heat_capacity": 0.128,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 11
+ },
+ "MoltenNickel": {
+  "default_temperature": 1800,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "NickelGas",
+   "temperature": 3003
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Nickel",
+   "temperature": 1728
+  },
+  "max_mass": 7870,
+  "molar_mass": 58.69,
+  "name": "Molten Nickel",
+  "specific_heat_capacity": 0.44,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 30
+ },
+ "MoltenNiobium": {
+  "default_temperature": 3000,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "NiobiumGas",
+   "temperature": 5017
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Niobium",
+   "temperature": 2750
+  },
+  "max_mass": 3870,
+  "molar_mass": 92.9,
+  "name": "Molten Niobium",
+  "specific_heat_capacity": 0.265,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 54
+ },
+ "MoltenSalt": {
+  "default_temperature": 450,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SaltGas",
+   "temperature": 1738
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Salt",
+   "temperature": 1073
+  },
+  "max_mass": 740,
+  "molar_mass": 32,
+  "name": "Molten Salt",
+  "specific_heat_capacity": 0.7,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.444
+ },
+ "MoltenSteel": {
+  "default_temperature": 2000,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SteelGas",
+   "temperature": 4100
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Steel",
+   "temperature": 1357
+  },
+  "max_mass": 3870,
+  "molar_mass": 63.546,
+  "name": "Molten Steel",
+  "specific_heat_capacity": 0.386,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 80
+ },
+ "MoltenSucrose": {
+  "default_temperature": 500,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 503.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Sucrose",
+   "temperature": 459
+  },
+  "max_mass": 740,
+  "molar_mass": 32,
+  "name": "Liquid Sucrose",
+  "specific_heat_capacity": 1.255,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.15
+ },
+ "MoltenSyngas": {
+  "default_temperature": 18,
+  "disabled": true,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Syngas",
+   "temperature": 21
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidSyngas",
+   "temperature": 14
+  },
+  "max_mass": 1000,
+  "molar_mass": 1.00794,
+  "name": "Molten Synthesis Gas",
+  "specific_heat_capacity": 2.4,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.1
+ },
+ "MoltenTungsten": {
+  "default_temperature": 4000,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "TungstenGas",
+   "temperature": 6203
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Tungsten",
+   "temperature": 3695
+  },
+  "max_mass": 3870,
+  "molar_mass": 183.84,
+  "name": "Molten Tungsten",
+  "specific_heat_capacity": 0.134,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal"
+  ],
+  "thermal_conductivity": 4
+ },
+ "MoltenUranium": {
+  "default_temperature": 460,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "RockGas",
+   "temperature": 4405
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "DepletedUranium",
+   "temperature": 406
+  },
+  "max_mass": 9970,
+  "molar_mass": 196.966569,
+  "name": "Liquid Uranium",
+  "specific_heat_capacity": 1.69,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 2
+ },
+ "MoltenZinc": {
+  "default_temperature": 900,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "ZincGas",
+   "temperature": 1180
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Zinc",
+   "temperature": 692.88
+  },
+  "max_mass": 3870,
+  "molar_mass": 65.38,
+  "name": "Molten Zinc",
+  "specific_heat_capacity": 0.388,
+  "state": "Liquid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 12
+ },
+ "Mucus": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "SlimeMold",
+   "ore_mass_conversion": 0.3,
+   "target": "DirtyWater",
+   "temperature": 363.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidMucus",
+   "temperature": 263.15
+  },
+  "max_mass": 100,
+  "molar_mass": 10,
+  "name": "Mucin",
+  "specific_heat_capacity": 3.0,
+  "state": "Liquid",
+  "tags": [
+   "Slippery"
+  ],
+  "thermal_conductivity": 0.45
+ },
+ "Mud": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": "Dirt",
+   "ore_mass_conversion": 0.4,
+   "target": "Steam",
+   "temperature": 372.84
+  },
+  "material_category": "Organics",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Mud",
+  "specific_heat_capacity": 0.83,
+  "state": "Solid",
+  "tags": [
+   "Unstable"
+  ],
+  "thermal_conductivity": 2
+ },
+ "MurkyBrine": {
+  "default_temperature": 282.15,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Salt",
+   "ore_mass_conversion": 0.3,
+   "target": "DirtyWater",
+   "temperature": 379.9
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MurkyBrineIce",
+   "temperature": 247.65
+  },
+  "max_mass": 1200,
+  "molar_mass": 25,
+  "name": "Polluted Brine",
+  "specific_heat_capacity": 3.6,
+  "state": "Liquid",
+  "tags": [
+   "AnyWater"
+  ],
+  "thermal_conductivity": 0.409
+ },
+ "MurkyBrineIce": {
+  "default_temperature": 223.15,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MurkyBrine",
+   "temperature": 247.65
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1100,
+  "molar_mass": 25,
+  "name": "Polluted Brine Ice",
+  "specific_heat_capacity": 3.6,
+  "state": "Solid",
+  "tags": [
+   "Slippery",
+   "IceOre",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2.18
+ },
+ "Naphtha": {
+  "default_temperature": 350,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SourGas",
+   "temperature": 812
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidNaphtha",
+   "temperature": 223
+  },
+  "max_mass": 740,
+  "molar_mass": 102.2,
+  "name": "Liquid Naphtha",
+  "specific_heat_capacity": 2.191,
+  "state": "Liquid",
+  "tags": [
+   "Oil"
+  ],
+  "thermal_conductivity": 0.2
+ },
+ "NaturalResin": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "RefinedCarbon",
+   "ore_mass_conversion": 0.25,
+   "target": "Steam",
+   "temperature": 398.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "NaturalSolidResin",
+   "temperature": 293.15
+  },
+  "max_mass": 920,
+  "molar_mass": 52.5,
+  "name": "Resin",
+  "specific_heat_capacity": 1.11,
+  "state": "Liquid",
+  "tags": [
+   "PlastifiableLiquid"
+  ],
+  "thermal_conductivity": 0.15
+ },
+ "NaturalSolidResin": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "NaturalResin",
+   "temperature": 293.15
+  },
+  "material_category": "Organics",
+  "max_mass": 1850,
+  "molar_mass": 52.5,
+  "name": "Solid Resin",
+  "specific_heat_capacity": 1.3,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 0.17
+ },
+ "Nickel": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 30,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenNickel",
+   "temperature": 1728
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 2000,
+  "molar_mass": 58.69,
+  "name": "Nickel",
+  "specific_heat_capacity": 0.44,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "StartingRefinedMetal"
+  ],
+  "thermal_conductivity": 91
+ },
+ "NickelGas": {
+  "default_temperature": 3200,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenNickel",
+   "temperature": 3003
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 58.69,
+  "name": "Nickel Gas",
+  "specific_heat_capacity": 0.44,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "NickelOre": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 30,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenNickel",
+   "temperature": 1728
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 203.35,
+  "name": "Nickel Ore",
+  "specific_heat_capacity": 0.45,
+  "state": "Solid",
+  "tags": [
+   "Ore",
+   "BuildableAny",
+   "StartingMetalOre"
+  ],
+  "thermal_conductivity": 3
+ },
+ "Niobium": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenNiobium",
+   "temperature": 2750
+  },
+  "material_category": "RareMaterials",
+  "max_mass": 50,
+  "molar_mass": 92.9,
+  "name": "Niobium",
+  "specific_heat_capacity": 0.265,
+  "state": "Solid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 54
+ },
+ "NiobiumGas": {
+  "default_temperature": 5500,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenNiobium",
+   "temperature": 5017
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 92.9,
+  "name": "Niobium Gas",
+  "specific_heat_capacity": 0.265,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "NuclearWaste": {
+  "default_temperature": 400,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Fallout",
+   "temperature": 800
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidNuclearWaste",
+   "temperature": 300
+  },
+  "max_mass": 1000,
+  "molar_mass": 196.966569,
+  "name": "Liquid Nuclear Waste",
+  "specific_heat_capacity": 7.44,
+  "state": "Liquid",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 6
+ },
+ "Obsidian": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 200,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 3000
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Obsidian",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny",
+   "PreciousRock"
+  ],
+  "thermal_conductivity": 2
+ },
+ "OxyRock": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "Sublimating",
+  "max_mass": 500,
+  "molar_mass": 43,
+  "name": "Oxylite",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "sublimation_rate": 0.4,
+  "sublimation_target": "Oxygen",
+  "tags": [
+   "FlyingCritterEdible",
+   "Oxidizer"
+  ],
+  "thermal_conductivity": 4
+ },
+ "Oxygen": {
+  "default_temperature": 300,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidOxygen",
+   "temperature": 90.19
+  },
+  "material_category": "Breathable",
+  "molar_mass": 15.9994,
+  "name": "Oxygen",
+  "specific_heat_capacity": 1.005,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.024
+ },
+ "PalmWood": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 18,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 873.15
+  },
+  "material_category": "Organics",
+  "max_mass": 1840,
+  "molar_mass": 217.8529,
+  "name": "Gum Wood",
+  "specific_heat_capacity": 2.3,
+  "state": "Solid",
+  "tags": [
+   "BuildingWood",
+   "IndustrialIngredient"
+  ],
+  "thermal_conductivity": 0.22
+ },
+ "Pearl": {
+  "default_temperature": 303,
+  "disabled": false,
+  "hardness": 80,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 1098
+  },
+  "material_category": "Other",
+  "max_mass": 1840,
+  "molar_mass": 100,
+  "name": "Pearl",
+  "specific_heat_capacity": 0.45,
+  "state": "Solid",
+  "tags": [
+   "Insulator",
+   "BuildableAny",
+   "Glasses"
+  ],
+  "thermal_conductivity": 0.9
+ },
+ "Peat": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Carbon",
+   "temperature": 500
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 4000,
+  "molar_mass": 24.02,
+  "name": "Peat",
+  "specific_heat_capacity": 0.71,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 0.6
+ },
+ "Petroleum": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SourGas",
+   "temperature": 812
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidPetroleum",
+   "temperature": 216
+  },
+  "max_mass": 740,
+  "molar_mass": 82.2,
+  "name": "Petroleum",
+  "specific_heat_capacity": 1.76,
+  "state": "Liquid",
+  "tags": [
+   "CombustibleLiquid",
+   "PlastifiableLiquid"
+  ],
+  "thermal_conductivity": 2
+ },
+ "PhosphateNodules": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidPhosphorus",
+   "temperature": 700
+  },
+  "material_category": "Agriculture",
+  "max_mass": 1840,
+  "molar_mass": 95.61,
+  "name": "Phosphate Nodules",
+  "specific_heat_capacity": 0.15,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 2
+ },
+ "Phosphorite": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidPhosphorus",
+   "temperature": 517
+  },
+  "material_category": "Agriculture",
+  "max_mass": 1840,
+  "molar_mass": 95.61,
+  "name": "Phosphorite",
+  "specific_heat_capacity": 0.15,
+  "state": "Solid",
+  "tags": [
+   "FlyingCritterEdible"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Phosphorus": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 0,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidPhosphorus",
+   "temperature": 317.3
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 1000,
+  "molar_mass": 30.973762,
+  "name": "Refined Phosphorus",
+  "specific_heat_capacity": 0.7697,
+  "state": "Solid",
+  "tags": [
+   "FlyingCritterEdible"
+  ],
+  "thermal_conductivity": 0.236
+ },
+ "PhosphorusGas": {
+  "default_temperature": 700,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidPhosphorus",
+   "temperature": 553.6
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 30.973762,
+  "name": "Phosphorus Gas",
+  "specific_heat_capacity": 0.7697,
+  "state": "Gas",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 0.236
+ },
+ "PhytoOil": {
+  "default_temperature": 293,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Algae",
+   "ore_mass_conversion": 0.6666,
+   "target": "CarbonDioxide",
+   "temperature": 348.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "FrozenPhytoOil",
+   "temperature": 240
+  },
+  "max_mass": 870,
+  "molar_mass": 450,
+  "name": "Phyto Oil",
+  "specific_heat_capacity": 0.9,
+  "state": "Liquid",
+  "tags": [
+   "Slippery",
+   "LubricatingOil",
+   "UnrefinedOil"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Polypropylene": {
+  "default_temperature": 296,
+  "disabled": false,
+  "hardness": 1,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Naphtha",
+   "temperature": 433
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 913,
+  "molar_mass": 42.08,
+  "name": "Plastic",
+  "specific_heat_capacity": 1.92,
+  "state": "Solid",
+  "tags": [
+   "Antiseptic",
+   "Plastic",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 0.15
+ },
+ "Propane": {
+  "default_temperature": 350,
+  "disabled": true,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidPropane",
+   "temperature": 231
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 44.1,
+  "name": "Propane Gas",
+  "specific_heat_capacity": 2.4,
+  "state": "Gas",
+  "tags": [
+   "HideFromSpawnTool",
+   "HideFromCodex"
+  ],
+  "thermal_conductivity": 0.015
+ },
+ "Radium": {
+  "default_temperature": 300,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1233
+  },
+  "max_mass": 200,
+  "molar_mass": 120,
+  "name": "Radium",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 20
+ },
+ "RefinedCarbon": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenCarbon",
+   "temperature": 4600
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 4000,
+  "molar_mass": 12.0107,
+  "name": "Refined Carbon",
+  "specific_heat_capacity": 1.74,
+  "state": "Solid",
+  "tags": [
+   "Insulator"
+  ],
+  "thermal_conductivity": 3.1
+ },
+ "RefinedLipid": {
+  "default_temperature": 293,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 453.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Tallow",
+   "temperature": 263.15
+  },
+  "max_mass": 870,
+  "molar_mass": 450,
+  "name": "Biodiesel",
+  "specific_heat_capacity": 2.19,
+  "state": "Liquid",
+  "tags": [
+   "Slippery",
+   "CombustibleLiquid"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Regolith": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "Filter",
+  "max_mass": 1000,
+  "molar_mass": 50,
+  "name": "Regolith",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [
+   "Unstable"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Resin": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Isoresin",
+   "ore_mass_conversion": 0.25,
+   "target": "Steam",
+   "temperature": 398.15
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidResin",
+   "temperature": 293.15
+  },
+  "max_mass": 920,
+  "molar_mass": 52.5,
+  "name": "Sap",
+  "specific_heat_capacity": 1.11,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.15
+ },
+ "RockGas": {
+  "default_temperature": 3000,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 2630
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 50,
+  "name": "Rock Gas",
+  "specific_heat_capacity": 1,
+  "state": "Gas",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 0.1
+ },
+ "Rubber": {
+  "default_temperature": 293.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 493.15
+  },
+  "material_category": "Other",
+  "max_mass": 800,
+  "molar_mass": 68.12,
+  "name": "Rubber",
+  "specific_heat_capacity": 1.8,
+  "state": "Solid",
+  "tags": [
+   "Insulator"
+  ],
+  "thermal_conductivity": 0.15
+ },
+ "Rust": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenIron",
+   "temperature": 1808
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 1840,
+  "molar_mass": 159.6882,
+  "name": "Rust",
+  "specific_heat_capacity": 0.449,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 4
+ },
+ "Salt": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 5,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenSalt",
+   "temperature": 1073
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 2000,
+  "molar_mass": 50,
+  "name": "Salt",
+  "specific_heat_capacity": 0.7,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0.444
+ },
+ "SaltGas": {
+  "default_temperature": 3000,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenSalt",
+   "temperature": 1738
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 50,
+  "name": "Salt Gas",
+  "specific_heat_capacity": 0.88,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.444
+ },
+ "SaltWater": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Salt",
+   "ore_mass_conversion": 0.07,
+   "target": "Steam",
+   "temperature": 372.84
+  },
+  "low_temp_transition": {
+   "ore": "Ice",
+   "ore_mass_conversion": 0.77,
+   "target": "Brine",
+   "temperature": 265.65
+  },
+  "max_mass": 1100,
+  "molar_mass": 21,
+  "name": "Salt Water",
+  "specific_heat_capacity": 4.1,
+  "state": "Liquid",
+  "tags": [
+   "AnyWater"
+  ],
+  "thermal_conductivity": 0.609
+ },
+ "Sand": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenGlass",
+   "temperature": 1986
+  },
+  "material_category": "Filter",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Sand",
+  "specific_heat_capacity": 0.83,
+  "state": "Solid",
+  "tags": [
+   "Unstable"
+  ],
+  "thermal_conductivity": 2
+ },
+ "SandCement": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "BuildableProcessed",
+  "max_mass": 2000,
+  "molar_mass": 25,
+  "name": "Sand Cement",
+  "specific_heat_capacity": 1.5,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 8
+ },
+ "SandStone": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1200
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Sandstone",
+  "specific_heat_capacity": 0.8,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2.9
+ },
+ "SedimentaryRock": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1200
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Sedimentary Rock",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Shale": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1100
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 55,
+  "name": "Shale",
+  "specific_heat_capacity": 0.25,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "Crushable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 1.8
+ },
+ "SiltStone": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1200
+  },
+  "material_category": "BuildableRaw",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Siltstone",
+  "specific_heat_capacity": 0.9,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "BuildableAny",
+   "Crushable"
+  ],
+  "thermal_conductivity": 2.0
+ },
+ "Slabs": {
+  "default_temperature": 300,
+  "disabled": true,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Magma",
+   "temperature": 1683
+  },
+  "material_category": "BuildableProcessed",
+  "max_mass": 2000,
+  "molar_mass": 25,
+  "name": "Building Slab",
+  "specific_heat_capacity": 0.52,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 8
+ },
+ "SlimeMold": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Dirt",
+   "temperature": 398.15
+  },
+  "material_category": "Organics",
+  "max_mass": 300,
+  "molar_mass": 4,
+  "name": "Slime",
+  "specific_heat_capacity": 0.2,
+  "state": "Solid",
+  "tags": [
+   "FlyingCritterEdible"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Snow": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Water",
+   "temperature": 272.5
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 20,
+  "molar_mass": 18.01528,
+  "name": "Snow",
+  "specific_heat_capacity": 2.05,
+  "state": "Solid",
+  "tags": [
+   "IceOre",
+   "Unstable"
+  ],
+  "thermal_conductivity": 0.545
+ },
+ "SolidCarbonDioxide": {
+  "default_temperature": 192.15,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidCarbonDioxide",
+   "temperature": 216.6
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 2000,
+  "molar_mass": 44.01,
+  "name": "Solid Carbon Dioxide",
+  "specific_heat_capacity": 0.846,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 1.46
+ },
+ "SolidChlorine": {
+  "default_temperature": 150,
+  "disabled": false,
+  "hardness": 25,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Chlorine",
+   "temperature": 172.17
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1000,
+  "molar_mass": 34.453,
+  "name": "Solid Chlorine",
+  "specific_heat_capacity": 0.48,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0.75
+ },
+ "SolidCrudeOil": {
+  "default_temperature": 200,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CrudeOil",
+   "temperature": 233
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1840,
+  "molar_mass": 500,
+  "name": "Solid Crude Oil",
+  "specific_heat_capacity": 1.69,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 2
+ },
+ "SolidEthanol": {
+  "default_temperature": 150,
+  "disabled": false,
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Ethanol",
+   "temperature": 159.1
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 200,
+  "molar_mass": 46.07,
+  "name": "Solid Ethanol",
+  "specific_heat_capacity": 2.46,
+  "state": "Solid",
+  "tags": [
+   "IceOre",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 20
+ },
+ "SolidHydrogen": {
+  "default_temperature": 5,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidHydrogen",
+   "temperature": 14
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1000,
+  "molar_mass": 44.1,
+  "name": "Solid Hydrogen",
+  "specific_heat_capacity": 2.4,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 1
+ },
+ "SolidMercury": {
+  "default_temperature": 200,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Mercury",
+   "temperature": 234.3
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 1000,
+  "molar_mass": 200.59,
+  "name": "Mercury",
+  "specific_heat_capacity": 0.14,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 8.3
+ },
+ "SolidMethane": {
+  "default_temperature": 50,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidMethane",
+   "temperature": 90.55
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 750,
+  "molar_mass": 16.044,
+  "name": "Solid Methane",
+  "specific_heat_capacity": 2.191,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0.03
+ },
+ "SolidMucus": {
+  "default_temperature": 278.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Mucus",
+   "temperature": 263.15
+  },
+  "material_category": "Organics",
+  "max_mass": 800,
+  "molar_mass": 25,
+  "name": "Frozen Mucin",
+  "specific_heat_capacity": 3.05,
+  "state": "Solid",
+  "tags": [
+   "Mixture",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 1
+ },
+ "SolidNaphtha": {
+  "default_temperature": 200,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Naphtha",
+   "temperature": 223
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1840,
+  "molar_mass": 102.2,
+  "name": "Solid Naphtha",
+  "specific_heat_capacity": 2.191,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0.2
+ },
+ "SolidNuclearWaste": {
+  "default_temperature": 250,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "NuclearWaste",
+   "temperature": 300
+  },
+  "material_category": "Other",
+  "max_mass": 9970,
+  "molar_mass": 196.966569,
+  "name": "Solid Nuclear Waste",
+  "specific_heat_capacity": 7.44,
+  "state": "Solid",
+  "tags": [
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 6
+ },
+ "SolidOxygen": {
+  "default_temperature": 30,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidOxygen",
+   "temperature": 54.36
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1000,
+  "molar_mass": 50,
+  "name": "Solid Oxygen",
+  "specific_heat_capacity": 1.01,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 1
+ },
+ "SolidPetroleum": {
+  "default_temperature": 200,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Petroleum",
+   "temperature": 216
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1840,
+  "molar_mass": 82.2,
+  "name": "Solid Petroleum",
+  "specific_heat_capacity": 1.76,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 2
+ },
+ "SolidPropane": {
+  "default_temperature": 60,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidPropane",
+   "temperature": 85
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1000,
+  "molar_mass": 44.1,
+  "name": "Solid Propane",
+  "specific_heat_capacity": 2.4,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "HideFromSpawnTool",
+   "HideFromCodex"
+  ],
+  "thermal_conductivity": 1
+ },
+ "SolidResin": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Resin",
+   "temperature": 293.15
+  },
+  "material_category": "Organics",
+  "max_mass": 1850,
+  "molar_mass": 52.5,
+  "name": "Solid Sap",
+  "specific_heat_capacity": 1.3,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 0.17
+ },
+ "SolidSuperCoolant": {
+  "default_temperature": 80,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SuperCoolant",
+   "temperature": 2
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 1840,
+  "molar_mass": 250,
+  "name": "Solid Super Coolant",
+  "specific_heat_capacity": 8.44,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 9.46
+ },
+ "SolidSyngas": {
+  "default_temperature": 5,
+  "disabled": true,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenSyngas",
+   "temperature": 14
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 1000,
+  "molar_mass": 44.1,
+  "name": "Solid Synthesis Gas",
+  "specific_heat_capacity": 2.4,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 1
+ },
+ "SolidViscoGel": {
+  "default_temperature": 150,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "ViscoGel",
+   "temperature": 242.5
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 150,
+  "molar_mass": 95,
+  "name": "Solid Visco-Gel",
+  "specific_heat_capacity": 1.55,
+  "state": "Solid",
+  "tags": [
+   "Plastic"
+  ],
+  "thermal_conductivity": 0.45
+ },
+ "SourGas": {
+  "default_temperature": 300,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": "Sulfur",
+   "ore_mass_conversion": 0.33,
+   "target": "LiquidMethane",
+   "temperature": 111.65
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 19.044,
+  "name": "Sour Gas",
+  "specific_heat_capacity": 1.898,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.018
+ },
+ "StableSnow": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Water",
+   "temperature": 272.5
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 20,
+  "molar_mass": 18.01528,
+  "name": "Packed Snow",
+  "specific_heat_capacity": 2.05,
+  "state": "Solid",
+  "tags": [
+   "IceOre",
+   "HideFromSpawnTool",
+   "HideFromCodex"
+  ],
+  "thermal_conductivity": 0.545
+ },
+ "Steam": {
+  "default_temperature": 400,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Water",
+   "temperature": 372.5
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 18.01528,
+  "name": "Steam",
+  "specific_heat_capacity": 4.179,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.184
+ },
+ "Steel": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 50,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenSteel",
+   "temperature": 2700
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 10000,
+  "molar_mass": 54.97,
+  "name": "Steel",
+  "specific_heat_capacity": 0.49,
+  "state": "Solid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 54
+ },
+ "SteelGas": {
+  "default_temperature": 4500,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenSteel",
+   "temperature": 4100
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 54.97,
+  "name": "Steel Gas",
+  "specific_heat_capacity": 0.49,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "Alloy",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Sucrose": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 5,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenSucrose",
+   "temperature": 459
+  },
+  "material_category": "ConsumableOre",
+  "max_mass": 2000,
+  "molar_mass": 342.3,
+  "name": "Sucrose",
+  "specific_heat_capacity": 1.255,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0.15
+ },
+ "SugarWater": {
+  "default_temperature": 233.15,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": "Sucrose",
+   "ore_mass_conversion": 0.77,
+   "target": "Steam",
+   "temperature": 433.15
+  },
+  "low_temp_transition": {
+   "ore": "Sucrose",
+   "ore_mass_conversion": 0.77,
+   "target": "Ice",
+   "temperature": 190.65
+  },
+  "max_mass": 1100,
+  "molar_mass": 21,
+  "name": "Nectar",
+  "specific_heat_capacity": 4.1,
+  "state": "Liquid",
+  "tags": [
+   "PlastifiableLiquid"
+  ],
+  "thermal_conductivity": 0.609
+ },
+ "Sulfur": {
+  "default_temperature": 290,
+  "disabled": false,
+  "hardness": 5,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidSulfur",
+   "temperature": 388.35
+  },
+  "material_category": "Other",
+  "max_mass": 2000,
+  "molar_mass": 50,
+  "name": "Sulfur",
+  "specific_heat_capacity": 0.7,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0.2
+ },
+ "SulfurGas": {
+  "default_temperature": 700,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "LiquidSulfur",
+   "temperature": 610.15
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 32,
+  "name": "Sulfur Gas",
+  "specific_heat_capacity": 0.7,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 0.2
+ },
+ "SuperCoolant": {
+  "default_temperature": 238,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SuperCoolantGas",
+   "temperature": 710
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidSuperCoolant",
+   "temperature": 2
+  },
+  "max_mass": 910,
+  "molar_mass": 250,
+  "name": "Super Coolant",
+  "specific_heat_capacity": 8.44,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 9.46
+ },
+ "SuperCoolantGas": {
+  "default_temperature": 850,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SuperCoolant",
+   "temperature": 710
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 190,
+  "name": "Super Coolant Gas",
+  "specific_heat_capacity": 8.44,
+  "state": "Gas",
+  "tags": [],
+  "thermal_conductivity": 1.2
+ },
+ "SuperInsulator": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 200,
+  "high_temp_transition": {
+   "ore": "SourGas",
+   "ore_mass_conversion": 0.15,
+   "target": "MoltenTungsten",
+   "temperature": 3895
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 1800,
+  "molar_mass": 341.76,
+  "name": "Insulite",
+  "specific_heat_capacity": 5.57,
+  "state": "Solid",
+  "tags": [
+   "BuildableRaw",
+   "Plumbable",
+   "Crushable",
+   "BuildableAny",
+   "Insulator"
+  ],
+  "thermal_conductivity": 1e-05
+ },
+ "Syngas": {
+  "default_temperature": 320,
+  "disabled": true,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenSyngas",
+   "temperature": 21
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 26.96,
+  "name": "Synthesis Gas",
+  "specific_heat_capacity": 2.4,
+  "state": "Gas",
+  "tags": [
+   "CombustibleGas"
+  ],
+  "thermal_conductivity": 0.168
+ },
+ "Tallow": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 15,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "RefinedLipid",
+   "temperature": 353.15
+  },
+  "material_category": "Liquifiable",
+  "max_mass": 2500,
+  "molar_mass": 850.92,
+  "name": "Tallow",
+  "specific_heat_capacity": 2.19,
+  "state": "Solid",
+  "tags": [
+   "Slippery"
+  ],
+  "thermal_conductivity": 10
+ },
+ "TempConductorSolid": {
+  "default_temperature": 242.15,
+  "disabled": false,
+  "hardness": 80,
+  "high_temp_transition": {
+   "ore": "Tungsten",
+   "ore_mass_conversion": 0.95,
+   "target": "MoltenNiobium",
+   "temperature": 2950
+  },
+  "material_category": "ManufacturedMaterial",
+  "max_mass": 1800,
+  "molar_mass": 174.35,
+  "name": "Thermium",
+  "specific_heat_capacity": 0.622,
+  "state": "Solid",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "Plumbable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 220
+ },
+ "ToxicMud": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": "ToxicSand",
+   "ore_mass_conversion": 0.4,
+   "target": "Steam",
+   "temperature": 372.84
+  },
+  "material_category": "Organics",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Polluted Mud",
+  "specific_heat_capacity": 0.83,
+  "state": "Solid",
+  "sublimation_rate": 0.1,
+  "sublimation_target": "ContaminatedOxygen",
+  "tags": [
+   "Unstable"
+  ],
+  "thermal_conductivity": 2
+ },
+ "ToxicSand": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 10,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenGlass",
+   "temperature": 1986
+  },
+  "material_category": "Organics",
+  "max_mass": 1840,
+  "molar_mass": 50,
+  "name": "Polluted Dirt",
+  "specific_heat_capacity": 0.83,
+  "state": "Solid",
+  "sublimation_rate": 0.1,
+  "sublimation_target": "ContaminatedOxygen",
+  "tags": [
+   "Compostable"
+  ],
+  "thermal_conductivity": 2
+ },
+ "Tungsten": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 200,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenTungsten",
+   "temperature": 3695
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 1000,
+  "molar_mass": 183.84,
+  "name": "Tungsten",
+  "specific_heat_capacity": 0.134,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 60
+ },
+ "TungstenGas": {
+  "default_temperature": 6500,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenTungsten",
+   "temperature": 6203
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 183.84,
+  "name": "Tungsten Gas",
+  "specific_heat_capacity": 0.134,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal"
+  ],
+  "thermal_conductivity": 1
+ },
+ "Unobtanium": {
+  "default_temperature": 1,
+  "disabled": false,
+  "hardness": 255,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Unobtanium",
+   "temperature": 10000
+  },
+  "material_category": "Special",
+  "max_mass": 20000,
+  "molar_mass": 10000,
+  "name": "Neutronium",
+  "specific_heat_capacity": 0,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 0
+ },
+ "UraniumOre": {
+  "default_temperature": 300,
+  "disabled": false,
+  "dlc": "EXPANSION1_ID",
+  "hardness": 150,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenUranium",
+   "temperature": 406
+  },
+  "material_category": "Metal",
+  "max_mass": 200,
+  "molar_mass": 120,
+  "name": "Uranium Ore",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "Metal",
+   "Noncrushable"
+  ],
+  "thermal_conductivity": 20
+ },
+ "Vacuum": {
+  "default_temperature": 0,
+  "disabled": false,
+  "hardness": 0,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Vacuum",
+   "temperature": 0
+  },
+  "material_category": "Special",
+  "max_mass": 0,
+  "molar_mass": 0,
+  "name": "Vacuum",
+  "specific_heat_capacity": 0,
+  "state": "Vacuum",
+  "tags": [],
+  "thermal_conductivity": 0
+ },
+ "ViscoGel": {
+  "default_temperature": 238,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Naphtha",
+   "temperature": 753
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "SolidViscoGel",
+   "temperature": 242.5
+  },
+  "max_mass": 100,
+  "molar_mass": 10,
+  "name": "Visco-Gel Fluid",
+  "specific_heat_capacity": 1.55,
+  "state": "Liquid",
+  "tags": [],
+  "thermal_conductivity": 0.45
+ },
+ "Void": {
+  "default_temperature": 0,
+  "disabled": false,
+  "hardness": 0,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Void",
+   "temperature": 0
+  },
+  "material_category": "Special",
+  "max_mass": 0,
+  "molar_mass": 0,
+  "name": "Void",
+  "specific_heat_capacity": 0,
+  "state": "Vacuum",
+  "tags": [],
+  "thermal_conductivity": 0
+ },
+ "Water": {
+  "default_temperature": 300,
+  "disabled": false,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Steam",
+   "temperature": 372.5
+  },
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "Ice",
+   "temperature": 272.5
+  },
+  "max_mass": 1000,
+  "molar_mass": 18.01528,
+  "name": "Water",
+  "specific_heat_capacity": 4.179,
+  "state": "Liquid",
+  "tags": [
+   "AnyWater"
+  ],
+  "thermal_conductivity": 0.609
+ },
+ "Wolframite": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 150,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenTungsten",
+   "temperature": 3200
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 150,
+  "name": "Wolframite",
+  "specific_heat_capacity": 0.134,
+  "state": "Solid",
+  "tags": [
+   "Plumbable",
+   "BuildableAny"
+  ],
+  "thermal_conductivity": 15
+ },
+ "WoodLog": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 18,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "CarbonDioxide",
+   "temperature": 873.15
+  },
+  "material_category": "Organics",
+  "max_mass": 1840,
+  "molar_mass": 217.8529,
+  "name": "Wood",
+  "specific_heat_capacity": 2.3,
+  "state": "Solid",
+  "tags": [
+   "HideFromSpawnTool",
+   "BuildingWood",
+   "IndustrialIngredient"
+  ],
+  "thermal_conductivity": 0.22
+ },
+ "Yellowcake": {
+  "default_temperature": 300,
+  "disabled": true,
+  "dlc": "EXPANSION1_ID",
+  "hardness": 250,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenUranium",
+   "temperature": 1132
+  },
+  "max_mass": 200,
+  "molar_mass": 120,
+  "name": "Yellowcake",
+  "specific_heat_capacity": 1,
+  "state": "Solid",
+  "tags": [],
+  "thermal_conductivity": 20
+ },
+ "Zinc": {
+  "default_temperature": 300,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenZinc",
+   "temperature": 692.65
+  },
+  "material_category": "RefinedMetal",
+  "max_mass": 3870,
+  "molar_mass": 65.38,
+  "name": "Zinc",
+  "specific_heat_capacity": 0.388,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "StartingRefinedMetal"
+  ],
+  "thermal_conductivity": 120
+ },
+ "ZincGas": {
+  "default_temperature": 3200,
+  "disabled": false,
+  "low_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenZinc",
+   "temperature": 1180
+  },
+  "material_category": "Unbreathable",
+  "molar_mass": 65.38,
+  "name": "Zinc Gas",
+  "specific_heat_capacity": 0.388,
+  "state": "Gas",
+  "tags": [
+   "Metal",
+   "RefinedMetal",
+   "EmitsLight"
+  ],
+  "thermal_conductivity": 1
+ },
+ "ZincOre": {
+  "default_temperature": 301.15,
+  "disabled": false,
+  "hardness": 2,
+  "high_temp_transition": {
+   "ore": null,
+   "ore_mass_conversion": null,
+   "target": "MoltenZinc",
+   "temperature": 692.65
+  },
+  "material_category": "Metal",
+  "max_mass": 1840,
+  "molar_mass": 65.38,
+  "name": "Zinc Ore",
+  "specific_heat_capacity": 0.388,
+  "state": "Solid",
+  "tags": [
+   "BuildableAny",
+   "StartingMetalOre",
+   "Ore"
+  ],
+  "thermal_conductivity": 4.0
+ }
+}
