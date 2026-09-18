@@ -1,12 +1,94 @@
+# ONI machine database — regenerated from current game files via
+# tools/extract_oni_data.py (see oni/data/buildings.json and recipes.json).
+#
+# Conventions:
+# - Rates are kg/s at 100% uptime. Power in watts. Heat in DTU/s.
+# - Heat is building self+exhaust heat only; heat carried by produced
+#   elements is not modeled (but hot-output temperatures are noted).
+# - Resource names use internal element ids: DirtyWater = Polluted Water,
+#   ToxicSand = Polluted Dirt, Methane = Natural Gas, Carbon = Coal,
+#   ContaminatedOxygen = Polluted Oxygen, OxyRock = Oxylite,
+#   Polypropylene = Plastic, SlimeMold = Slime, BuildingWood = Wood.
+# - 'LIQUID'/'GAS' in a machine name expands to one machine per element
+#   (see machine.py:_expand_wildcards).
 
-Electrolyzer:
-  needs:
-    Power: 120
-    PipedWater: 1
+# ---------------------------------------------------------------- power ----
+
+ManualGenerator:
   gives:
-    Hydrogen: 0.112
-    Oxygen: .888
-    Heat: 45288
+    Power: 400
+    Heat: 1000
+
+# Coal Generator
+Generator:
+  needs:
+    Carbon: 1
+  gives:
+    Power: 600
+    CarbonDioxide: 0.02
+    Heat: 9000
+
+HydrogenGenerator:
+  needs:
+    PipedHydrogen: 0.1
+  gives:
+    Power: 800
+    Heat: 4000
+
+# Natural Gas Generator
+MethaneGenerator:
+  needs:
+    PipedMethane: 0.09
+  gives:
+    Power: 800
+    PipedDirtyWater: 0.0675
+    CarbonDioxide: 0.0225
+    Heat: 10000
+
+PetroleumGenerator:
+  needs:
+    PipedPetroleum: 2
+  gives:
+    Power: 2000
+    CarbonDioxide: 0.5
+    DirtyWater: 0.75
+    Heat: 20000
+
+WoodGasGenerator:
+  needs:
+    BuildingWood: 1.2
+  gives:
+    Power: 300
+    CarbonDioxide: 0.17
+    Heat: 9000
+
+SolarPanel:
+  # peak output; scales with light
+  gives:
+    Power: 380
+
+Battery:
+  gives:
+    Heat: 1250
+
+BatteryMedium:
+  gives:
+    Heat: 1250
+
+BatterySmart:
+  gives:
+    Heat: 500
+
+PowerTransformer:
+  gives:
+    Heat: 1000
+
+# "Large Power Transformer" in-game (1 kW)
+PowerTransformerSmall:
+  gives:
+    Heat: 1000
+
+# ------------------------------------------------------- pumps and vents ----
 
 LIQUIDPump:
   needs:
@@ -31,6 +113,13 @@ GASPump:
   gives:
     PipedGAS: 0.5
 
+MiniGASPump:
+  needs:
+    Power: 60
+    GAS: .05
+  gives:
+    PipedGAS: 0.05
+
 GASVent:
   needs:
     PipedGAS: 0.5
@@ -43,14 +132,13 @@ LIQUIDVent:
   gives:
     LIQUID: 10
 
-MiniGASPump:
+# "Gas Shutoff" in-game
+GasLogicValve:
   needs:
-    Power: 60
-    GAS: .05
-  gives:
-    PipedGAS: 0.05
+    Power: 10
 
-GasShutoff:
+# "Liquid Shutoff" in-game
+LiquidLogicValve:
   needs:
     Power: 10
 
@@ -58,178 +146,235 @@ GasFilter:
   needs:
     Power: 120
 
-SpaceScanner:
-  needs:
-    Power: 120
-
-Refrigerator:
-  needs:
-    Power: 120
-  gives:
-    Heat: 500
-
-Incubator:
-  needs:
-    Power: 240
-  gives:
-    Heat: 4500
-
-Lamp:
-  needs:
-    Power: 8
-  gives:
-    Heat: 500
-
-Jukebox:
-  needs:
-    Power: 960
-  gives:
-    Heat: 1000
-
-ArcadeCabinet:
-  needs:
-    Power: 1200
-  gives:
-    Heat: 4000
-
-
-# Assumes 30 sec operation time
-EspressoMachine:
-  max_uptime: 0.1
-  needs:
-    Power: 480
-    PinchaPeppernut: .03333
-    Water: .0333
-  gives:
-    Heat: 1000
-
-SolarPanel:
-  gives:
-    Power: 380
-
-FertilizerSynthesizer:
-  needs:
-    PollutedWater: .039
-    Dirt: .065
-    Phosphorite: .026
-    Power: 120
-  gives:
-    Fertilizer: .120
-    NaturalGas: .01
-    Heat: 3000
-
-AlgaeDistiller:
-  needs:
-    Slime: 0.6
-    Power: 120
-  gives:
-    Heat: 1500
-    Algae: 0.2
-    PollutedWater: 0.4
-
-OxyliteRefinery:
-  needs:
-    Power: 1200
-    PipedOxygen: 0.6
-    Gold: .003
-  gives:
-    Oxylite: 0.6
-    Heat: 12000
-
-GasElementSensor:
-  needs:
-    Power: 25
-
 LiquidFilter:
   needs:
     Power: 120
   gives:
     Heat: 4000
 
-LiquidTepidizer:
-  needs:
-    Power: 960
-  gives:
-    Heat: 4064000
+# ---------------------------------------------------------------- oxygen ----
 
-LiquidShutoff:
+Electrolyzer:
   needs:
-    Power: 10
-
-ManualGenerator:
-  # greedy: False
+    Power: 120
+    PipedWater: 1
   gives:
-    Power: 400
+    Oxygen: 0.888
+    Hydrogen: 0.112
+    Heat: 1250  # outputs gas at >= 70 C
+
+# Oxygen Diffuser
+MineralDeoxidizer:
+  needs:
+    Power: 120
+    Algae: 0.55
+  gives:
+    Oxygen: 0.5
+    Heat: 1500
+
+RustDeoxidizer:
+  needs:
+    Power: 60
+    Rust: 0.75
+    Salt: 0.25
+  gives:
+    Oxygen: 0.57
+    ChlorineGas: 0.03
+    IronOre: 0.4
+    Heat: 1125
+
+# Polluted Oxygen from Polluted Dirt
+SublimationStation:
+  needs:
+    Power: 60
+    ToxicSand: 1
+  gives:
+    ContaminatedOxygen: 0.66
+    Heat: 1500
+
+# Deodorizer
+AirFilter:
+  needs:
+    Power: 5
+    Sand: 0.13333
+    ContaminatedOxygen: 0.1
+  gives:
+    Oxygen: 0.09
+    Clay: 0.14333
+    Heat: 625
+
+# Algae Terrarium; also consumes 0.3 g/s of atmosphere CO2
+AlgaeHabitat:
+  needs:
+    Algae: .03
+    Water: 0.3
+    CarbonDioxide: .033
+  gives:
+    Oxygen: .04
+    DirtyWater: .29033
+
+# Oxylite Refinery
+OxyliteRefinery:
+  needs:
+    Power: 1200
+    PipedOxygen: 0.6
+    Gold: .003
+  gives:
+    OxyRock: 0.6
+    Heat: 12000
+
+# ----------------------------------------------------------------- water ----
+
+# Carbon Skimmer
+CO2Scrubber:
+  needs:
+    CarbonDioxide: 0.3
+    PipedWater: 1
+    Power: 120
+  gives:
+    PipedDirtyWater: 1
     Heat: 1000
 
-
-CoalGenerator:
-  # greedy: False
+# Water Sieve
+WaterPurifier:
   needs:
-    Coal: 1
+    Power: 120
+    PipedDirtyWater: 5
+    Sand: 1
   gives:
-    Power: 600
-    Heat: 9000
-
-HydrogenGenerator:
-  # greedy: False
-  needs:
-    PipedHydrogen: 0.1
-  gives:
-    Power: 800
+    PipedWater: 5
+    ToxicSand: 0.2
     Heat: 4000
 
-NaturalGasGenerator:
-  # greedy: False
+# Salt Water -> Water; also Brine 5 -> Water 3.5 + Salt 1.5
+Desalinator:
   needs:
-    PipedNaturalGas: 0.09
+    Power: 480
+    PipedSaltWater: 5
   gives:
-    PollutedWater: .0675
-    PipedCarbonDioxide: .0225
-    Power: 800
+    PipedWater: 4.65
+    Salt: 0.35
+    Heat: 8000
+
+# Oil Well
+OilWellCap:
+  needs:
+    Power: 240
+    PipedWater: 1
+  gives:
+    PipedCrudeOil: 3.3333
+    Methane: .03333
+    Heat: 2000
+
+# ------------------------------------------------------------ refinement ----
+
+FertilizerMaker:
+  needs:
+    DirtyWater: .039
+    Dirt: .065
+    Phosphorite: .026
+    Power: 120
+  gives:
+    Fertilizer: .12
+    Methane: .01
+    Heat: 3000
+
+AlgaeDistillery:
+  needs:
+    SlimeMold: 0.6
+    Power: 120
+  gives:
+    Algae: 0.2
+    DirtyWater: 0.4
+    Heat: 1500
+
+# accepts any compostable; Polluted Dirt shown as the typical input
+Compost:
+  needs:
+    ToxicSand: 0.1
+  gives:
+    Dirt: 0.1
+    Heat: 1125
+
+OilRefinery:
+  needs:
+    PipedCrudeOil: 10
+    Power: 480
+  gives:
+    PipedPetroleum: 5
+    Methane: 0.09
     Heat: 10000
 
-PetroleumGenerator:
-  # greedy: False
+# Polymer Press
+Polymerizer:
   needs:
-    PipedPetroleum: 2
+    PipedPetroleum: .83333
+    Power: 240
   gives:
-    CarbonDioxide: 0.5
-    PollutedWater: .075
-    Power: 2000
+    Polypropylene: 0.5
+    Steam: .00833
+    CarbonDioxide: .00833
+    Heat: 32500
+
+EthanolDistillery:
+  needs:
+    BuildingWood: 1
+    Power: 240
+  gives:
+    Ethanol: 0.5
+    ToxicSand: 0.3333
+    CarbonDioxide: 0.1667
+    Heat: 4500
+
+# Kiln, per second of continuous operation (recipes take 40 s)
+RefinedCarbonKiln:
+  needs:
+    Carbon: 3.125
+  gives:
+    RefinedCarbon: 2.5
     Heat: 20000
+
+CeramicKiln:
+  needs:
+    Clay: 2.5
+    Carbon: 0.625
+  gives:
+    Ceramic: 2.5
+    Heat: 20000
+
+# Metal Refinery, per second of continuous operation (100 kg per 40 s).
+# Heat includes coolant heating: 0.8 * SHC(metal) * 100 kg * (melt - 40 C).
+IronRefinery:
+  needs:
+    Power: 1200
+    IronOre: 2.5
+  gives:
+    Iron: 2.5
+    Heat: 1358375
+
+CopperRefinery:
+  needs:
+    Power: 1200
+    Cuprite: 2.5
+  gives:
+    Copper: 2.5
+    Heat: 819764
 
 GoldRefinery:
   needs:
     Power: 1200
     GoldAmalgam: 2.5
   gives:
-    Heat: 280166.2
     Gold: 2.5
+    Heat: 280153
 
 TungstenRefinery:
   needs:
     Power: 1200
     Wolframite: 2.5
   gives:
-    Heat: 789689.2
     Tungsten: 2.5
-
-CopperRefinery:
-  needs:
-    Power: 1200
-    CopperOre: 2.5
-  gives:
-    Heat: 819803
-    Copper: 2.5
-
-IronRefinery:
-  needs:
-    Power: 1200
-    IronOre: 2.5
-  gives:
-    Heat: 1358420.2
-    Iron: 2.5
+    Heat: 922336
 
 SteelRefinery:
   needs:
@@ -238,219 +383,227 @@ SteelRefinery:
     RefinedCarbon: 0.5
     Lime: 0.25
   gives:
-    Heat: 2355162.0
     Steel: 2.5
+    Heat: 2355113
 
-
-SmartBattery:
-  gives:
-    Heat: 500
-
-PowerTransformer:
-  gives:
-    Heat: 1000
-
-LargePowerTransformer:
-  gives:
-    Heat: 1000
-
-CarbonSkimmer:
-  needs:
-    CarbonDioxide: 0.3
-    PipedWater: 1
-    Power: 120
-  gives:
-    PollutedWater: 1
-    Heat: 1000
-
-OxygenDiffuser:
-    needs:
-      Algae: 0.550
-      Power: 120
-    gives:
-      Heat: 1500
-      Oxygen: 0.5
-
-AlgaeTerrarium:
-  needs:
-    Algae: .03
-    Water: 0.3
-    CarbonDioxide: .033
-  gives:
-    Oxygen: .04
-    PollutedWater: .29033
-
-WaterSieve:
-  needs:
-    Power: 120
-    PipedPollutedWater: 5
-    Sand: 1
-  gives:
-    Water: 5
-    PollutedDirt: 0.2
-    Heat: 102000
-
-Compost:
-  needs:
-    PollutedDirt: -0.1
-  gives:
-    Dirt: 0.1
-
-OilRefinery:
-  needs:
-    PipedCrudeOil: 10
-    Power: 480
-  gives:
-    PipedPetroleum: 5
-    NaturalGas: 0.09
-    Heat: 10000
-
-PolymerPress:
-  needs:
-    PipedPetroleum: .83333
-    Power: 240
-  gives:
-    Plastic: 0.5
-    Steam: .00833
-    PipedCarbonDioxide: .00833
-    Heat: 32500
-
-# How long does a batch take??
-RefinedCarbonKiln:
-  needs:
-    Coal: 125
-  gives:
-    Heat: 20000
-    RefinedCarbon: 100
-
-CeramicCarbonKiln:
-  needs:
-    Clay: 100
-    Coal: 25
-  gives:
-    Heat: 20000
-    Ceramic: 100
-
-ThermoAquatuner:
+AluminumRefinery:
   needs:
     Power: 1200
+    AluminumOre: 2.5
+  gives:
+    Aluminum: 2.5
+    Heat: 1144946
+
+CobaltRefinery:
+  needs:
+    Power: 1200
+    Cobaltite: 2.5
+  gives:
+    Cobalt: 2.5
+    Heat: 1238074
+
+LeadRefinery:
+  needs:
+    Power: 1200
+    Lead: 2.5
+  gives:
+    Lead: 2.5
+    Heat: 89600
+
+NickelRefinery:
+  needs:
+    Power: 1200
+    NickelOre: 2.5
+  gives:
+    Nickel: 2.5
+    Heat: 1261068
+
+GlassForge:
+  needs:
+    Power: 1200
+    Sand: 2.5
+  gives:
+    MoltenGlass: 0.625
+    Heat: 247685
+
+# ------------------------------------------------------------- temperature ----
+
+# Liquid Tepidizer, normal mode (960 W). Turbo mode: 4 kW -> 4064000 DTU/s.
+LiquidHeater:
+  needs:
+    Power: 960
+  gives:
+    Heat: 975360
+
+# Thermo Aquatuner; moves 585 kDTU/s (water) from coolant to itself
+LiquidConditioner:
+  needs:
+    Power: 1200
+
+# Thermo Regulator
+AirConditioner:
+  needs:
+    Power: 240
+
+IceMachine:
+  needs:
+    Power: 240
+    Water: 0.5
+  gives:
+    Ice: 0.5
+    Heat: 16000  # heat removed from the water is not modeled
+
+# Ice-E Fan; consumes ice and deletes 32 kDTU/s while operated
+IceCooledFan:
+  needs:
+    Heat: 32000
+
+# Anti-Entropy Thermo-Nullifier
+MassiveHeatSink:
+  needs:
+    Hydrogen: 0.01
+    Heat: -80000
 
 WheezeWort:
   needs:
     Heat: 120000
 
-IceMaker:
+# ----------------------------------------------------------------- other ----
+
+CometDetector:
   needs:
     Power: 120
-    Heat: 111000
-    Water: 0.5  # Assumes 100s operation time, or 45C water
+
+Refrigerator:
+  needs:
+    Power: 120
   gives:
-    Ice: 0.5
+    Heat: 125
 
-IceEFan:
+EggIncubator:
   needs:
-    Heat: 32000
-
-Nullifier:
-  needs:
-    Hydrogen: 0.01
-    Heat: -80000
-
-OilWell:
-  needs:
-    PipedWater: 1
+    Power: 240
   gives:
-    CrudeOil: 3.33
-    NaturalGas: .03333
-
-# Arbitrarily assumes 1 sec operation time
-EggCracker:
-  needs:
-    Egg: 1
-  gives:
-    RawEgg: 1
-    EggShell: 1
-
-OmeletteGrill:
-  needs:
-    RawEgg: 1
-    Power: 60
-  gives:
-    Food: 2800
     Heat: 4500
 
-MushFryGrill:
+FloorLamp:
   needs:
-    Power: 60
-    MushBar: 1
+    Power: 8
   gives:
-    Food: 1050
-    Heat: 4500
-
-FrostBunGrill:
-  needs:
-    Power: 60
-    SleetWheatGrain: 3
-  gives:
-    Food: 1200
-    Heat: 4500
-
-GristleBerryGrill:
-  needs:
-    Power: 60
-    BristleBerry: 1
-  gives:
-    Food: 2000
-    Heat: 4500
-
-StuffedBerryGrill:
-  needs:
-    Power: 60
-    BristleBerry: 2
-    PinchaPeppernut: 2
-  gives:
-    Food: 4000
-    Heat: 4500
-
-PickledMealGrill:
-  needs:
-    Power: 60
-    MealLice: 3
-  gives:
-    Food: 1800
-    Heat: 4500
-
-FriedMushroomGrill:
-  needs:
-    Power: 60
-    Mushroom: 1
-  gives:
-    Food: 2800
-    Heat: 4500
-
-BarbequeGrill:
-  needs:
-    Power: 60
-    Meat: 2
-    PinchaPeppernut: 1
-  gives:
-    Food: 4000
-    Heat: 4500
-
-PepperBreadGrill:
-  needs:
-    Power: 60
-    SleetWheatGrain: 10
-    PinchaPeppernut: 1
-  gives:
-    Food: 4000
-    Heat: 4500
+    Heat: 500
 
 CeilingLight:
   needs:
     Power: 10
   gives:
     Heat: 500
+
+# Jukebot
+Phonobox:
+  needs:
+    Power: 960
+  gives:
+    Heat: 1000
+
+ArcadeMachine:
+  needs:
+    Power: 1200
+  gives:
+    Heat: 2000
+
+EspressoMachine:
+  needs:
+    Power: 480
+    PinchaPeppernut: .03333
+    Water: .0333
+  gives:
+    Heat: 1000
+
+# ------------------------------------------------------------------ food ----
+# Food recipes, per second of continuous operation.
+# CookingStation (Electric Grill): 60 W, 4500 DTU/s while running.
+
+MushFryGrill:
+  needs:
+    Power: 60
+    MushBar: 0.03333
+  gives:
+    Food: 35
+    Heat: 4500
+
+PickledMealGrill:
+  needs:
+    Power: 60
+    MealLice: 0.06
+  gives:
+    Food: 36
+    Heat: 4500
+
+FriedMushroomGrill:
+  needs:
+    Power: 60
+    Mushroom: 0.02
+  gives:
+    Food: 56
+    Heat: 4500
+
+FrostBunGrill:
+  needs:
+    Power: 60
+    SleetWheatGrain: 0.06
+  gives:
+    Food: 24
+    Heat: 4500
+
+OmeletteGrill:
+  needs:
+    Power: 60
+    RawEgg: 0.02
+  gives:
+    Food: 56
+    Heat: 4500
+
+BarbequeGrill:
+  needs:
+    Power: 60
+    Meat: 0.04
+  gives:
+    Food: 80
+    Heat: 4500
+
+GristleBerryGrill:
+  needs:
+    Power: 60
+    PrickleFruit: 0.02
+  gives:
+    Food: 40
+    Heat: 4500
+
+# GourmetCookingStation (Gas Range), 50 s recipes: also burns piped methane.
+
+PepperBreadGrill:
+  needs:
+    Power: 240
+    PipedMethane: 0.1
+    SleetWheatGrain: 0.2
+    SpiceNut: 0.02
+  gives:
+    Food: 80
+    CarbonDioxide: 0.025
+    Heat: 9000
+
+MushroomWrapGrill:
+  needs:
+    Power: 240
+    PipedMethane: 0.1
+    FriedMushroom: 0.02
+    Lettuce: 0.08
+  gives:
+    Food: 96
+    CarbonDioxide: 0.025
+    Heat: 9000
+
+# ------------------------------------------------------------ duplicants ----
 
 Duplicant:
   needs:
@@ -459,14 +612,14 @@ Duplicant:
   gives:
     CarbonDioxide: .002
 
+# --------------------------------------------------------------- critters ----
 
 StoneHatch:
   needs:
     IgneousRock: 0.223
   gives:
-    Coal: 0.117
+    Carbon: 0.117
     Egg: 0.0002777777777
-    Meat: 0.000033333333
 
 Slickster:
   needs:
@@ -475,6 +628,8 @@ Slickster:
     CrudeOil: .01667
     Egg: 0.0002777777777
     Meat: 0.000033333333
+
+# ----------------------------------------------------------------- plants ----
 
 WildSleetWheat:
   gives:
@@ -490,7 +645,7 @@ FarmedSleetWheat:
 FarmedPinchaPepper:
   needs:
     Phosphorite: .001666
-    PollutedWater: .05833
+    DirtyWater: .05833
   gives:
     PinchaPeppernut: 0.0008333333  # 4 per 8 cycles
 
@@ -504,7 +659,7 @@ WildDuskCap:
 
 FarmedDuskCap:
   needs:
-    Slime: .006666666
+    SlimeMold: .006666666
   gives:
     Mushroom: 0.00022222
 

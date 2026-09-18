@@ -196,7 +196,7 @@ def _expand_wildcards(name, contents):
                 n = name.replace(wc, r.__name__)
                 c = deepcopy(contents)
                 for entry in ['needs', 'gives']:
-                    for k in c[entry]:
+                    for k in list(c[entry]):
                         c[entry][k.replace(wc, r.__name__)] = c[entry].pop(k)
 
                 yield n, c
@@ -310,8 +310,14 @@ class System:
         ]).fillna(0)
 
         # Rescale each resource to unity-max
-        for c in result.columns:
-            result[c] /= result[c].abs().max()
+        for c in list(result.columns):
+            peak = result[c].abs().max()
+            if peak == 0:
+                # a resource that nets to zero for every machine carries
+                # no information for the balance program
+                result = result.drop(columns=c)
+            else:
+                result[c] /= peak
 
         return result
 
