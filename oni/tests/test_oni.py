@@ -25,13 +25,13 @@ class TestMachine:
         assert e.needs()[Power] == 120
         assert e.gives()[Hydrogen] == 0.112
         assert e.gives()[Oxygen] == 0.888
-        assert e.gives()[Heat] == 45288
+        assert e.gives()[Heat] == 1250
 
     def test_throttle(self):
         e = Electrolyzer().throttle(0.5)
         assert e.uptime == 0.5
         assert e.needs() == {PipedWater: 0.5, Power: 60}
-        assert e.gives() == {Oxygen: .444, Hydrogen: .056, Heat: 22644}
+        assert e.gives() == {Oxygen: .444, Hydrogen: .056, Heat: 625}
 
     def test_name(self):
         e = Electrolyzer()
@@ -46,7 +46,7 @@ class TestMachine:
         assert str(e) == "Sink(Power, 10) [100.0% Uptime]"
 
     def test_liquid_expansion(self):
-        from oni import WaterPump, PipedLiquidChlorine
+        from oni import WaterPump, PipedChlorine
 
 
 class TestSystem:
