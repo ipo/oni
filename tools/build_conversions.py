@@ -15,6 +15,13 @@ Conversion sources covered:
   recipe             - ComplexRecipe on a fabricator (kiln, refinery, grill)
                        batch amounts normalized to kg/s via the recipe time
 
+Every output carries an explicit temperature rule:
+  input_temperature       - SHC-weighted average of the consumed inputs
+  max_input_or_min        - that average, but at least min_k
+  building_temperature    - the building's own temperature
+  max_building_or_min     - building temperature, but at least min_k
+  fixed                   - a hardcoded temperature (k)
+
 Pure transport (pumps, vents) and storage-only buildings are not included.
 
 Usage: python3 tools/build_conversions.py [--data-dir oni/data]
@@ -95,6 +102,8 @@ def converter_entries(bid, building, elements):
             elif is_num(p.get('min_temperature')) and p['min_temperature'] > 0:
                 o['temperature'] = {'rule': 'max_input_or_min',
                                     'min_k': p['min_temperature']}
+            else:
+                o['temperature'] = {'rule': 'input_temperature'}
             outputs.append(o)
         if inputs or outputs:
             entry = {'source': 'element_converter', 'inputs': inputs,
@@ -136,6 +145,8 @@ def generator_entries(bid, building, elements):
         if is_num(o.get('min_temperature')) and o['min_temperature'] > 0:
             out['temperature'] = {'rule': 'max_building_or_min',
                                   'min_k': o['min_temperature']}
+        else:
+            out['temperature'] = {'rule': 'building_temperature'}
         outputs.append(out)
     entry = {'source': 'generator', 'inputs': inputs, 'outputs': outputs}
     if incomplete:
