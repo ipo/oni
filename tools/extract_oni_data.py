@@ -14,6 +14,8 @@ Outputs:
     elements.json   - all sim elements with thermal/phase data
     buildings.json  - all constructable buildings with power/consumption/production
     recipes.json    - all fabricator/refinery recipes
+    foods.json      - all foods with kcal and quality
+    plants.json     - all crop plants with growth time, yield and consumption
 """
 import argparse
 import json
@@ -102,6 +104,60 @@ def parse_named_args(arglist):
         else:
             pos.append(a)
     return pos, named
+
+
+def map_args_to_params(arglist, param_names):
+    """Map an argument list (mixed positional/named) to parameter names.
+
+    Decompiled code interleaves named and positional args
+    (e.g. `pressure_sensitive: true, 0f, 0.15f, "ColdWheatSeed"`); named
+    args still consume their positional slot, so positional args after a
+    named one bind to the following parameters.
+    """
+    out = {}
+    idx = 0
+    for a in arglist:
+        m = re.match(r'^(\w+)\s*:\s*(.+)$', a, re.S)
+        if m and m.group(1) in param_names:
+            name = m.group(1)
+            out[name] = m.group(2).strip()
+            idx = param_names.index(name) + 1
+        else:
+            while idx < len(param_names) and param_names[idx] in out:
+                idx += 1
+            if idx < len(param_names):
+                out[param_names[idx]] = a.strip()
+                idx += 1
+    return out
+
+
+def eval_arith(expr, names=None):
+    """Evaluate a simple C# arithmetic expression to a number.
+
+    Handles float literals with `f` suffix, + - * /, parentheses,
+    Mathf.RoundToInt(...) and substitution of known named values.
+    Returns None when the expression is not simple arithmetic.
+    """
+    if isinstance(expr, (int, float)):
+        return expr
+    if not isinstance(expr, str):
+        return None
+    s = expr.strip()
+    s = re.sub(r'Mathf\.RoundToInt\s*\(', 'round(', s)
+    s = re.sub(r'(?<=\d)f\b', '', s)
+    for k, v in (names or {}).items():
+        if v is None:
+            continue
+        s = re.sub(rf'\b{re.escape(k)}\.CaloriesPerUnit\b', repr(float(v)), s)
+        s = re.sub(rf'\b{re.escape(k)}\b', repr(float(v)), s)
+    if re.search(r'[A-Za-z_]', re.sub(r'round', '', s)):
+        return None
+    if not re.fullmatch(r'[\d\s.+\-*/()a-z]+', s):
+        return None
+    try:
+        return eval(s, {'__builtins__': {}}, {'round': round})
+    except Exception:
+        return None
 
 
 # --------------------------------------------------------------------------
@@ -681,6 +737,224 @@ def parse_recipes(path, resolver):
 
 
 # --------------------------------------------------------------------------
+# Food / crop / plant extraction
+# --------------------------------------------------------------------------
+
+def parse_foods(path, resolver, strings):
+    """Parse TUNING/FOOD.cs -> {food_id: {kcal, quality, ...}}."""
+    text = open(path, encoding='utf-8', errors='replace').read()
+    foods = {}
+    cals = {}  # FOOD_TYPES member name -> calories, for forward references
+    pattern = re.compile(
+        r'readonly EdiblesManager\.FoodInfo (\w+) = '
+        r'new EdiblesManager\.FoodInfo\(')
+    for m in pattern.finditer(text):
+        open_idx = text.index('(', m.end() - 1)
+        close_idx = find_matching(text, open_idx)
+        pos, named = parse_named_args(split_args(text[open_idx + 1:close_idx]))
+        if len(pos) < 3:
+            continue
+        fid = resolver.resolve(pos[0])
+        if not isinstance(fid, str):
+            continue
+        cal = eval_arith(pos[1], cals)
+        quality = eval_arith(pos[2])
+        if cal is None or quality is None:
+            continue
+        rec = {'kcal': cal / 1000.0, 'quality': int(quality)}
+        if 'can_rot' in named:
+            rec['can_rot'] = named['can_rot'].strip() == 'true'
+        for extra in pos[7:]:
+            dm = re.match(r'^DlcManager\.(\w+)$', extra.strip())
+            if dm:
+                rec['dlc'] = dm.group(1)
+        name_key = f'STRINGS.ITEMS.FOOD.{fid.upper()}.NAME'
+        if name_key in strings:
+            rec['name'] = clean_name(strings[name_key])
+        foods[fid] = rec
+        cals[m.group(1)] = cal
+    return foods
+
+
+def parse_crops(path, resolver):
+    """Parse TUNING/CROPS.cs -> {crop_id: {growth_seconds, units_per_harvest}}.
+
+    Growth durations are the domestic (farmed) values; wild plants grow at
+    WILD_GROWTH_RATE_MODIFIER (0.25) speed.
+    """
+    text = open(path, encoding='utf-8', errors='replace').read()
+    m = re.search(r'CROP_TYPES\s*=\s*new List<Crop\.CropVal>\s*\{', text)
+    if not m:
+        return {}
+    open_idx = text.index('{', m.end() - 1)
+    close_idx = find_matching(text, open_idx, '{', '}')
+    body = text[open_idx + 1:close_idx]
+    crops = {}
+    for cm in re.finditer(r'new Crop\.CropVal\(', body):
+        co = body.index('(', cm.end() - 1)
+        cc = find_matching(body, co)
+        pos, _named = parse_named_args(split_args(body[co + 1:cc]))
+        if not pos:
+            continue
+        cid = resolver.resolve(pos[0])
+        if not isinstance(cid, str):
+            continue
+        dur = eval_arith(pos[1]) if len(pos) > 1 else None
+        num = eval_arith(pos[2]) if len(pos) > 2 else 1
+        crops[cid] = {
+            'growth_seconds': dur,
+            'units_per_harvest': int(num) if num else 1,
+        }
+    return crops
+
+
+# EntityTemplates.ExtendEntityToBasicPlant parameter names in order
+BASIC_PLANT_PARAMS = [
+    'template', 'temperature_lethal_low', 'temperature_warning_low',
+    'temperature_warning_high', 'temperature_lethal_high', 'safe_elements',
+    'pressure_sensitive', 'pressure_lethal_low', 'pressure_warning_low',
+    'crop_id', 'can_drown', 'can_tinker', 'require_solid_tile',
+    'require_Backwall_Foundation', 'should_grow_old', 'max_age',
+    'min_radiation', 'max_radiation', 'baseTraitId', 'baseTraitName',
+]
+
+
+def parse_consume_infos(window, resolver, local):
+    """Extract PlantElementAbsorber.ConsumeInfo blocks from a code window."""
+    tag_locals = dict(local)
+    for tm in re.finditer(r'Tag\s+(\w+)\s*=\s*([^;]+);', window):
+        tag_locals[tm.group(1)] = tm.group(2).strip()
+    out = []
+    for m in re.finditer(r'new PlantElementAbsorber\.ConsumeInfo\s*\{', window):
+        bo = window.index('{', m.end() - 1)
+        bc = find_matching(window, bo, '{', '}')
+        body = window[bo + 1:bc]
+        tagm = re.search(r'tag\s*=\s*([^,}]+)', body)
+        ratem = re.search(r'massConsumptionRate\s*=\s*([^,}]+)', body)
+        if not tagm or not ratem:
+            continue
+        texpr = tagm.group(1).strip()
+        seen = 0
+        while texpr in tag_locals and isinstance(tag_locals[texpr], str) \
+                and seen < 4:
+            texpr = tag_locals[texpr]
+            seen += 1
+        tag = resolver.resolve(texpr, tag_locals)
+        rate = eval_arith(ratem.group(1).strip(),
+                          {k: v for k, v in local.items()
+                           if isinstance(v, (int, float))})
+        kinds = re.findall(r'ExtendPlantTo(\w+)\s*\(', window[:m.start()])
+        kind = kinds[-1] if kinds else None
+        out.append({
+            'material': tag,
+            'kg_per_second': rate,
+            'kind': {'Irrigated': 'irrigation',
+                     'Fertilizable': 'fertilization'}.get(kind, kind),
+        })
+    return out
+
+
+def find_enclosing_method(text, pos):
+    """Return {'name', 'params'} of the method enclosing offset pos."""
+    best = None
+    for m in re.finditer(r'\bGameObject\s+(\w+)\s*\(([^()]*)\)', text):
+        if m.start() < pos:
+            best = m
+        else:
+            break
+    if best is None:
+        return None
+    params = []
+    for p in split_args(best.group(2)):
+        words = p.split('=')[0].split()
+        if words:
+            params.append(words[-1])
+    return {'name': best.group(1), 'params': params}
+
+
+def parse_plants(decompiled_dir, resolver, strings, crops):
+    """Scan *Config.cs for crop plants -> {plant_id: {...}}."""
+    texts = {}
+    for fn in sorted(os.listdir(decompiled_dir)):
+        if fn.endswith('Config.cs'):
+            texts[fn] = open(os.path.join(decompiled_dir, fn),
+                             encoding='utf-8', errors='replace').read()
+
+    def add_plant(pid, crop, consumes, src_text):
+        if pid in plants:
+            return
+        rec = {'crop': crop}
+        c = crops.get(crop)
+        if c:
+            rec['growth_seconds'] = c['growth_seconds']
+            rec['units_per_harvest'] = c['units_per_harvest']
+        rec['consumes'] = consumes
+        dlc = re.search(r'GetRequiredDlcIds\(\)\s*\{\s*return ([^;]+);',
+                        src_text)
+        if dlc:
+            ids = re.findall(r'DlcManager\.(\w+)', dlc.group(1))
+            if ids:
+                rec['required_dlc'] = ids
+        for key in (f'STRINGS.CREATURES.SPECIES.{pid.upper()}.NAME',
+                    'STRINGS.CREATURES.SPECIES.'
+                    f'{camel_to_snake(pid).upper()}.NAME'):
+            if key in strings:
+                rec['name'] = clean_name(strings[key])
+                break
+        plants[pid] = rec
+
+    plants = {}
+    for fn, text in texts.items():
+        if 'ExtendEntityToBasicPlant' not in text:
+            continue
+        local = collect_local_consts(text)
+        mid = re.search(r'public (?:const|static) string ID = "([^"]+)"', text)
+        file_id = mid.group(1) if mid else fn.removesuffix('Config.cs')
+        calls = list(re.finditer(r'ExtendEntityToBasicPlant\(', text))
+        for i, m in enumerate(calls):
+            open_idx = text.index('(', m.end() - 1)
+            close_idx = find_matching(text, open_idx)
+            args = split_args(text[open_idx + 1:close_idx])
+            mapped = map_args_to_params(args, BASIC_PLANT_PARAMS)
+            crop_expr = mapped.get('crop_id')
+            if crop_expr is None:
+                continue
+            window_end = calls[i + 1].start() if i + 1 < len(calls) \
+                else len(text)
+            window = text[m.start():window_end]
+            consumes = parse_consume_infos(window, resolver, local)
+            crop = resolver.resolve(crop_expr, local)
+            if isinstance(crop, str):
+                add_plant(file_id, crop, consumes, text)
+                continue
+            # Parameterized helper (e.g. WormPlantConfig.BaseWormPlant takes
+            # the crop id as a method parameter): resolve via its call sites.
+            raw = crop_expr.strip()
+            meth = find_enclosing_method(text, m.start())
+            if not meth or raw not in meth['params']:
+                continue
+            pidx = meth['params'].index(raw)
+            ididx = meth['params'].index('id') if 'id' in meth['params'] else 0
+            for sfn, stext in texts.items():
+                for sm in re.finditer(
+                        rf'\b{re.escape(meth["name"])}\s*\(', stext):
+                    if re.search(r'GameObject\s+$', stext[:sm.start()]):
+                        continue  # the definition itself
+                    so = stext.index('(', sm.end() - 1)
+                    sc = find_matching(stext, so)
+                    spos, _ = parse_named_args(
+                        split_args(stext[so + 1:sc]))
+                    slocal = collect_local_consts(stext)
+                    if pidx >= len(spos) or ididx >= len(spos):
+                        continue
+                    scrop = resolver.resolve(spos[pidx], slocal)
+                    sid = resolver.resolve(spos[ididx], slocal)
+                    if isinstance(scrop, str) and isinstance(sid, str):
+                        add_plant(sid, scrop, consumes, stext)
+    return plants
+
+
+# --------------------------------------------------------------------------
 # Elements / strings
 # --------------------------------------------------------------------------
 
@@ -809,6 +1083,21 @@ def main():
           f'({failed} files failed to parse)')
     print(f'  {sum(len(v) for v in recipes.values())} recipes across '
           f'{len(recipes)} fabricators -> recipes.json')
+
+    print('extracting foods...')
+    foods = parse_foods(os.path.join(args.decompiled_dir, 'TUNING', 'FOOD.cs'),
+                        resolver, strings)
+    with open(os.path.join(args.out_dir, 'foods.json'), 'w') as f:
+        json.dump(foods, f, indent=1, sort_keys=True)
+    print(f'  {len(foods)} foods -> foods.json')
+
+    print('extracting crop plants...')
+    crops = parse_crops(os.path.join(args.decompiled_dir, 'TUNING', 'CROPS.cs'),
+                        resolver)
+    plants = parse_plants(args.decompiled_dir, resolver, strings, crops)
+    with open(os.path.join(args.out_dir, 'plants.json'), 'w') as f:
+        json.dump(plants, f, indent=1, sort_keys=True)
+    print(f'  {len(crops)} crop types, {len(plants)} plants -> plants.json')
 
 
 if __name__ == '__main__':

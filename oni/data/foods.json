@@ -1,0 +1,452 @@
+{
+ "BasicForagePlant": {
+  "can_rot": false,
+  "kcal": 800.0,
+  "name": "Muckroot",
+  "quality": -1
+ },
+ "BasicPlantBar": {
+  "can_rot": true,
+  "kcal": 1700.0,
+  "name": "Liceloaf",
+  "quality": 0
+ },
+ "BasicPlantFood": {
+  "can_rot": true,
+  "kcal": 600.0,
+  "name": "Meal Lice",
+  "quality": -1
+ },
+ "BeanPlantSeed": {
+  "can_rot": true,
+  "kcal": 0.0,
+  "name": "Nosh Bean",
+  "quality": 3
+ },
+ "BerryPie": {
+  "can_rot": true,
+  "kcal": 4200.0,
+  "name": "Mixed Berry Pie",
+  "quality": 5
+ },
+ "Burger": {
+  "can_rot": true,
+  "kcal": 6000.0,
+  "name": "Frost Burger",
+  "quality": 6
+ },
+ "ButterflyFood": {
+  "can_rot": true,
+  "kcal": 1500.0,
+  "name": "Toasted Mimillet",
+  "quality": 1
+ },
+ "ButterflyPlantSeed": {
+  "can_rot": true,
+  "kcal": 0.0,
+  "name": "Mimillet",
+  "quality": 2
+ },
+ "Carrot": {
+  "can_rot": true,
+  "kcal": 4000.0,
+  "name": "Plume Squash",
+  "quality": 0
+ },
+ "Caviar": {
+  "can_rot": false,
+  "kcal": 0.0,
+  "name": "Caviar",
+  "quality": 2
+ },
+ "ColdWheatBread": {
+  "can_rot": true,
+  "kcal": 1200.0,
+  "name": "Frost Bun",
+  "quality": 2
+ },
+ "ColdWheatSeed": {
+  "can_rot": true,
+  "kcal": 0.0,
+  "name": "Sleet Wheat Grain",
+  "quality": 0
+ },
+ "CookedEgg": {
+  "can_rot": true,
+  "kcal": 2800.0,
+  "name": "Omelette",
+  "quality": 2
+ },
+ "CookedFish": {
+  "can_rot": true,
+  "kcal": 1600.0,
+  "name": "Cooked Seafood",
+  "quality": 3
+ },
+ "CookedMeat": {
+  "can_rot": true,
+  "kcal": 4000.0,
+  "name": "Barbeque",
+  "quality": 3
+ },
+ "CookedPikeapple": {
+  "can_rot": true,
+  "kcal": 1200.0,
+  "name": "Pikeapple Skewer",
+  "quality": 1
+ },
+ "Curry": {
+  "can_rot": true,
+  "kcal": 5000.0,
+  "name": "Curried Beans",
+  "quality": 4
+ },
+ "DeepFriedFish": {
+  "can_rot": true,
+  "kcal": 4200.0,
+  "name": "Fish Taco",
+  "quality": 4
+ },
+ "DeepFriedMeat": {
+  "can_rot": true,
+  "kcal": 4000.0,
+  "name": "Deep Fried Steak",
+  "quality": 3
+ },
+ "DeepFriedNosh": {
+  "can_rot": true,
+  "kcal": 5000.0,
+  "name": "Nosh Noms",
+  "quality": 3
+ },
+ "DeepFriedShellfish": {
+  "can_rot": true,
+  "kcal": 4200.0,
+  "name": "Shellfish Tempura",
+  "quality": 4
+ },
+ "DinosaurMeat": {
+  "can_rot": true,
+  "kcal": 0.0,
+  "name": "Tough Meat",
+  "quality": -1
+ },
+ "Edamame": {
+  "can_rot": true,
+  "kcal": 1450.0,
+  "name": "Edamame",
+  "quality": 3
+ },
+ "FernFood": {
+  "can_rot": true,
+  "kcal": 0.0,
+  "name": "Megafrond Grain",
+  "quality": 2
+ },
+ "FieldRation": {
+  "can_rot": false,
+  "kcal": 800.0,
+  "name": "Nutrient Bar",
+  "quality": -1
+ },
+ "FishMeat": {
+  "can_rot": true,
+  "kcal": 1000.0,
+  "name": "Fish Fillet",
+  "quality": 2
+ },
+ "ForestForagePlant": {
+  "can_rot": false,
+  "kcal": 6400.0,
+  "name": "Hexalent Fruit",
+  "quality": -1
+ },
+ "FriedMushBar": {
+  "can_rot": true,
+  "kcal": 1050.0,
+  "name": "Mush Fry",
+  "quality": 0
+ },
+ "FriedMushroom": {
+  "can_rot": true,
+  "kcal": 2800.0,
+  "name": "Fried Mushroom",
+  "quality": 1
+ },
+ "FriesCarrot": {
+  "can_rot": true,
+  "kcal": 5400.0,
+  "name": "Squash Fries",
+  "quality": 3
+ },
+ "FruitCake": {
+  "can_rot": false,
+  "kcal": 4000.0,
+  "name": "Berry Sludge",
+  "quality": 3
+ },
+ "GammaMush": {
+  "can_rot": true,
+  "kcal": 1050.0,
+  "name": "Gamma Mush",
+  "quality": 1
+ },
+ "GardenFoodPlantFood": {
+  "can_rot": true,
+  "kcal": 800.0,
+  "name": "Sweatcorn",
+  "quality": -1
+ },
+ "GardenForagePlant": {
+  "can_rot": false,
+  "kcal": 800.0,
+  "name": "Snac Fruit",
+  "quality": -1
+ },
+ "GrilledPrickleFruit": {
+  "can_rot": true,
+  "kcal": 2000.0,
+  "name": "Gristle Berry",
+  "quality": 1
+ },
+ "HardSkinBerry": {
+  "can_rot": true,
+  "kcal": 800.0,
+  "name": "Pikeapple",
+  "quality": -1
+ },
+ "IceCavesForagePlant": {
+  "can_rot": false,
+  "kcal": 800.0,
+  "name": "Sherberry",
+  "quality": -1
+ },
+ "Lettuce": {
+  "can_rot": true,
+  "kcal": 400.0,
+  "name": "Lettuce",
+  "quality": 0
+ },
+ "Maki": {
+  "can_rot": true,
+  "kcal": 3600.0,
+  "name": "Sushi Roll",
+  "quality": 4
+ },
+ "Meat": {
+  "can_rot": true,
+  "kcal": 1600.0,
+  "name": "Meat",
+  "quality": -1
+ },
+ "MushBar": {
+  "can_rot": true,
+  "kcal": 800.0,
+  "name": "Mush Bar",
+  "quality": -1
+ },
+ "Mushroom": {
+  "can_rot": true,
+  "kcal": 2400.0,
+  "name": "Mushroom",
+  "quality": 0
+ },
+ "MushroomWrap": {
+  "can_rot": true,
+  "kcal": 4800.0,
+  "name": "Mushroom Wrap",
+  "quality": 4
+ },
+ "MusselTongue": {
+  "can_rot": false,
+  "kcal": 2800.0,
+  "name": "Mussel Tongue",
+  "quality": -1
+ },
+ "Nigiri": {
+  "can_rot": true,
+  "kcal": 3600.0,
+  "name": "Nigiri",
+  "quality": 5
+ },
+ "Nori": {
+  "can_rot": true,
+  "kcal": 0.0,
+  "name": "Nori",
+  "quality": 2
+ },
+ "Pancakes": {
+  "can_rot": true,
+  "kcal": 3600.0,
+  "name": "Souffl\u00e9 Pancakes",
+  "quality": 3
+ },
+ "Pemmican": {
+  "can_rot": false,
+  "kcal": 2600.0,
+  "name": "Pemmican",
+  "quality": 2
+ },
+ "PickledMeal": {
+  "can_rot": true,
+  "kcal": 1800.0,
+  "name": "Pickled Meal",
+  "quality": -1
+ },
+ "PlantMeat": {
+  "can_rot": true,
+  "kcal": 1200.0,
+  "name": "Plant Meat",
+  "quality": 1
+ },
+ "PrehistoricPacuFillet": {
+  "can_rot": true,
+  "kcal": 1000.0,
+  "name": "Jawbo Fillet",
+  "quality": 3
+ },
+ "PrickleFruit": {
+  "can_rot": true,
+  "kcal": 1600.0,
+  "name": "Bristle Berry",
+  "quality": 0
+ },
+ "Quiche": {
+  "can_rot": true,
+  "kcal": 6400.0,
+  "name": "Mushroom Quiche",
+  "quality": 5
+ },
+ "RawEgg": {
+  "can_rot": true,
+  "kcal": 1600.0,
+  "name": "Raw Egg",
+  "quality": -1
+ },
+ "Salsa": {
+  "can_rot": true,
+  "kcal": 4400.0,
+  "name": "Stuffed Berry",
+  "quality": 4
+ },
+ "SaltySticksFood": {
+  "can_rot": true,
+  "kcal": 600.0,
+  "name": "Salty Sticks",
+  "quality": -1
+ },
+ "ShellfishMeat": {
+  "can_rot": true,
+  "kcal": 1000.0,
+  "name": "Raw Shellfish",
+  "quality": 2
+ },
+ "SmokedDinosaurMeat": {
+  "can_rot": true,
+  "kcal": 5000.0,
+  "name": "Tender Brisket",
+  "quality": 3
+ },
+ "SmokedFish": {
+  "can_rot": true,
+  "kcal": 2800.0,
+  "name": "Smoked Fish",
+  "quality": 3
+ },
+ "SmokedVegetables": {
+  "can_rot": true,
+  "kcal": 2862.5,
+  "name": "Veggie Poppers",
+  "quality": 2
+ },
+ "SpiceBread": {
+  "can_rot": true,
+  "kcal": 4000.0,
+  "name": "Pepper Bread",
+  "quality": 5
+ },
+ "SpiceNut": {
+  "can_rot": true,
+  "kcal": 0.0,
+  "name": "Pincha Peppernut",
+  "quality": 0
+ },
+ "SpicyTofu": {
+  "can_rot": true,
+  "kcal": 4000.0,
+  "name": "Spicy Tofu",
+  "quality": 5
+ },
+ "SquidMeat": {
+  "can_rot": true,
+  "kcal": 800.0,
+  "name": "Calamari",
+  "quality": 2
+ },
+ "SurfAndTurf": {
+  "can_rot": true,
+  "kcal": 6000.0,
+  "name": "Surf'n'Turf",
+  "quality": 4
+ },
+ "SwampDelights": {
+  "can_rot": true,
+  "kcal": 2240.0,
+  "name": "Swampy Delights",
+  "quality": 1
+ },
+ "SwampForagePlant": {
+  "can_rot": false,
+  "kcal": 2400.0,
+  "name": "Swamp Chard Heart",
+  "quality": -1
+ },
+ "SwampFruit": {
+  "can_rot": true,
+  "kcal": 1840.0,
+  "name": "Bog Jelly",
+  "quality": 0
+ },
+ "Tofu": {
+  "can_rot": true,
+  "kcal": 3600.0,
+  "name": "Tofu",
+  "quality": 2
+ },
+ "UrchinMeat": {
+  "can_rot": true,
+  "kcal": 7200.0,
+  "name": "Uni",
+  "quality": 3
+ },
+ "VineFruit": {
+  "can_rot": true,
+  "kcal": 325.0,
+  "name": "Ovagro Fig",
+  "quality": 0
+ },
+ "WormBasicFood": {
+  "can_rot": true,
+  "kcal": 1200.0,
+  "name": "Roast Grubfruit Nut",
+  "quality": 1
+ },
+ "WormBasicFruit": {
+  "can_rot": true,
+  "kcal": 800.0,
+  "name": "Spindly Grubfruit",
+  "quality": 0
+ },
+ "WormSuperFood": {
+  "can_rot": true,
+  "kcal": 2400.0,
+  "name": "Grubfruit Preserve",
+  "quality": 3
+ },
+ "WormSuperFruit": {
+  "can_rot": true,
+  "kcal": 250.0,
+  "name": "Grubfruit",
+  "quality": 1
+ }
+}

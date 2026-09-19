@@ -1,0 +1,506 @@
+{
+ "BasicFabricPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.26666666666666666,
+    "kind": "irrigation",
+    "material": "DirtyWater"
+   }
+  ],
+  "crop": "BasicFabric",
+  "growth_seconds": 1200,
+  "units_per_harvest": 1
+ },
+ "BasicSingleHarvestPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "Dirt"
+   }
+  ],
+  "crop": "BasicPlantFood",
+  "growth_seconds": 1800,
+  "name": "Mealwood",
+  "units_per_harvest": 1
+ },
+ "BeanPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": "irrigation",
+    "material": "Ethanol"
+   },
+   {
+    "kg_per_second": 0.008333333333333333,
+    "kind": "fertilization",
+    "material": "Dirt"
+   }
+  ],
+  "crop": "BeanPlantSeed",
+  "growth_seconds": 12600,
+  "name": "Nosh Sprout",
+  "units_per_harvest": 12
+ },
+ "BlueGrass": {
+  "consumes": [
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": "fertilization",
+    "material": "Ice"
+   }
+  ],
+  "crop": "OxyRock",
+  "growth_seconds": 1200,
+  "name": "Alveo Vera",
+  "required_dlc": [
+   "DLC2"
+  ],
+  "units_per_harvest": 36
+ },
+ "ButterflyPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "Dirt"
+   }
+  ],
+  "crop": "Butterfly",
+  "growth_seconds": 3000,
+  "name": "Mimika Bud",
+  "required_dlc": [
+   "DLC4"
+  ],
+  "units_per_harvest": 1
+ },
+ "CarrotPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.025,
+    "kind": "irrigation",
+    "material": "Ethanol"
+   }
+  ],
+  "crop": "Carrot",
+  "growth_seconds": 5400,
+  "name": "Plume Squash Plant",
+  "required_dlc": [
+   "DLC2"
+  ],
+  "units_per_harvest": 1
+ },
+ "Clam": {
+  "consumes": [
+   {
+    "kg_per_second": 0.058333333333333334,
+    "kind": "fertilization",
+    "material": "Sand"
+   }
+  ],
+  "crop": "Pearl",
+  "growth_seconds": 4800,
+  "name": "Clampum",
+  "required_dlc": [
+   "DLC5"
+  ],
+  "units_per_harvest": 50
+ },
+ "ColdWheat": {
+  "consumes": [
+   {
+    "kg_per_second": 0.008333333333333333,
+    "kind": "fertilization",
+    "material": "Dirt"
+   },
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": "irrigation",
+    "material": "Water"
+   }
+  ],
+  "crop": "ColdWheatSeed",
+  "growth_seconds": 10800,
+  "name": "Sleet Wheat",
+  "units_per_harvest": 18
+ },
+ "CritterTrapPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "irrigation",
+    "material": "DirtyWater"
+   }
+  ],
+  "crop": "PlantMeat",
+  "growth_seconds": 18000,
+  "name": "Saturn Critter Trap",
+  "required_dlc": [
+   "EXPANSION1"
+  ],
+  "units_per_harvest": 10
+ },
+ "DewDripperPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "BrineIce"
+   }
+  ],
+  "crop": "DewDrip",
+  "growth_seconds": 1200,
+  "name": "Dew Dripper",
+  "required_dlc": [
+   "DLC4"
+  ],
+  "units_per_harvest": 1
+ },
+ "DewPalm": {
+  "consumes": [
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": null,
+    "material": "Sulfur"
+   }
+  ],
+  "crop": "PalmWood",
+  "growth_seconds": 6000,
+  "name": "Gum Palm",
+  "required_dlc": [
+   "DLC5"
+  ],
+  "units_per_harvest": 700
+ },
+ "Dinofern": {
+  "consumes": [],
+  "crop": "FernFood",
+  "growth_seconds": 5400,
+  "name": "Megafrond",
+  "required_dlc": [
+   "DLC4"
+  ],
+  "units_per_harvest": 36
+ },
+ "FilterPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.008333333333333333,
+    "kind": "fertilization",
+    "material": "Sand"
+   },
+   {
+    "kg_per_second": 0.10833333333333334,
+    "kind": "irrigation",
+    "material": "DirtyWater"
+   }
+  ],
+  "crop": "Water",
+  "growth_seconds": 6000,
+  "name": "Hydrocactus",
+  "required_dlc": [
+   "EXPANSION1"
+  ],
+  "units_per_harvest": 350
+ },
+ "FlyTrapPlant": {
+  "consumes": [],
+  "crop": "Amber",
+  "growth_seconds": 7200,
+  "name": "Lura Plant",
+  "required_dlc": [
+   "DLC4"
+  ],
+  "units_per_harvest": 264
+ },
+ "ForestTree": {
+  "consumes": [
+   {
+    "kg_per_second": 0.11666666666666667,
+    "kind": "irrigation",
+    "material": "DirtyWater"
+   },
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "Dirt"
+   }
+  ],
+  "crop": "WoodLog",
+  "growth_seconds": 2700,
+  "units_per_harvest": 300
+ },
+ "ForestTreeBranch": {
+  "consumes": [],
+  "crop": "WoodLog",
+  "growth_seconds": 2700,
+  "units_per_harvest": 300
+ },
+ "GardenFoodPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "Peat"
+   }
+  ],
+  "crop": "GardenFoodPlantFood",
+  "growth_seconds": 1800,
+  "name": "Sweatcorn Stalk",
+  "required_dlc": [
+   "DLC4"
+  ],
+  "units_per_harvest": 1
+ },
+ "GasGrass": {
+  "consumes": [
+   {
+    "kg_per_second": 0.00083333335,
+    "kind": "irrigation",
+    "material": "Chlorine"
+   },
+   {
+    "kg_per_second": 0.041666666666666664,
+    "kind": "fertilization",
+    "material": "Dirt"
+   }
+  ],
+  "crop": "PlantFiber",
+  "growth_seconds": 2400,
+  "name": "Gas Grass",
+  "units_per_harvest": 400
+ },
+ "HardSkinBerryPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.008333333333333333,
+    "kind": "fertilization",
+    "material": "Phosphorite"
+   }
+  ],
+  "crop": "HardSkinBerry",
+  "growth_seconds": 1800,
+  "name": "Pikeapple Bush",
+  "required_dlc": [
+   "DLC2"
+  ],
+  "units_per_harvest": 1
+ },
+ "KelpPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "ToxicSand"
+   }
+  ],
+  "crop": "Kelp",
+  "growth_seconds": 3000,
+  "name": "Seakomb",
+  "required_dlc": [
+   "DLC4"
+  ],
+  "units_per_harvest": 50
+ },
+ "MushroomPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.006666666666666667,
+    "kind": "fertilization",
+    "material": "SlimeMold"
+   }
+  ],
+  "crop": "Mushroom",
+  "growth_seconds": 4500,
+  "name": "Dusk Cap",
+  "units_per_harvest": 1
+ },
+ "PlanktonCoral": {
+  "consumes": [
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": null,
+    "material": "Coquina"
+   }
+  ],
+  "crop": "Phosphorite",
+  "growth_seconds": 2400,
+  "name": "Starnacle",
+  "required_dlc": [
+   "DLC5"
+  ],
+  "units_per_harvest": 80
+ },
+ "PrickleFlower": {
+  "consumes": [
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": "irrigation",
+    "material": "Water"
+   }
+  ],
+  "crop": "PrickleFruit",
+  "growth_seconds": 3600,
+  "name": "Bristle Blossom",
+  "units_per_harvest": 1
+ },
+ "SaltPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.011666667,
+    "kind": "fertilization",
+    "material": "Sand"
+   }
+  ],
+  "crop": "Salt",
+  "growth_seconds": 3600,
+  "name": "Dasha Saltvine",
+  "units_per_harvest": 65
+ },
+ "SaltySticksPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "Salt"
+   }
+  ],
+  "crop": "SaltySticksFood",
+  "growth_seconds": 2400,
+  "name": "Sodicane",
+  "required_dlc": [
+   "DLC5"
+  ],
+  "units_per_harvest": 1
+ },
+ "SeaLettuce": {
+  "consumes": [
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": "irrigation",
+    "material": "SaltWater"
+   }
+  ],
+  "crop": "Lettuce",
+  "growth_seconds": 7200,
+  "name": "Waterweed",
+  "units_per_harvest": 12
+ },
+ "SpiceVine": {
+  "consumes": [
+   {
+    "kg_per_second": 0.058333333333333334,
+    "kind": "irrigation",
+    "material": "DirtyWater"
+   },
+   {
+    "kg_per_second": 0.0016666667,
+    "kind": "fertilization",
+    "material": "Phosphorite"
+   }
+  ],
+  "crop": "SpiceNut",
+  "growth_seconds": 4800,
+  "name": "Pincha Pepperplant",
+  "units_per_harvest": 4
+ },
+ "SuperWormPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "Sulfur"
+   }
+  ],
+  "crop": "WormSuperFruit",
+  "growth_seconds": 4800,
+  "name": "Grubfruit Plant",
+  "required_dlc": [
+   "EXPANSION1"
+  ],
+  "units_per_harvest": 8
+ },
+ "SwampHarvestPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.06666666666666667,
+    "kind": "irrigation",
+    "material": "DirtyWater"
+   }
+  ],
+  "crop": "SwampFruit",
+  "growth_seconds": 3960,
+  "name": "Bog Bucket",
+  "required_dlc": [
+   "EXPANSION1"
+  ],
+  "units_per_harvest": 1
+ },
+ "SwampLily": {
+  "consumes": [],
+  "crop": "SwampLilyFlower",
+  "growth_seconds": 7200,
+  "name": "Balm Lily",
+  "units_per_harvest": 2
+ },
+ "TubeWorm": {
+  "consumes": [
+   {
+    "kg_per_second": 0.03333333333333333,
+    "kind": "fertilization",
+    "material": "Sulfur"
+   },
+   {
+    "kg_per_second": 0.05,
+    "kind": "irrigation",
+    "material": "MurkyBrine"
+   },
+   {
+    "kg_per_second": 0.05,
+    "kind": "irrigation",
+    "material": "Brine"
+   }
+  ],
+  "crop": "Polypropylene",
+  "growth_seconds": 4800,
+  "name": "Tublia",
+  "required_dlc": [
+   "DLC5"
+  ],
+  "units_per_harvest": 200
+ },
+ "UrchinPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.008333333333333333,
+    "kind": "fertilization",
+    "material": {
+     "raw": "FertilizerElement.CreateTag()"
+    }
+   }
+  ],
+  "crop": "Urchin",
+  "growth_seconds": 9600,
+  "name": "Pinpoket",
+  "required_dlc": [
+   "DLC5"
+  ],
+  "units_per_harvest": 1
+ },
+ "WormPlant": {
+  "consumes": [
+   {
+    "kg_per_second": 0.016666666666666666,
+    "kind": "fertilization",
+    "material": "Sulfur"
+   }
+  ],
+  "crop": "WormBasicFruit",
+  "growth_seconds": 2400,
+  "name": "Spindly Grubfruit Plant",
+  "required_dlc": [
+   "EXPANSION1"
+  ],
+  "units_per_harvest": 1
+ }
+}
