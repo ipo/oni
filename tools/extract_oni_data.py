@@ -4,11 +4,10 @@
 Usage:
     python3 tools/extract_oni_data.py \
         --game-dir /path/to/OxygenNotIncluded \
-        --decompiled-dir /path/to/decompiled/Assembly-CSharp \
+        --source-dir /path/to/assembly-source \
         --out-dir oni/data
 
-The decompiled dir is produced by ilspycmd:
-    ilspycmd OxygenNotIncluded_Data/Managed/Assembly-CSharp.dll -o out --nested-directories
+The assembly source directory is produced by the local extraction process.
 
 Outputs:
     elements.json   - all sim elements with thermal/phase data
@@ -112,7 +111,7 @@ def parse_named_args(arglist):
 def map_args_to_params(arglist, param_names):
     """Map an argument list (mixed positional/named) to parameter names.
 
-    Decompiled code interleaves named and positional args
+    Assembly-source code interleaves named and positional args
     (e.g. `pressure_sensitive: true, 0f, 0.15f, "ColdWheatSeed"`); named
     args still consume their positional slot, so positional args after a
     named one bind to the following parameters.
@@ -164,7 +163,7 @@ def eval_arith(expr, names=None):
 
 
 # --------------------------------------------------------------------------
-# Constant table built from the decompiled sources
+# Constant table built from the assembly sources
 # --------------------------------------------------------------------------
 
 class ConstTable:
@@ -875,12 +874,12 @@ def find_enclosing_method(text, pos):
     return {'name': best.group(1), 'params': params}
 
 
-def parse_plants(decompiled_dir, resolver, strings, crops):
+def parse_plants(source_dir, resolver, strings, crops):
     """Scan *Config.cs for crop plants -> {plant_id: {...}}."""
     texts = {}
-    for fn in sorted(os.listdir(decompiled_dir)):
+    for fn in sorted(os.listdir(source_dir)):
         if fn.endswith('Config.cs'):
-            texts[fn] = open(os.path.join(decompiled_dir, fn),
+            texts[fn] = open(os.path.join(source_dir, fn),
                              encoding='utf-8', errors='replace').read()
 
     def add_plant(pid, crop, consumes, src_text):
@@ -1034,8 +1033,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--game-dir', required=True,
                     help='Path to the OxygenNotIncluded install directory')
-    ap.add_argument('--decompiled-dir', required=True,
-                    help='Path to decompiled Assembly-CSharp sources')
+    ap.add_argument('--source-dir', required=True,
+                    help='Path to Assembly-CSharp source files')
     ap.add_argument('--out-dir', required=True)
     ap.add_argument('--critter-out',
                     help='Path for critter.yaml (default: sibling of data directory)')
@@ -1056,15 +1055,15 @@ def main():
 
     print('building constant table...')
     consts = ConstTable()
-    consts.load_dir(args.decompiled_dir)
+    consts.load_dir(args.source_dir)
     print(f'  {len(consts.table)} constants')
     resolver = Resolver(consts)
 
     buildings, recipes, failed = {}, {}, 0
-    for fn in sorted(os.listdir(args.decompiled_dir)):
+    for fn in sorted(os.listdir(args.source_dir)):
         if not fn.endswith('Config.cs'):
             continue
-        path = os.path.join(args.decompiled_dir, fn)
+        path = os.path.join(args.source_dir, fn)
         try:
             rec = parse_config_file(path, resolver)
         except Exception as e:
@@ -1090,23 +1089,23 @@ def main():
           f'{len(recipes)} fabricators -> recipes.json')
 
     print('extracting foods...')
-    foods = parse_foods(os.path.join(args.decompiled_dir, 'TUNING', 'FOOD.cs'),
+    foods = parse_foods(os.path.join(args.source_dir, 'TUNING', 'FOOD.cs'),
                         resolver, strings)
     with open(os.path.join(args.out_dir, 'foods.json'), 'w') as f:
         json.dump(foods, f, indent=1, sort_keys=True)
     print(f'  {len(foods)} foods -> foods.json')
 
     print('extracting crop plants...')
-    crops = parse_crops(os.path.join(args.decompiled_dir, 'TUNING', 'CROPS.cs'),
+    crops = parse_crops(os.path.join(args.source_dir, 'TUNING', 'CROPS.cs'),
                         resolver)
-    plants = parse_plants(args.decompiled_dir, resolver, strings, crops)
+    plants = parse_plants(args.source_dir, resolver, strings, crops)
     with open(os.path.join(args.out_dir, 'plants.json'), 'w') as f:
         json.dump(plants, f, indent=1, sort_keys=True)
     print(f'  {len(crops)} crop types, {len(plants)} plants -> plants.json')
 
     critter_out = args.critter_out or os.path.join(args.out_dir, '..', 'critter.yaml')
     print('extracting critters...')
-    critters = extract_critters(args.decompiled_dir, strings)
+    critters = extract_critters(args.source_dir, strings)
     with open(critter_out, 'w') as f:
         yaml.safe_dump(critters, f, sort_keys=False, allow_unicode=True)
     print(f"  {len(critters['critters'])} critters -> {critter_out}")

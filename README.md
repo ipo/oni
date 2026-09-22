@@ -1,27 +1,37 @@
-# ONI
+# Oxygen Not Included data and calculator
 
-The `oni` library helps balance systems of machines in the game Oxygen Not Included. For details, see the interactive demo notebook here:
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ChrisBeaumont/oni/master?filepath=doc%2FONI%20Guide.ipynb)
+`oni` is a Python library for balancing Oxygen Not Included resource systems.
+This repository also contains a reproducible, game-data-backed export of ONI
+elements, buildings, recipes, plants, food, and critters.
 
 ## Installation
 
 ``pip install oni``
 
-## Acknowledgements
-
-Most of the data for machines and resources comes from [Oxygen Not Included Database](http://oni-db.com), [oni-assistant](http://oni-assistant.com), and the [Oxygen Not Included Wiki](https://oxygennotincluded.gamepedia.com/Oxygen_Not_Included_Wiki). Thanks to those tools. Errors in the data are likely my fault, introduced during transcription.
-
 ## Game data
 
-Machine and resource data is extracted directly from the current game files
-with `tools/extract_oni_data.py`, which parses the game's StreamingAssets YAML
-and a decompiled `Assembly-CSharp.dll` (via `ilspycmd`). Extracted raw data
-lives in `oni/data/` (`elements.json`, `buildings.json`, `recipes.json`),
-and `tools/build_conversions.py` derives `conversions.json`: a normalized
-per-building list of mass conversions with rates, output temperature rules,
-and whether each output goes to the environment, storage, or a conduit.
-`oni/critter.yaml` is a separate decompile-backed export for creature
-lifecycle, ranching space, temperature, reproduction, and statically-defined
-diet information. Resource names are internal element ids (e.g. `DirtyWater` is
-Polluted Water, `Methane` is Natural Gas, `Carbon` is Coal).
+The exports originate from a matching installed copy of ONI and its
+`Assembly-CSharp.dll` source:
+
+- `StreamingAssets` supplies element definitions and localized names.
+- The assembly source supplies building components, recipes, food, plants,
+  and critter behaviour/configuration.
+
+Run the extractor against those two inputs to refresh the generated data:
+
+```bash
+python3 tools/extract_oni_data.py \
+  --game-dir /path/to/OxygenNotIncluded \
+  --source-dir /path/to/assembly-source \
+  --out-dir oni/data
+python3 tools/build_conversions.py --data-dir oni/data
+```
+
+The raw exports are in `oni/data/`: `elements.json`, `buildings.json`,
+`recipes.json`, `foods.json`, `plants.json`, and the normalized building
+conversion data in `conversions.json`. `oni/critter.yaml` holds per-critter
+lifecycle, ranching space, movement, temperature, reproduction, and
+statically traceable diet/conversion data.
+
+Resource names use internal element IDs: for example, `DirtyWater` is Polluted
+Water, `Methane` is Natural Gas, and `Carbon` is Coal.

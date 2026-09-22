@@ -1,4 +1,4 @@
-"""Extract critter configuration from decompiled ONI sources.
+"""Extract critter configuration from ONI assembly sources.
 
 This is deliberately a static-source export: every record points back to the
 config class that creates the critter. Fields are omitted when the value is
@@ -412,14 +412,14 @@ def _behaviour(method_body, methods):
     return None
 
 
-def extract_critters(decompiled_dir, strings):
+def extract_critters(source_dir, strings):
     """Return the versioned critter export document for ``critter.yaml``."""
     texts = {}
-    for directory, _subdirs, filenames in os.walk(decompiled_dir):
+    for directory, _subdirs, filenames in os.walk(source_dir):
         for filename in sorted(filenames):
             if filename.endswith('.cs'):
                 path = os.path.join(directory, filename)
-                relative = os.path.relpath(path, decompiled_dir)
+                relative = os.path.relpath(path, source_dir)
                 with open(path, encoding='utf-8', errors='replace') as source:
                     texts[relative] = source.read()
     method_index = {}
