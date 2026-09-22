@@ -21,6 +21,7 @@ lives in `oni/data/` (`elements.json`, `buildings.json`, `recipes.json`),
 and `tools/build_conversions.py` derives `conversions.json`: a normalized
 per-building list of mass conversions with rates, output temperature rules,
 and whether each output goes to the environment, storage, or a conduit.
-`oni/machine.yaml` and the liquid/gas lists in `oni/resource.py` are derived
-from it. Resource names are internal element ids (e.g. `DirtyWater` is
+`oni/critter.yaml` is a separate decompile-backed export for creature
+lifecycle, ranching space, temperature, reproduction, and statically-defined
+diet information. Resource names are internal element ids (e.g. `DirtyWater` is
 Polluted Water, `Methane` is Natural Gas, `Carbon` is Coal).

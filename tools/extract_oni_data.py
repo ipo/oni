@@ -16,6 +16,7 @@ Outputs:
     recipes.json    - all fabricator/refinery recipes
     foods.json      - all foods with kcal and quality
     plants.json     - all crop plants with growth time, yield and consumption
+    ../critter.yaml - critter lifecycle, diet, ranching and reproduction data
 """
 import argparse
 import json
@@ -23,6 +24,8 @@ import os
 import re
 
 import yaml
+
+from extract_critters import extract_critters
 
 
 # --------------------------------------------------------------------------
@@ -1034,6 +1037,8 @@ def main():
     ap.add_argument('--decompiled-dir', required=True,
                     help='Path to decompiled Assembly-CSharp sources')
     ap.add_argument('--out-dir', required=True)
+    ap.add_argument('--critter-out',
+                    help='Path for critter.yaml (default: sibling of data directory)')
     args = ap.parse_args()
 
     sa = os.path.join(args.game_dir, 'OxygenNotIncluded_Data', 'StreamingAssets')
@@ -1098,6 +1103,13 @@ def main():
     with open(os.path.join(args.out_dir, 'plants.json'), 'w') as f:
         json.dump(plants, f, indent=1, sort_keys=True)
     print(f'  {len(crops)} crop types, {len(plants)} plants -> plants.json')
+
+    critter_out = args.critter_out or os.path.join(args.out_dir, '..', 'critter.yaml')
+    print('extracting critters...')
+    critters = extract_critters(args.decompiled_dir, strings)
+    with open(critter_out, 'w') as f:
+        yaml.safe_dump(critters, f, sort_keys=False, allow_unicode=True)
+    print(f"  {len(critters['critters'])} critters -> {critter_out}")
 
 
 if __name__ == '__main__':

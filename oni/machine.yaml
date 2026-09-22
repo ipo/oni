@@ -612,23 +612,6 @@ Duplicant:
   gives:
     CarbonDioxide: .002
 
-# --------------------------------------------------------------- critters ----
-
-StoneHatch:
-  needs:
-    IgneousRock: 0.223
-  gives:
-    Carbon: 0.117
-    Egg: 0.0002777777777
-
-Slickster:
-  needs:
-    CarbonDioxide: .03333
-  gives:
-    CrudeOil: .01667
-    Egg: 0.0002777777777
-    Meat: 0.000033333333
-
 # ----------------------------------------------------------------- plants ----
 
 WildSleetWheat:

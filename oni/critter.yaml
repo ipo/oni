@@ -1,0 +1,2110 @@
+schema_version: 1
+units:
+  temperature: kelvin
+  mass: kg
+  time: cycles
+  space: tiles per critter
+critters:
+  AlgaeStego:
+    name: Blum Lumb
+    config: AlgaeStegoConfig.cs
+    base_trait_id: AlgaeStegoBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 293.15
+      warning_high_k: 343.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 200.0
+      hit_points: 50.0
+    reproduction:
+      egg_id: AlgaeStegoEgg
+      egg_mass_kg: 8.0
+      baby_id: AlgaeStegoBaby
+      fertility_cycles: 120.00001
+      incubation_cycles: 40.0
+      egg_chances:
+      - egg: StegoEgg
+        weight: 0.35
+      - egg: AlgaeStegoEgg
+        weight: 0.65
+      ranchable: true
+    diet:
+      calories_per_cycle: 1300000.0
+    required_dlc:
+    - DLC4
+  BeeHive:
+    name: BeeHive
+    config: BaseBeeHiveConfig.cs
+    base_trait_id: BeeHiveBaseTrait
+    life:
+      hit_points: 25.0
+    diet:
+      calories_per_cycle: 1500000.0
+    required_dlc:
+    - EXPANSION1
+  Chameleon:
+    name: Dartle
+    config: ChameleonConfig.cs
+    base_trait_id: ChameleonBaseTrait
+    ranching:
+      tiles_per_critter: 4.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 233.15
+      warning_high_k: 293.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      hit_points: 25.0
+    reproduction:
+      egg_id: ChameleonEgg
+      egg_mass_kg: 2.0
+      baby_id: ChameleonBaby
+      egg_chances:
+      - egg: ChameleonEgg
+        weight: 0.98
+      ranchable: true
+    diet:
+      calories_per_cycle: 2000000.0
+      inputs:
+      - elements:
+        - DewDrip
+        calories_per_kg: 2000000.0
+        kg_per_cycle: 1.0
+      outputs:
+      - element: BleachStone
+        conversion_ratio: 10.0
+        kg_per_cycle: 10.0
+    required_dlc:
+    - DLC4
+  Crab:
+    name: Pokeshell
+    config: CrabConfig.cs
+    base_trait_id: CrabBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: CrabEgg
+      egg_mass_kg: 2.0
+      baby_id: CrabBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: CrabEgg
+        weight: 0.97
+      - egg: CrabWoodEgg
+        weight: 0.02
+      - egg: CrabFreshWaterEgg
+        weight: 0.01
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - ToxicSand
+        calories_per_kg: 1428.5714285714287
+        kg_per_cycle: 70.0
+      outputs:
+      - element: Sand
+        conversion_ratio: 0.5
+        kg_per_cycle: 35.0
+  CrabFreshWater:
+    name: Sanishell
+    config: CrabFreshWaterConfig.cs
+    base_trait_id: CrabFreshWaterBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: CrabFreshWaterEgg
+      egg_mass_kg: 2.0
+      baby_id: CrabFreshWaterBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: CrabEgg
+        weight: 0.32
+      - egg: CrabWoodEgg
+        weight: 0.02
+      - egg: CrabFreshWaterEgg
+        weight: 0.65
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+  CrabWood:
+    name: Oakshell
+    config: CrabWoodConfig.cs
+    base_trait_id: CrabWoodBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: CrabWoodEgg
+      egg_mass_kg: 2.0
+      baby_id: CrabWoodBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: CrabEgg
+        weight: 0.32
+      - egg: CrabWoodEgg
+        weight: 0.65
+      - egg: CrabFreshWaterEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+  DieselMoo:
+    name: Husky Moo
+    config: DieselMooConfig.cs
+    base_trait_id: DieselMooBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    life:
+      max_age_cycles: 75.0
+      hit_points: 50.0
+    diet:
+      calories_per_cycle: 200000.0
+  DivergentBeetle:
+    name: Sweetle
+    config: DivergentBeetleConfig.cs
+    base_trait_id: DivergentBeetleBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 243.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 75.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: DivergentBeetleEgg
+      egg_mass_kg: 2.0
+      baby_id: DivergentBeetleBaby
+      fertility_cycles: 45.0
+      incubation_cycles: 15.0
+      egg_chances:
+      - egg: DivergentBeetleEgg
+        weight: 0.98
+      - egg: DivergentWormEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 700000.0
+      inputs:
+      - elements:
+        - Sulfur
+        calories_per_kg: 35000.0
+        kg_per_cycle: 20.0
+      outputs:
+      - element: Sucrose
+        conversion_ratio: 0.5
+        kg_per_cycle: 10.0
+    required_dlc:
+    - EXPANSION1
+  DivergentWorm:
+    name: Grubgrub
+    config: DivergentWormConfig.cs
+    base_trait_id: DivergentWormBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 243.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 150.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: DivergentWormEgg
+      egg_mass_kg: 2.0
+      baby_id: DivergentWormBaby
+      fertility_cycles: 90.0
+      incubation_cycles: 30.0
+      egg_chances:
+      - egg: DivergentBeetleEgg
+        weight: 0.33
+      - egg: DivergentWormEgg
+        weight: 0.67
+      ranchable: true
+    diet:
+      calories_per_cycle: 700000.0
+      inputs:
+      - elements:
+        - Sulfur
+        calories_per_kg: 35000.0
+        kg_per_cycle: 20.0
+      outputs:
+      - element: Mud
+        conversion_ratio: 0.1
+        kg_per_cycle: 2.0
+    required_dlc:
+    - EXPANSION1
+  Drecko:
+    name: Drecko
+    config: DreckoConfig.cs
+    base_trait_id: DreckoBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 333.15
+      lethal_low_k: 243.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 150.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: DreckoEgg
+      egg_mass_kg: 2.0
+      baby_id: DreckoBaby
+      fertility_cycles: 90.0
+      incubation_cycles: 30.0
+      egg_chances:
+      - egg: DreckoEgg
+        weight: 0.98
+      - egg: DreckoPlasticEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 2000000.0
+      inputs:
+      - elements:
+        - SpiceVine
+        - SwampLily
+        - BasicSingleHarvestPlant
+        calories_per_kg: 2666666.6666666665
+        kg_per_cycle: 0.75
+      outputs:
+      - element: Phosphorite
+        conversion_ratio: 13.33
+        kg_per_cycle: 9.9975
+  DreckoPlastic:
+    name: Glossy Drecko
+    config: DreckoPlasticConfig.cs
+    base_trait_id: DreckoPlasticBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 293.15
+      warning_high_k: 323.15
+      lethal_low_k: 243.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 150.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: DreckoPlasticEgg
+      egg_mass_kg: 2.0
+      baby_id: DreckoPlasticBaby
+      fertility_cycles: 90.0
+      incubation_cycles: 30.0
+      egg_chances:
+      - egg: DreckoEgg
+        weight: 0.35
+      - egg: DreckoPlasticEgg
+        weight: 0.65
+      ranchable: true
+    diet:
+      calories_per_cycle: 2000000.0
+      inputs:
+      - elements:
+        - BasicSingleHarvestPlant
+        - PrickleFlower
+        calories_per_kg: 2666666.6666666665
+        kg_per_cycle: 0.75
+      outputs:
+      - element: Phosphorite
+        conversion_ratio: 9.0
+        kg_per_cycle: 6.75
+  FetchDrone:
+    name: FetchDrone
+    config: FetchDroneConfig.cs
+    behaviour:
+      nav_type: hover
+    life:
+      hit_points: 100.0
+    required_dlc:
+    - DLC3
+  GlassDeer:
+    name: Shatter Flox
+    config: GlassDeerConfig.cs
+    base_trait_id: GlassDeerBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 243.15
+      warning_high_k: 283.15
+      lethal_low_k: 213.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+      stomach_calories: 1000000.0
+    reproduction:
+      egg_id: GlassDeerEgg
+      egg_mass_kg: 2.0
+      baby_id: GlassDeerBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: WoodDeerEgg
+        weight: 0.35
+      - egg: GlassDeerEgg
+        weight: 0.65
+      ranchable: true
+    diet:
+      inputs:
+      - elements:
+        - Katairite
+        calories_per_kg: 5000.0
+      outputs:
+      - element: Dirt
+        conversion_ratio: 25.000002
+      - element: Dirt
+        conversion_ratio: 50.000004
+      - element: Dirt
+        conversion_ratio: 0.5
+    required_dlc:
+    - DLC2
+  Glom:
+    name: Morb
+    config: GlomConfig.cs
+    base_trait_id: GlomBaseTrait
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 303.15
+      warning_high_k: 373.15
+      lethal_low_k: 273.15
+      lethal_high_k: 473.15
+    life:
+      hit_points: 25.0
+  GoldBelly:
+    name: Regal Bammoth
+    config: GoldBellyConfig.cs
+    base_trait_id: GoldBellyBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 303.15
+      warning_high_k: 343.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 200.0
+      hit_points: 50.0
+    reproduction:
+      egg_id: GoldBellyEgg
+      egg_mass_kg: 8.0
+      baby_id: GoldBellyBaby
+      fertility_cycles: 120.00001
+      incubation_cycles: 40.0
+      egg_chances:
+      - egg: IceBellyEgg
+        weight: 0.02
+      - egg: GoldBellyEgg
+        weight: 0.98
+      ranchable: true
+    required_dlc:
+    - DLC2
+  Hatch:
+    name: Hatch
+    config: HatchConfig.cs
+    base_trait_id: HatchBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 228.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: HatchEgg
+      egg_mass_kg: 2.0
+      baby_id: HatchBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: HatchEgg
+        weight: 0.98
+      - egg: HatchHardEgg
+        weight: 0.02
+      - egg: HatchVeggieEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 700000.0
+      inputs:
+      - elements:
+        - Clay
+        - Coquina
+        - CrushedRock
+        - Dirt
+        - Sand
+        - SandStone
+        - SedimentaryRock
+        - Shale
+        - SiltStone
+        calories_per_kg: 5000.0
+        kg_per_cycle: 140.0
+      outputs:
+      - element: Carbon
+        conversion_ratio: 0.5
+      - element: Carbon
+        conversion_ratio: 0.75
+  HatchHard:
+    name: Stone Hatch
+    config: HatchHardConfig.cs
+    base_trait_id: HatchHardBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 228.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 200.0
+    reproduction:
+      egg_id: HatchHardEgg
+      egg_mass_kg: 2.0
+      baby_id: HatchHardBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: HatchEgg
+        weight: 0.32
+      - egg: HatchHardEgg
+        weight: 0.65
+      - egg: HatchMetalEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 700000.0
+      inputs:
+      - elements:
+        - Basalt
+        - Granite
+        - IgneousRock
+        - Obsidian
+        - SedimentaryRock
+        calories_per_kg: 5000.0
+        kg_per_cycle: 140.0
+      - elements:
+        - Gold
+        - GoldAmalgam
+        - Tungsten
+        - Wolframite
+        calories_per_kg: 5000.0
+        kg_per_cycle: 140.0
+      outputs:
+      - element: Carbon
+        conversion_ratio: 0.5
+      - element: Carbon
+        conversion_ratio: 0.25
+  HatchMetal:
+    name: Smooth Hatch
+    config: HatchMetalConfig.cs
+    base_trait_id: HatchMetalBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 228.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 400.0
+    reproduction:
+      egg_id: HatchMetalEgg
+      egg_mass_kg: 2.0
+      baby_id: HatchMetalBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: HatchEgg
+        weight: 0.11
+      - egg: HatchHardEgg
+        weight: 0.22
+      - egg: HatchMetalEgg
+        weight: 0.67
+      ranchable: true
+    diet:
+      calories_per_cycle: 700000.0
+      inputs:
+      - elements:
+        - Gold
+        - GoldAmalgam
+        - Tungsten
+        - Wolframite
+        calories_per_kg: 5000.0
+        kg_per_cycle: 140.0
+  HatchVeggie:
+    name: Sage Hatch
+    config: HatchVeggieConfig.cs
+    base_trait_id: HatchVeggieBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 228.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: HatchVeggieEgg
+      egg_mass_kg: 2.0
+      baby_id: HatchVeggieBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: HatchEgg
+        weight: 0.33
+      - egg: HatchVeggieEgg
+        weight: 0.67
+      ranchable: true
+    diet:
+      calories_per_cycle: 700000.0
+      inputs:
+      - elements:
+        - Algae
+        - Corallium
+        - Dirt
+        - Fertilizer
+        - SlimeMold
+        - ToxicMud
+        - ToxicSand
+        calories_per_kg: 5000.0
+        kg_per_cycle: 140.0
+      outputs:
+      - element: Carbon
+        conversion_ratio: 1.0
+      - element: Carbon
+        conversion_ratio: 1.0
+  IceBelly:
+    name: Bammoth
+    config: IceBellyConfig.cs
+    base_trait_id: IceBellyBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 303.15
+      warning_high_k: 343.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 200.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: IceBellyEgg
+      egg_mass_kg: 8.0
+      baby_id: IceBellyBaby
+      fertility_cycles: 120.00001
+      incubation_cycles: 40.0
+      egg_chances:
+      - egg: IceBellyEgg
+        weight: 1.0
+      - egg: GoldBellyEgg
+        weight: 0.0
+      ranchable: true
+    required_dlc:
+    - DLC2
+  LightBug:
+    name: Shine Bug
+    config: LightBugConfig.cs
+    base_trait_id: LightBugBaseTrait
+    ranching:
+      tiles_per_critter: 6.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 25.0
+      hit_points: 5.0
+    reproduction:
+      egg_id: LightBugEgg
+      egg_mass_kg: 1.0
+      baby_id: LightBugBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: LightBugEgg
+        weight: 0.98
+      - egg: LightBugOrangeEgg
+        weight: 0.02
+      fish_overcrowding: false
+      ranchable: true
+    diet:
+      calories_per_cycle: 40000.0
+  LightBugBlack:
+    name: Abyss Bug
+    config: LightBugBlackConfig.cs
+    base_trait_id: LightBugBlackBaseTrait
+    ranching:
+      tiles_per_critter: 6.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 75.0
+      hit_points: 5.0
+    reproduction:
+      egg_id: LightBugBlackEgg
+      egg_mass_kg: 1.0
+      baby_id: LightBugBlackBaby
+      fertility_cycles: 45.0
+      incubation_cycles: 15.0
+      egg_chances:
+      - egg: LightBugBlueEgg
+        weight: 0.33
+      - egg: LightBugBlackEgg
+        weight: 0.66
+      - egg: LightBugCrystalEgg
+        weight: 0.02
+      fish_overcrowding: false
+      ranchable: true
+    diet:
+      calories_per_cycle: 40000.0
+  LightBugBlue:
+    name: Azure Bug
+    config: LightBugBlueConfig.cs
+    base_trait_id: LightBugBlueBaseTrait
+    ranching:
+      tiles_per_critter: 6.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 25.0
+      hit_points: 5.0
+    reproduction:
+      egg_id: LightBugBlueEgg
+      egg_mass_kg: 1.0
+      baby_id: LightBugBlueBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: LightBugPinkEgg
+        weight: 0.33
+      - egg: LightBugBlueEgg
+        weight: 0.66
+      - egg: LightBugBlackEgg
+        weight: 0.02
+      fish_overcrowding: false
+      ranchable: true
+    diet:
+      calories_per_cycle: 40000.0
+  LightBugCrystal:
+    name: Radiant Bug
+    config: LightBugCrystalConfig.cs
+    base_trait_id: LightBugCrystalBaseTrait
+    ranching:
+      tiles_per_critter: 6.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 75.0
+      hit_points: 5.0
+    reproduction:
+      egg_id: LightBugCrystalEgg
+      egg_mass_kg: 1.0
+      baby_id: LightBugCrystalBaby
+      fertility_cycles: 45.0
+      incubation_cycles: 15.0
+      egg_chances:
+      - egg: LightBugCrystalEgg
+        weight: 0.98
+      - egg: LightBugEgg
+        weight: 0.02
+      fish_overcrowding: false
+      ranchable: true
+    diet:
+      calories_per_cycle: 40000.0
+  LightBugOrange:
+    name: Sun Bug
+    config: LightBugOrangeConfig.cs
+    base_trait_id: LightBugOrangeBaseTrait
+    ranching:
+      tiles_per_critter: 6.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 25.0
+      hit_points: 5.0
+    reproduction:
+      egg_id: LightBugOrangeEgg
+      egg_mass_kg: 1.0
+      baby_id: LightBugOrangeBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: LightBugEgg
+        weight: 0.33
+      - egg: LightBugOrangeEgg
+        weight: 0.66
+      - egg: LightBugPurpleEgg
+        weight: 0.02
+      fish_overcrowding: false
+      ranchable: true
+    diet:
+      calories_per_cycle: 40000.0
+  LightBugPink:
+    name: Coral Bug
+    config: LightBugPinkConfig.cs
+    base_trait_id: LightBugPinkBaseTrait
+    ranching:
+      tiles_per_critter: 6.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 25.0
+      hit_points: 5.0
+    reproduction:
+      egg_id: LightBugPinkEgg
+      egg_mass_kg: 1.0
+      baby_id: LightBugPinkBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: LightBugPurpleEgg
+        weight: 0.33
+      - egg: LightBugPinkEgg
+        weight: 0.66
+      - egg: LightBugBlueEgg
+        weight: 0.02
+      fish_overcrowding: false
+      ranchable: true
+    diet:
+      calories_per_cycle: 40000.0
+  LightBugPurple:
+    name: Royal Bug
+    config: LightBugPurpleConfig.cs
+    base_trait_id: LightBugPurpleBaseTrait
+    ranching:
+      tiles_per_critter: 6.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 25.0
+      hit_points: 5.0
+    reproduction:
+      egg_id: LightBugPurpleEgg
+      egg_mass_kg: 1.0
+      baby_id: LightBugPurpleBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: LightBugOrangeEgg
+        weight: 0.33
+      - egg: LightBugPurpleEgg
+        weight: 0.66
+      - egg: LightBugPinkEgg
+        weight: 0.02
+      fish_overcrowding: false
+      ranchable: true
+    diet:
+      calories_per_cycle: 40000.0
+  Mole:
+    name: Shove Vole
+    config: MoleConfig.cs
+    base_trait_id: MoleBaseTrait
+    ranching:
+      tiles_per_critter: 0.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: MoleEgg
+      egg_mass_kg: 2.0
+      baby_id: MoleBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: MoleEgg
+        weight: 0.98
+      - egg: MoleDelicacyEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 4800000.0
+      outputs:
+      - element: Regolith
+        conversion_ratio: 0.5
+  MoleDelicacy:
+    name: Delecta Vole
+    config: MoleDelicacyConfig.cs
+    base_trait_id: MoleDelicacyBaseTrait
+    ranching:
+      tiles_per_critter: 0.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: MoleDelicacyEgg
+      egg_mass_kg: 2.0
+      baby_id: MoleDelicacyBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: MoleEgg
+        weight: 0.32
+      - egg: MoleDelicacyEgg
+        weight: 0.65
+      ranchable: true
+    diet:
+      calories_per_cycle: 4800000.0
+      outputs:
+      - element: Regolith
+        conversion_ratio: 0.5
+  Moo:
+    name: Gassy Moo
+    config: MooConfig.cs
+    base_trait_id: MooBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    life:
+      max_age_cycles: 75.0
+      hit_points: 50.0
+    diet:
+      calories_per_cycle: 200000.0
+  Oilfloater:
+    name: Slickster
+    config: OilFloaterConfig.cs
+    base_trait_id: OilfloaterBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 323.15
+      warning_high_k: 413.15
+      lethal_low_k: 273.15
+      lethal_high_k: 473.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: OilfloaterEgg
+      egg_mass_kg: 2.0
+      baby_id: OilfloaterBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: OilfloaterEgg
+        weight: 0.98
+      - egg: OilfloaterHighTempEgg
+        weight: 0.02
+      - egg: OilfloaterDecorEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 120000.0
+      inputs:
+      - elements:
+        - CarbonDioxide
+        calories_per_kg: 6000.0
+        kg_per_cycle: 20.0
+      outputs:
+      - element: CrudeOil
+        conversion_ratio: 0.5
+        kg_per_cycle: 10.0
+  OilfloaterDecor:
+    name: Longhair Slickster
+    config: OilFloaterDecorConfig.cs
+    base_trait_id: OilfloaterDecorBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 323.15
+      lethal_low_k: 223.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 150.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: OilfloaterDecorEgg
+      egg_mass_kg: 2.0
+      baby_id: OilfloaterDecorBaby
+      fertility_cycles: 90.0
+      incubation_cycles: 30.0
+      egg_chances:
+      - egg: OilfloaterEgg
+        weight: 0.33
+      - egg: OilfloaterHighTempEgg
+        weight: 0.02
+      - egg: OilfloaterDecorEgg
+        weight: 0.66
+      ranchable: true
+    diet:
+      calories_per_cycle: 120000.0
+      inputs:
+      - elements:
+        - Oxygen
+        calories_per_kg: 6000.0
+        kg_per_cycle: 20.0
+  OilfloaterHighTemp:
+    name: Molten Slickster
+    config: OilFloaterHighTempConfig.cs
+    base_trait_id: OilfloaterHighTempBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 373.15
+      warning_high_k: 473.15
+      lethal_low_k: 323.15
+      lethal_high_k: 573.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: OilfloaterHighTempEgg
+      egg_mass_kg: 2.0
+      baby_id: OilfloaterHighTempBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: OilfloaterEgg
+        weight: 0.33
+      - egg: OilfloaterHighTempEgg
+        weight: 0.66
+      - egg: OilfloaterDecorEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 120000.0
+      inputs:
+      - elements:
+        - CarbonDioxide
+        calories_per_kg: 6000.0
+        kg_per_cycle: 20.0
+      outputs:
+      - element: Petroleum
+        conversion_ratio: 0.5
+        kg_per_cycle: 10.0
+  Pacu:
+    name: Pacu
+    config: PacuConfig.cs
+    base_trait_id: PacuBaseTrait
+    ranching:
+      tiles_per_critter: 8.0
+    behaviour:
+      nav_type: swim
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 253.15
+      lethal_high_k: 373.15
+    reproduction:
+      egg_id: PacuEgg
+      egg_mass_kg: 0.75
+      baby_id: PacuBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: PacuEgg
+        weight: 0.98
+      - egg: PacuTropicalEgg
+        weight: 0.02
+      - egg: PacuCleanerEgg
+        weight: 0.02
+      fish_overcrowding: true
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - Algae
+        calories_per_kg: 13333.333333333334
+        kg_per_cycle: 7.5
+      - elements:
+        - Kelp
+        calories_per_kg: 5000.0
+        kg_per_cycle: 20.0
+      - elements:
+        - KelpPlant
+        calories_per_kg: 50000.0
+        kg_per_cycle: 2.0
+      - elements:
+        - FishFood
+        calories_per_kg: 100000.0
+        kg_per_cycle: 1.0
+      outputs:
+      - element: ToxicSand
+        conversion_ratio: 0.6666666666666666
+      - element: ToxicSand
+        conversion_ratio: 0.5
+      - element: ToxicSand
+        conversion_ratio: 5.0
+      - element: ToxicSand
+        conversion_ratio: 6.0
+  PacuCleaner:
+    name: Gulp Fish
+    config: PacuCleanerConfig.cs
+    base_trait_id: PacuCleanerBaseTrait
+    ranching:
+      tiles_per_critter: 8.0
+    behaviour:
+      nav_type: swim
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 243.15
+      warning_high_k: 278.15
+      lethal_low_k: 223.15
+      lethal_high_k: 298.15
+    reproduction:
+      egg_id: PacuCleanerEgg
+      egg_mass_kg: 0.75
+      baby_id: PacuCleanerBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: PacuEgg
+        weight: 0.32
+      - egg: PacuCleanerEgg
+        weight: 0.65
+      - egg: PacuTropicalEgg
+        weight: 0.02
+      fish_overcrowding: true
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - Algae
+        calories_per_kg: 13333.333333333334
+        kg_per_cycle: 7.5
+      - elements:
+        - Kelp
+        calories_per_kg: 5000.0
+        kg_per_cycle: 20.0
+      - elements:
+        - KelpPlant
+        calories_per_kg: 50000.0
+        kg_per_cycle: 2.0
+      - elements:
+        - FishFood
+        calories_per_kg: 100000.0
+        kg_per_cycle: 1.0
+      outputs:
+      - element: ToxicSand
+        conversion_ratio: 0.6666666666666666
+      - element: ToxicSand
+        conversion_ratio: 0.5
+      - element: ToxicSand
+        conversion_ratio: 5.0
+      - element: ToxicSand
+        conversion_ratio: 6.0
+  PacuTropical:
+    name: Tropical Pacu
+    config: PacuTropicalConfig.cs
+    base_trait_id: PacuTropicalBaseTrait
+    ranching:
+      tiles_per_critter: 8.0
+    behaviour:
+      nav_type: swim
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 303.15
+      warning_high_k: 353.15
+      lethal_low_k: 283.15
+      lethal_high_k: 373.15
+    reproduction:
+      egg_id: PacuTropicalEgg
+      egg_mass_kg: 0.75
+      baby_id: PacuTropicalBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: PacuEgg
+        weight: 0.32
+      - egg: PacuTropicalEgg
+        weight: 0.65
+      - egg: PacuCleanerEgg
+        weight: 0.02
+      fish_overcrowding: true
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - Algae
+        calories_per_kg: 13333.333333333334
+        kg_per_cycle: 7.5
+      - elements:
+        - Kelp
+        calories_per_kg: 5000.0
+        kg_per_cycle: 20.0
+      - elements:
+        - KelpPlant
+        calories_per_kg: 50000.0
+        kg_per_cycle: 2.0
+      - elements:
+        - FishFood
+        calories_per_kg: 100000.0
+        kg_per_cycle: 1.0
+      outputs:
+      - element: ToxicSand
+        conversion_ratio: 0.6666666666666666
+      - element: ToxicSand
+        conversion_ratio: 0.5
+      - element: ToxicSand
+        conversion_ratio: 5.0
+      - element: ToxicSand
+        conversion_ratio: 6.0
+  ParrotFish:
+    name: Beakon
+    config: ParrotFishConfig.cs
+    base_trait_id: ParrotFishBaseTrait
+    ranching:
+      tiles_per_critter: 8.0
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 253.15
+      lethal_high_k: 373.15
+    reproduction:
+      egg_id: ParrotFishEgg
+      egg_mass_kg: 0.75
+      baby_id: ParrotFishBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: ParrotFishEgg
+        weight: 1.0
+      fish_overcrowding: true
+      ranchable: true
+    required_dlc:
+    - DLC5
+  PrehistoricPacu:
+    name: Jawbo
+    config: PrehistoricPacuConfig.cs
+    base_trait_id: PrehistoricPacuBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: swim
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 253.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 50.0
+    reproduction:
+      egg_id: PrehistoricPacuEgg
+      egg_mass_kg: 3.0
+      baby_id: PrehistoricPacuBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: PrehistoricPacuEgg
+        weight: 1.0
+      fish_overcrowding: true
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - Pacu
+        - PacuTropical
+        - ParrotFish
+        calories_per_kg: 500.0
+        kg_per_cycle: 200.0
+      - elements:
+        - FishMeat
+        calories_per_kg: 100000.0
+        kg_per_cycle: 1.0
+      - elements:
+        - CookedFish
+        calories_per_kg: 100000.0
+        kg_per_cycle: 1.0
+    required_dlc:
+    - DLC4
+  PufferFish:
+    name: Blowter
+    config: PufferFishConfig.cs
+    base_trait_id: PufferFishBaseTrait
+    ranching:
+      tiles_per_critter: 8.0
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 253.15
+      lethal_high_k: 373.15
+    reproduction:
+      egg_id: PufferFishEgg
+      egg_mass_kg: 2.0
+      baby_id: PufferFishBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: PufferFishEgg
+        weight: 1.0
+      fish_overcrowding: true
+      ranchable: true
+    required_dlc:
+    - DLC5
+  Puft:
+    name: Puft
+    config: PuftConfig.cs
+    base_trait_id: PuftBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 288.15
+      warning_high_k: 328.15
+      lethal_low_k: 223.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 75.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: PuftEgg
+      egg_mass_kg: 0.5
+      baby_id: PuftBaby
+      fertility_cycles: 45.0
+      incubation_cycles: 15.0
+      egg_chances:
+      - egg: PuftEgg
+        weight: 0.98
+      - egg: PuftAlphaEgg
+        weight: 0.02
+      - egg: PuftOxyliteEgg
+        weight: 0.02
+      - egg: PuftBleachstoneEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 200000.0
+      inputs:
+      - elements:
+        - ContaminatedOxygen
+        calories_per_kg: 6666.666666666667
+        kg_per_cycle: 30.0
+      outputs:
+      - element: SlimeMold
+        conversion_ratio: 0.95
+        kg_per_cycle: 28.5
+  PuftAlpha:
+    name: Puft Prince
+    config: PuftAlphaConfig.cs
+    base_trait_id: PuftAlphaBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 293.15
+      warning_high_k: 313.15
+      lethal_low_k: 223.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 75.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: PuftAlphaEgg
+      egg_mass_kg: 0.5
+      baby_id: PuftAlphaBaby
+      fertility_cycles: 45.0
+      incubation_cycles: 15.0
+      egg_chances:
+      - egg: PuftEgg
+        weight: 0.98
+      - egg: PuftAlphaEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 200000.0
+      inputs:
+      - elements:
+        - ContaminatedOxygen
+        calories_per_kg: 6666.666666666667
+        kg_per_cycle: 30.0
+      - elements:
+        - ChlorineGas
+        calories_per_kg: 6666.666666666667
+        kg_per_cycle: 30.0
+      - elements:
+        - Oxygen
+        calories_per_kg: 6666.666666666667
+        kg_per_cycle: 30.0
+      outputs:
+      - element: SlimeMold
+        conversion_ratio: 0.1
+      - element: BleachStone
+        conversion_ratio: 0.1
+      - element: OxyRock
+        conversion_ratio: 0.1
+  PuftBleachstone:
+    name: Squeaky Puft
+    config: PuftBleachstoneConfig.cs
+    base_trait_id: PuftBleachstoneBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 223.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 75.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: PuftBleachstoneEgg
+      egg_mass_kg: 0.5
+      baby_id: PuftBleachstoneBaby
+      fertility_cycles: 45.0
+      incubation_cycles: 15.0
+      egg_chances:
+      - egg: PuftEgg
+        weight: 0.31
+      - egg: PuftAlphaEgg
+        weight: 0.02
+      - egg: PuftBleachstoneEgg
+        weight: 0.67
+      ranchable: true
+    diet:
+      calories_per_cycle: 200000.0
+      inputs:
+      - elements:
+        - ChlorineGas
+        calories_per_kg: 6666.666666666667
+        kg_per_cycle: 30.0
+      outputs:
+      - element: BleachStone
+        conversion_ratio: 0.95
+        kg_per_cycle: 28.5
+  PuftOxylite:
+    name: Dense Puft
+    config: PuftOxyliteConfig.cs
+    base_trait_id: PuftOxyliteBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 223.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 75.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: PuftOxyliteEgg
+      egg_mass_kg: 0.5
+      baby_id: PuftOxyliteBaby
+      fertility_cycles: 45.0
+      incubation_cycles: 15.0
+      egg_chances:
+      - egg: PuftEgg
+        weight: 0.31
+      - egg: PuftAlphaEgg
+        weight: 0.02
+      - egg: PuftOxyliteEgg
+        weight: 0.67
+      ranchable: true
+    diet:
+      calories_per_cycle: 200000.0
+      inputs:
+      - elements:
+        - Oxygen
+        calories_per_kg: 6666.666666666667
+        kg_per_cycle: 30.0
+      outputs:
+      - element: OxyRock
+        conversion_ratio: 0.95
+        kg_per_cycle: 28.5
+  Raptor:
+    name: Rhex
+    config: RaptorConfig.cs
+    base_trait_id: RaptorBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 223.15
+      warning_high_k: 288.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 200.0
+      hit_points: 50.0
+    reproduction:
+      egg_id: RaptorEgg
+      egg_mass_kg: 8.0
+      baby_id: RaptorBaby
+      fertility_cycles: 120.00001
+      incubation_cycles: 40.0
+      egg_chances:
+      - egg: RaptorEgg
+        weight: 1.0
+      ranchable: true
+    required_dlc:
+    - DLC4
+  SeaHorse:
+    name: Seaquine
+    config: SeaHorseConfig.cs
+    base_trait_id: SeaHorseBaseTrait
+    ranching:
+      tiles_per_critter: 8.0
+    behaviour:
+      nav_type: swim
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 253.15
+      lethal_high_k: 373.15
+    reproduction:
+      egg_id: SeaHorseEgg
+      egg_mass_kg: 2.0
+      baby_id: SeaHorseBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: SeaHorseEgg
+        weight: 1.0
+      fish_overcrowding: true
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - Pearl
+        calories_per_kg: 32000.0
+        kg_per_cycle: 3.125
+      outputs:
+      - element: SlimeMold
+        conversion_ratio: 3.84
+        kg_per_cycle: 12.0
+    required_dlc:
+    - DLC5
+  SeaTurtle:
+    name: Orehull
+    config: SeaTurtleConfig.cs
+    base_trait_id: SeaTurtleBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: swim
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 273.15
+      warning_high_k: 333.15
+      lethal_low_k: 253.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 50.0
+    reproduction:
+      egg_id: SeaTurtleEgg
+      egg_mass_kg: 3.0
+      baby_id: SeaTurtleBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: SeaTurtleEgg
+        weight: 1.0
+      fish_overcrowding: true
+      ranchable: true
+    diet:
+      calories_per_cycle: 800000.0
+      inputs:
+      - elements:
+        - SeaFairy
+        calories_per_kg: 80000.0
+        kg_per_cycle: 10.0
+      - elements:
+        - Nori
+        calories_per_kg: 40000.0
+        kg_per_cycle: 20.0
+    required_dlc:
+    - DLC5
+  Seal:
+    name: Spigot Seal
+    config: SealConfig.cs
+    base_trait_id: SealBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 198.15
+      warning_high_k: 283.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: SealEgg
+      egg_mass_kg: 2.0
+      baby_id: SealBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: SealEgg
+        weight: 1.0
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - Sucrose
+        calories_per_kg: 3246.7532
+        kg_per_cycle: 30.800000443520005
+      outputs:
+      - element: Ethanol
+        conversion_ratio: 1.0
+      - element: Ethanol
+        conversion_ratio: 1.2987013
+    required_dlc:
+    - DLC2
+  ShockWorm:
+    name: Shockworm
+    config: ShockwormConfig.cs
+    behaviour:
+      nav_type: hover
+      drown_vulnerable: true
+      entomb_vulnerable: true
+  Snail:
+    name: Slogo
+    config: SnailConfig.cs
+    base_trait_id: SnailBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 278.15
+      warning_high_k: 348.15
+      lethal_low_k: 253.15
+      lethal_high_k: 373.15
+    reproduction:
+      egg_id: SnailEgg
+      egg_mass_kg: 0.5
+      baby_id: SnailBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: SnailEgg
+        weight: 0.99
+      - egg: SnailIronEgg
+        weight: 0.01
+      fish_overcrowding: false
+      ranchable: true
+    required_dlc:
+    - DLC5
+  SnailIron:
+    name: Gildgo
+    config: SnailIronConfig.cs
+    base_trait_id: SnailIronBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 333.15
+      warning_high_k: 388.15
+      lethal_low_k: 308.15
+      lethal_high_k: 413.15
+    reproduction:
+      egg_id: SnailIronEgg
+      egg_mass_kg: 0.5
+      baby_id: SnailIronBaby
+      fertility_cycles: 15.000001
+      incubation_cycles: 5.0
+      egg_chances:
+      - egg: SnailEgg
+        weight: 0.35
+      - egg: SnailIronEgg
+        weight: 0.65
+      ranchable: true
+    required_dlc:
+    - DLC5
+  Squid:
+    name: Glo Squid
+    config: SquidConfig.cs
+    base_trait_id: SquidBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: swim
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 313.15
+      warning_high_k: 373.15
+      lethal_low_k: 293.15
+      lethal_high_k: 393.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 50.0
+    reproduction:
+      egg_id: SquidEgg
+      egg_mass_kg: 2.0
+      baby_id: SquidBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: SquidEgg
+        weight: 1.0
+      fish_overcrowding: true
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      inputs:
+      - elements:
+        - TubeWorm
+    required_dlc:
+    - DLC5
+  Squirrel:
+    name: Pip
+    config: SquirrelConfig.cs
+    base_trait_id: SquirrelBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 228.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: SquirrelEgg
+      egg_mass_kg: 2.0
+      baby_id: SquirrelBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: SquirrelEgg
+        weight: 0.98
+      - egg: SquirrelHugEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      outputs:
+      - element: Dirt
+        conversion_ratio: 50.0
+  SquirrelHug:
+    name: Cuddle Pip
+    config: SquirrelHugConfig.cs
+    base_trait_id: SquirrelHugBaseTrait
+    ranching:
+      tiles_per_critter: 4.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 228.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: SquirrelHugEgg
+      egg_mass_kg: 2.0
+      baby_id: SquirrelHugBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: SquirrelEgg
+        weight: 0.35
+      - egg: SquirrelHugEgg
+        weight: 0.65
+      ranchable: true
+    diet:
+      calories_per_cycle: 100000.0
+      outputs:
+      - element: Dirt
+        conversion_ratio: 25.0
+  Staterpillar:
+    name: Plug Slug
+    config: StaterpillarConfig.cs
+    base_trait_id: StaterpillarBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 283.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: StaterpillarEgg
+      egg_mass_kg: 2.0
+      baby_id: StaterpillarBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: StaterpillarEgg
+        weight: 0.98
+      - egg: StaterpillarGasEgg
+        weight: 0.02
+      - egg: StaterpillarLiquidEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 2000000.0
+      outputs:
+      - element: Hydrogen
+        conversion_ratio: 0.05
+      - element: Hydrogen
+        conversion_ratio: 0.05
+    required_dlc:
+    - EXPANSION1
+  StaterpillarGas:
+    name: Smog Slug
+    config: StaterpillarGasConfig.cs
+    base_trait_id: StaterpillarGasBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 263.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: StaterpillarGasEgg
+      egg_mass_kg: 2.0
+      baby_id: StaterpillarGasBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: StaterpillarEgg
+        weight: 0.32
+      - egg: StaterpillarGasEgg
+        weight: 0.66
+      - egg: StaterpillarLiquidEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 2000000.0
+      outputs:
+      - element: Hydrogen
+        conversion_ratio: 0.05
+      - element: Hydrogen
+        conversion_ratio: 0.05
+    required_dlc:
+    - EXPANSION1
+  StaterpillarLiquid:
+    name: Sponge Slug
+    config: StaterpillarLiquidConfig.cs
+    base_trait_id: StaterpillarLiquidBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: false
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 263.15
+      warning_high_k: 313.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+    reproduction:
+      egg_id: StaterpillarLiquidEgg
+      egg_mass_kg: 2.0
+      baby_id: StaterpillarLiquidBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: StaterpillarEgg
+        weight: 0.32
+      - egg: StaterpillarGasEgg
+        weight: 0.02
+      - egg: StaterpillarLiquidEgg
+        weight: 0.66
+      ranchable: true
+    diet:
+      calories_per_cycle: 2000000.0
+      outputs:
+      - element: Hydrogen
+        conversion_ratio: 0.05
+      - element: Hydrogen
+        conversion_ratio: 0.05
+    required_dlc:
+    - EXPANSION1
+  Stego:
+    name: Lumb
+    config: StegoConfig.cs
+    base_trait_id: StegoBaseTrait
+    ranching:
+      tiles_per_critter: 16.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 293.15
+      warning_high_k: 343.15
+      lethal_low_k: 173.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 200.0
+      hit_points: 50.0
+    reproduction:
+      egg_id: StegoEgg
+      egg_mass_kg: 8.0
+      baby_id: StegoBaby
+      fertility_cycles: 120.00001
+      incubation_cycles: 40.0
+      egg_chances:
+      - egg: StegoEgg
+        weight: 0.98
+      - egg: AlgaeStegoEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      calories_per_cycle: 1300000.0
+    required_dlc:
+    - DLC4
+  SweepBot:
+    name: SweepBot
+    config: SweepBotConfig.cs
+    base_trait_id: SweepBotBaseTrait
+    behaviour:
+      nav_type: floor
+  WoodDeer:
+    name: Flox
+    config: WoodDeerConfig.cs
+    base_trait_id: WoodDeerBaseTrait
+    ranching:
+      tiles_per_critter: 12.0
+    behaviour:
+      nav_type: floor
+      drown_vulnerable: true
+      entomb_vulnerable: false
+    temperature:
+      warning_low_k: 243.15
+      warning_high_k: 283.15
+      lethal_low_k: 213.15
+      lethal_high_k: 373.15
+    life:
+      max_age_cycles: 100.0
+      hit_points: 25.0
+      stomach_calories: 1000000.0
+    reproduction:
+      egg_id: WoodDeerEgg
+      egg_mass_kg: 2.0
+      baby_id: WoodDeerBaby
+      fertility_cycles: 60.000004
+      incubation_cycles: 20.0
+      egg_chances:
+      - egg: WoodDeerEgg
+        weight: 0.98
+      - egg: GlassDeerEgg
+        weight: 0.02
+      ranchable: true
+    diet:
+      outputs:
+      - element: Dirt
+        conversion_ratio: 25.000002000000002
+      - element: Dirt
+        conversion_ratio: 50.000004000000004
+    required_dlc:
+    - DLC2
