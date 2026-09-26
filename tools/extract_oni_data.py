@@ -13,7 +13,7 @@ Outputs:
     elements.json   - all sim elements with thermal/phase data
     buildings.json  - all constructable buildings with power/consumption/production
     recipes.json    - all fabricator/refinery recipes
-    foods.json      - all foods with kcal and quality
+    foods.json      - all foods with kcal, quality, and consumed morale effect
     plants.json     - all crop plants with growth time, yield and consumption
     ../critter.yaml - critter lifecycle, diet, ranching and reproduction data
 """
@@ -742,8 +742,60 @@ def parse_recipes(path, resolver):
 # Food / crop / plant extraction
 # --------------------------------------------------------------------------
 
-def parse_foods(path, resolver, strings):
-    """Parse TUNING/FOOD.cs -> {food_id: {kcal, quality, ...}}."""
+def parse_food_quality_effects(source_dir, game_dir):
+    """Read the game's food-quality-to-morale mapping.
+
+    ``Edible.GetEffectForFoodQuality`` maps FoodInfo.Quality to an effect ID;
+    the modifier resource defines the QualityOfLife value for that effect. Both
+    are game inputs, so this deliberately does not duplicate a morale table.
+    """
+    edible_path = os.path.join(source_dir, 'Edible.cs')
+    edible_text = open(edible_path, encoding='utf-8', errors='replace').read()
+
+    mapping_match = re.search(
+        r'qualityEffects\s*=\s*new Dictionary<int, string>\s*\{(.*?)\n\s*\};',
+        edible_text, re.S)
+    if not mapping_match:
+        raise ValueError(f'Could not find food-quality effect mapping in {edible_path}')
+    quality_effects = {
+        int(quality): effect
+        for quality, effect in re.findall(
+            r'\{\s*(-?\d+)\s*,\s*"([^"]+)"\s*\}', mapping_match.group(1))
+    }
+    if not quality_effects:
+        raise ValueError(f'No food-quality effects found in {edible_path}')
+
+    clamp_match = re.search(
+        r'qualityLevel\s*=\s*Mathf\.Clamp\(\s*qualityLevel\s*,\s*'
+        r'(-?\d+)\s*,\s*(-?\d+)\s*\)', edible_text)
+    if not clamp_match:
+        raise ValueError(f'Could not find food-quality clamp in {edible_path}')
+    min_quality, max_quality = map(int, clamp_match.groups())
+
+    modifiers_path = os.path.join(
+        game_dir, 'OxygenNotIncluded_Data', 'resources.assets')
+    modifier_data = open(modifiers_path, 'rb').read().decode('latin-1')
+    morale_by_effect = {}
+    for effect in quality_effects.values():
+        match = re.search(
+            rf'(?<![\w]){re.escape(effect)},Effect,QualityOfLife,'
+            r'(-?\d+(?:\.\d+)?)\b', modifier_data)
+        if not match:
+            raise ValueError(
+                f'Could not find QualityOfLife modifier for {effect} in '
+                f'{modifiers_path}')
+        morale_by_effect[effect] = float(match.group(1))
+
+    return {
+        'effects_by_quality': quality_effects,
+        'morale_by_effect': morale_by_effect,
+        'min_quality': min_quality,
+        'max_quality': max_quality,
+    }
+
+
+def parse_foods(path, resolver, strings, food_quality_effects):
+    """Parse TUNING/FOOD.cs -> {food_id: {kcal, quality, morale, ...}}."""
     text = open(path, encoding='utf-8', errors='replace').read()
     foods = {}
     cals = {}  # FOOD_TYPES member name -> calories, for forward references
@@ -763,7 +815,22 @@ def parse_foods(path, resolver, strings):
         quality = eval_arith(pos[2])
         if cal is None or quality is None:
             continue
-        rec = {'kcal': cal / 1000.0, 'quality': int(quality)}
+        quality = int(quality)
+        effective_quality = min(
+            max(quality, food_quality_effects['min_quality']),
+            food_quality_effects['max_quality'])
+        effect = food_quality_effects['effects_by_quality'].get(effective_quality)
+        if effect is None:
+            raise ValueError(
+                f'Food quality {effective_quality} for {fid} has no effect mapping')
+        morale = food_quality_effects['morale_by_effect'][effect]
+        rec = {
+            'kcal': cal / 1000.0,
+            'quality': quality,
+            'effective_quality': effective_quality,
+            'morale_effect': effect,
+            'morale': int(morale) if morale.is_integer() else morale,
+        }
         if 'can_rot' in named:
             rec['can_rot'] = named['can_rot'].strip() == 'true'
         for extra in pos[7:]:
@@ -1089,8 +1156,10 @@ def main():
           f'{len(recipes)} fabricators -> recipes.json')
 
     print('extracting foods...')
+    food_quality_effects = parse_food_quality_effects(args.source_dir,
+                                                       args.game_dir)
     foods = parse_foods(os.path.join(args.source_dir, 'TUNING', 'FOOD.cs'),
-                        resolver, strings)
+                        resolver, strings, food_quality_effects)
     with open(os.path.join(args.out_dir, 'foods.json'), 'w') as f:
         json.dump(foods, f, indent=1, sort_keys=True)
     print(f'  {len(foods)} foods -> foods.json')

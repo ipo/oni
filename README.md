@@ -15,7 +15,9 @@ The exports originate from a matching installed copy of ONI and its
 
 - `StreamingAssets` supplies element definitions and localized names.
 - The assembly source supplies building components, recipes, food, plants,
-  and critter behaviour/configuration.
+  and critter behaviour/configuration. Food morale is resolved from the
+  source-defined food-quality effect mapping and the installed game's
+  modifier resource.
 
 Run the extractor against those two inputs to refresh the generated data:
 
